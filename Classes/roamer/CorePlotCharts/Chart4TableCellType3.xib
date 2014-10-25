@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Chart4TableCellType3"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Chart4CellType3Identifier" rowHeight="53" id="4" customClass="Chart4TableCellType3">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4" id="QcY-0G-wAn">
+                <rect key="frame" x="0.0" y="0.0" width="310" height="52"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6" userLabel="当前车速">
+                        <rect key="frame" x="0.0" y="0.0" width="81" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="XKh-xH-bX6"/>
+                            <constraint firstAttribute="width" constant="81" id="hoZ-9W-7Uf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7" userLabel="道路名称">
+                        <rect key="frame" x="89" y="0.0" width="280" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="9Mh-1t-FVP"/>
+                            <constraint firstAttribute="width" constant="280" id="mYu-Px-oex"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23" userLabel="子道路名称">
+                        <rect key="frame" x="152" y="3" width="126" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="8vm-bQ-LSe"/>
+                            <constraint firstAttribute="width" constant="126" id="wWb-rm-MUm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5" userLabel="道路方向">
+                        <rect key="frame" x="210" y="24" width="68" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="68" id="toN-jE-6e7"/>
+                            <constraint firstAttribute="height" constant="22" id="tpH-0L-UqJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9I5-eW-ila" userLabel="Button - 地图定位">
+                        <rect key="frame" x="556" y="3" width="36" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="U6M-3J-gjm"/>
+                            <constraint firstAttribute="height" constant="46" id="xIG-Ox-ytd"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="locate_in_map">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7" firstAttribute="leading" secondItem="6" secondAttribute="trailing" constant="8" id="92k-Qo-reP"/>
+                    <constraint firstItem="5" firstAttribute="top" secondItem="QcY-0G-wAn" secondAttribute="topMargin" constant="16" id="Dvo-f9-ff7"/>
+                    <constraint firstItem="6" firstAttribute="leading" secondItem="QcY-0G-wAn" secondAttribute="leadingMargin" constant="-8" id="JjA-c6-BKh"/>
+                    <constraint firstItem="23" firstAttribute="leading" secondItem="6" secondAttribute="trailing" constant="71" id="O34-YS-48S"/>
+                    <constraint firstItem="9I5-eW-ila" firstAttribute="trailing" secondItem="QcY-0G-wAn" secondAttribute="trailingMargin" id="ThW-ug-fY9"/>
+                    <constraint firstItem="23" firstAttribute="top" secondItem="QcY-0G-wAn" secondAttribute="topMargin" constant="-5" id="V6x-Nc-OmV"/>
+                    <constraint firstItem="5" firstAttribute="leading" secondItem="6" secondAttribute="trailing" constant="129" id="aag-TF-Q2h"/>
+                    <constraint firstItem="7" firstAttribute="top" secondItem="QcY-0G-wAn" secondAttribute="topMargin" constant="-8" id="hgN-Yq-Ykc"/>
+                    <constraint firstItem="6" firstAttribute="top" secondItem="QcY-0G-wAn" secondAttribute="topMargin" constant="-8" id="kVR-aa-Pfw"/>
+                    <constraint firstItem="9I5-eW-ila" firstAttribute="top" secondItem="QcY-0G-wAn" secondAttribute="topMargin" constant="-5" id="onb-Kr-ntf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="currentSpeed" destination="6" id="28"/>
+                <outlet property="roadDirection" destination="5" id="31"/>
+                <outlet property="roadName" destination="7" id="29"/>
+                <outlet property="selectBtn" destination="9I5-eW-ila" id="SHi-tA-PIF"/>
+                <outlet property="subRoadName" destination="23" id="30"/>
+            </connections>
+            <point key="canvasLocation" x="145" y="154.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="locate_in_map" width="64" height="64"/>
+    </resources>
+</document>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[Chart4ViewController favorite_click:]:Chart4ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[sender ParentView]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Downloader viewDidAppear:]:Downloader.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.currentDownloadStatus">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController changeBaseMapLayer:]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.baseMapLayer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart1ViewController viewDidLoad]:Chart1ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.parentViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController reloadBaseMap:]:iLiveTrafficMapViewController.mm">
+      </ContextState>
+      <ContextState
+         contextName = "+[Tools checkVersion:]:Tools.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[(NSDictionary*)[obj objectForKey:@&quot;online_params&quot;] objectForKey:@&quot;BaseMapTPKVersion&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController ClickDownBut:]:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__26-[Downloader downloadFile]_block_invoke112:Downloader.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "progress">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4ViewController lcoate_in_map_click:]:Chart4ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view">
+            </PersistentString>
+            <PersistentString
+               value = "[[view superview]superview]">
+            </PersistentString>
+            <PersistentString
+               value = "cell.roadName.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController viewDidLoad]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "hanzhouTrafficEnv.xmin">
+            </PersistentString>
+            <PersistentString
+               value = "hanzhouTrafficEnv.xmax">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController reloadBaseMap:]:iLiveTrafficMapViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController changeBaseMapLayer:]:iLiveTrafficMapViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "Tools">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController queryTask:operation:didExecuteWithFeatureSetResult:]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "queryTask.description">
+            </PersistentString>
+            <PersistentString
+               value = "self.graphicsLayer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController locateRoadOnMap:]:iLiveTrafficMapViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__26-[Downloader downloadFile]_block_invoke138:Downloader.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController locateRoadOnMap:]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "roadName[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController viewDidLoad]:iLiveTrafficMapViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "BASE_MAP_TPK_NAME_USED_BY_ARCGIS">
+            </PersistentString>
+            <PersistentString
+               value = "self.baseMapLayer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__45-[Downloader downloadFileWithTCBlobDownload:]_block_invoke114:Downloader.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(float)( savedServerFileSizeInfo - (long long)totalLength + (long long) receivedLength)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Downloader downloadFileWithTCBlobDownload:]:Downloader.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(NSString *)self-&gt;downloadThread-&gt;_pathToDownloadDirectory">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController viewDidLoad]:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__26-[Downloader downloadFile]_block_invoke123:Downloader.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,17 @@
+//
+// Prefix header for all source files of the 'iLiveTraffic' target in the 'iLiveTraffic' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+    #import <CoreLocation/CoreLocation.h>
+    #import "iLiveTrafficAppDelegate.h"
+#endif
+
+#ifdef DEBUG
+# define DLog(fmt, ...) NSLog((@"\n ------- \n[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define DLog(...);
+#endif
+

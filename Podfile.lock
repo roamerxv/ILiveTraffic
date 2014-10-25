@@ -1,0 +1,45 @@
+PODS:
+  - AMSmoothAlert (1.1):
+    - GPUImage
+  - ArcGIS-Runtime-SDK-iOS (10.2.3)
+  - CorePlot (1.5.1)
+  - GPUImage (0.1.6)
+  - MMProgressHUD (0.2.3)
+  - PPRevealSideViewController (1.1.0)
+  - SBJson (4.0.1)
+  - Shimmer (1.0.1)
+  - STAlertView (0.1.0)
+  - TCBlobDownload (1.5.2)
+  - UAProgressView (0.1.1)
+  - UIDeviceAddition (1.0)
+
+DEPENDENCIES:
+  - AMSmoothAlert
+  - ArcGIS-Runtime-SDK-iOS (= 10.2.3)
+  - CorePlot
+  - GPUImage
+  - MMProgressHUD
+  - PPRevealSideViewController (~> 1.1.0)
+  - SBJson
+  - Shimmer
+  - STAlertView
+  - TCBlobDownload
+  - TCBlobDownload (= 1.5.0)
+  - UAProgressView
+  - UIDeviceAddition
+
+SPEC CHECKSUMS:
+  AMSmoothAlert: 1b4bf6688b698a606a963c336b5060490f4d3db2
+  ArcGIS-Runtime-SDK-iOS: 4f8c8a4992385b225ffd10a6dd2c0151335f437d
+  CorePlot: b15cb1a9a687b9576545104248d6e22033e678bb
+  GPUImage: cecb0830bb9428f50192042e3c7b53810f51388e
+  MMProgressHUD: 416686cee2e9af16691e82ebfdcf7caf1dd6f621
+  PPRevealSideViewController: b49265e0b6c5493aed29a6821c8eb8d84b7e109a
+  SBJson: d71212c078abf4679d54b0d0565260c474e46235
+  Shimmer: 35aa2a57b8fbc17f9e16706021665966fd93dbd1
+  STAlertView: adead4e87f5d89a20cdd369cd81c81d1528ddd63
+  TCBlobDownload: 1009aed36d2330a73c0e8a13a2702464fe244ade
+  UAProgressView: c393bc53d1cabc077279e957c5898a5bb7bdb3ce
+  UIDeviceAddition: fb25767a1b5447c4e40af0ca948178c9feb9d05b
+
+COCOAPODS: 0.34.4

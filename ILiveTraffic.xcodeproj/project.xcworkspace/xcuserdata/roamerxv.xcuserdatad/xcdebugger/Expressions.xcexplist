@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[Chart2ViewController viewDidLoad]:Chart2ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4ViewController connectionDidFinishLoading:]:Chart4ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.receivedData">
+            </PersistentString>
+            <PersistentString
+               value = "favoriteItems">
+            </PersistentString>
+            <PersistentString
+               value = "itemArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController corePlotBtnClick:]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "[iLiveTrafficAppDelegate shared]">
+            </PersistentString>
+            <PersistentString
+               value = "[[iLiveTrafficAppDelegate shared] addOperation:theOp]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4ViewController tableView:willBeginEditingRowAtIndexPath:]:Chart4ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart2ViewController renderPies]:Chart2ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "piesData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainRoadSpeedViewController tableView:cellForRowAtIndexPath:]:MainRoadSpeedViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "speed">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController zoomRespond:]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.mapView  mapLayerForName:@&quot;BaseLayer&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "self.mapView.mapScale">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[tabbarView delegate]:tabbarView.h">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart3ViewController getData]:Chart3ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4ViewController favorite_click:]:Chart4ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "row">
+            </PersistentString>
+            <PersistentString
+               value = "self.itemArray">
+            </PersistentString>
+            <PersistentString
+               value = "[UIDevice currentDevice]">
+            </PersistentString>
+            <PersistentString
+               value = "self.searchResults">
+            </PersistentString>
+            <PersistentString
+               value = "((Chart4TableCellType2 *) [[((UIButton *)sender) superview] superview])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Canvas drawRect:]:Canvas.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self superview]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Canvas renderPie:]:Canvas.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Quare4MenuViewController closeBtnClicked:]:Quare4MenuViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.superview.subviews">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart3ViewController tableView:cellForRowAtIndexPath:]:Chart3ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[ NSBundle mainBundle]loadNibNamed:@&quot;Chart3TableViewCell&quot; owner:self options:nil]">
+            </PersistentString>
+            <PersistentString
+               value = "tableView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4TableCell didTransitionToState:]:Chart4TableCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "subview.subviews ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4ViewController tableView:heightForRowAtIndexPath:]:Chart4ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.current_roadtype">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TabbarViewController viewDidLoad]:TabbarViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.frame.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[tabbarView btn1Click:]:tabbarView.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart1ViewController initWithNibName:bundle:]:Chart1ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "points">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4ViewController tableView:cellForRowAtIndexPath:]:Chart4ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.itemArray">
+            </PersistentString>
+            <PersistentString
+               value = "[itemRoadName isEqualToString:roadName]">
+            </PersistentString>
+            <PersistentString
+               value = "self.favoriteItems.count">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[sender ParentView]">
+            </PersistentString>
+            <PersistentString
+               value = "[iLiveTrafficAppDelegate shared]">
+            </PersistentString>
+            <PersistentString
+               value = "itemAttayCount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4ViewController tableView:commitEditingStyle:forRowAtIndexPath:]:Chart4ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[NSString alloc] initWithFormat:@&quot;http://127.0.0.1:3000/customer_road/main_road_speed_collect?roadName=%@&amp;clientID=%@&quot;, roadName, delegate.deviceInfoID  ]]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart1ViewController generateGraphic]:Chart1ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[WZGuideViewController viewDidLoad]:WZGuideViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "imgName">
+            </PersistentString>
+            <PersistentString
+               value = "[UIImage imageNamed:imgName]">
+            </PersistentString>
+            <PersistentString
+               value = "imageNameArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart1ViewController invokeData]:Chart1ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "points">
+            </PersistentString>
+            <PersistentString
+               value = "data">
+            </PersistentString>
+            <PersistentString
+               value = "jsonDic">
+            </PersistentString>
+            <PersistentString
+               value = "dataInfo">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainRoadSpeedViewController inputData:]:MainRoadSpeedViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[jsonDic objectForKey:@&quot;result_items&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Canvas drawMarkLine]:Canvas.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "CGRectMake(end_x,end_y,200,100)">
+            </PersistentString>
+            <PersistentString
+               value = "magentaColor">
+            </PersistentString>
+            <PersistentString
+               value = "helveticaBold">
+            </PersistentString>
+            <PersistentString
+               value = "font">
+            </PersistentString>
+            <PersistentString
+               value = "__IPHONE_OS_VERSION_MAX_ALLOWED">
+            </PersistentString>
+            <PersistentString
+               value = "[UIDevice currentDevice].systemVersion">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart2ViewController drawTable]:Chart2ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[inputFormatter dateFromString:[item objectForKey:@&quot;created_at&quot;]]">
+            </PersistentString>
+            <PersistentString
+               value = "[item objectForKey:@&quot;created_at&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "(NSString *)[item objectForKey:@&quot;created_at&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController connectionDidFinishLoading:]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "[parser objectWithString:wsReturnValueString error:nil]  objectForKey:@&quot;result_length&quot;]]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[tabbarViewController touchBtnAtIndex:]:tabbarViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.arrayViewcontrollers">
+            </PersistentString>
+            <PersistentString
+               value = "[self getViewcontrollers]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[Tools isPosInCityWithAGSMapView:withLongitude:withLatitude:]:Tools.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[mapView.maxEnvelope containsPoint:point]">
+            </PersistentString>
+            <PersistentString
+               value = "mapView.maxEnvelope">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4ViewController searchDisplayController:shouldReloadTableForSearchString:]:Chart4ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[road_name rangeOfString:searchString ].length">
+            </PersistentString>
+            <PersistentString
+               value = "searchResults">
+            </PersistentString>
+            <PersistentString
+               value = "itemArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart1ViewController numberOfRecordsForPlot:]:Chart1ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[dataForPlot count]">
+            </PersistentString>
+            <PersistentString
+               value = "DLog(@&quot;#####%@&quot;,[self dataPlot])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Quare4MenuViewController buttonClick:]:Quare4MenuViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "TopLeftViewTag">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Canvas setData:]:Canvas.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "data">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart1ViewController showWeather]:Chart1ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[lastweek objectForKey:@&quot;ctime&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "[todayInfo count]">
+            </PersistentString>
+            <PersistentString
+               value = "[dataInfo objectForKey:@&quot;today&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController onUploadUserWord:]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "[iFlyUserWords toString]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PullingRefreshTableView tableViewDidEndDragging:]:PullingRefreshTableView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_footerView.state">
+            </PersistentString>
+            <PersistentString
+               value = "_headerView.state">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[iLiveTrafficAppDelegate shared]:iLiveTrafficAppDelegate.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart2ViewController drawCanvas]:Chart2ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.piesCanvas">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficAppDelegate application:didFinishLaunchingWithOptions:]:iLiveTrafficAppDelegate.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[NSUserDefaults standardUserDefaults] boolForKey:@&quot;everLaunched&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "objc_msgSend:(null)">
+         <PersistentStrings>
+            <PersistentString
+               value = "NSOrderedDescending">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4TableCell willTransitionToState:]:Chart4TableCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "subview.subviews ">
+            </PersistentString>
+            <PersistentString
+               value = "NSStringFromClass([subview class])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DeviceInfoController saveDeviceID:]:DeviceInfoController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "((DeviceInfo *)deviceInfo[0]).active_count">
+            </PersistentString>
+            <PersistentString
+               value = "21%10">
+            </PersistentString>
+            <PersistentString
+               value = "item.active_count.intValue%10">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart2ViewController renderPie]:Chart2ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart3MetroViewController drawCell]:Chart3MetroViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[NSString alloc] initWithFormat:@&quot;%2f&quot;,index]">
+            </PersistentString>
+            <PersistentString
+               value = "v1Controller name">
+            </PersistentString>
+            <PersistentString
+               value = "[rowData objectForKey:@&quot;congest_index&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "[dateFormatter stringFromDate:updateTime ]">
+            </PersistentString>
+            <PersistentString
+               value = "[rowData objectForKey:@&quot;net_name&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart3ViewController tableView:numberOfRowsInSection:]:Chart3ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[itemArray count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4ViewController tableView:numberOfRowsInSection:]:Chart4ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Canvas getPiesData]:Canvas.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[piesData count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController refreshCongestIndexOfCity]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "[current_congest_index JSONValue]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TableCell4Roadname speachIt:]:TableCell4Roadname.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController currentLocationAsCenter:]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mapView.locationDisplay.dataSource">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController locationBtnClicked:]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "[CLLocationManager  locationServicesEnabled]">
+            </PersistentString>
+            <PersistentString
+               value = "![self.locationManager locationServicesEnabled]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Canvas drawPies]:Canvas.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "piesData.count">
+            </PersistentString>
+            <PersistentString
+               value = "[(NSNumber *)[item objectForKey:@&quot;y&quot;] floatValue] &gt; 3.0">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart2ViewController viewWillAppear:]:Chart2ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart2ViewController getPiesData]:Chart2ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chart4ViewController scrollViewDidEndDragging:willDecelerate:]:Chart4ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "itemArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[iLiveTrafficMapViewController viewDidAppear:]:iLiveTrafficMapViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "trafficLayer.renderNativeResolution">
+            </PersistentString>
+            <PersistentString
+               value = "trafficLayer.dpi">
+            </PersistentString>
+            <PersistentString
+               value = "[baseLayer renderNativeResolution]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
