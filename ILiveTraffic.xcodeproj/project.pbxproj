@@ -1,0 +1,1342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B72722C1241EE2B00F251CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B72722B1241EE2B00F251CF /* CoreLocation.framework */; };
+		1B7BC060127999C8001CEB5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7BC05F127999C8001CEB5C /* QuartzCore.framework */; };
+		1B8445F4123C8B2F0007F8FB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8445F3123C8B2F0007F8FB /* CoreFoundation.framework */; };
+		1B844602123C8BE40007F8FB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B844601123C8BE40007F8FB /* CFNetwork.framework */; };
+		1D3623260D0F684500981E51 /* iLiveTrafficAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iLiveTrafficAppDelegate.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		621F56B01728D09900B277DA /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 621F56AF1728D09800B277DA /* Entitlements.plist */; };
+		7A8BAF8C39FBF65E512802AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 045847AB524D49019304FEAC /* libPods.a */; };
+		D901A72219D0548600AAB29A /* Location_hangzhou.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D901A72119D0548600AAB29A /* Location_hangzhou.gpx */; };
+		D90A246019F7B55600AA2527 /* SketchToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = D90A245E19F7B55600AA2527 /* SketchToolbar.h */; };
+		D90A246119F7B55600AA2527 /* SketchToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A245F19F7B55600AA2527 /* SketchToolbar.m */; };
+		D90A6E6617D9B90700121939 /* MainRoadSpeedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D90A6E6317D9B90700121939 /* MainRoadSpeedViewController.h */; };
+		D90A6E6717D9B90700121939 /* MainRoadSpeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A6E6417D9B90700121939 /* MainRoadSpeedViewController.m */; };
+		D90A6E6817D9B90700121939 /* MainRoadSpeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90A6E6517D9B90700121939 /* MainRoadSpeedViewController.xib */; };
+		D90B9D941772AF8200368758 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90B9D931772AF8200368758 /* CoreText.framework */; };
+		D90B9D961772AF9700368758 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D90B9D951772AF9700368758 /* libc++.dylib */; };
+		D90B9D981772AFA600368758 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D90B9D971772AFA600368758 /* libz.dylib */; };
+		D90B9D9A1772AFB600368758 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90B9D991772AFB600368758 /* MediaPlayer.framework */; };
+		D90B9D9C1772AFC500368758 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90B9D9B1772AFC500368758 /* MobileCoreServices.framework */; };
+		D90B9D9E1772AFD200368758 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90B9D9D1772AFD200368758 /* OpenGLES.framework */; };
+		D90B9DA01772AFDB00368758 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D90B9D9F1772AFDB00368758 /* Security.framework */; };
+		D9102D6119D1454500112161 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9102D6019D1454500112161 /* Crashlytics.framework */; };
+		D91131E819C18D7000191E5A /* Configer.h in Headers */ = {isa = PBXBuildFile; fileRef = D91131E619C18D7000191E5A /* Configer.h */; };
+		D91131E919C18D7000191E5A /* Configer.m in Sources */ = {isa = PBXBuildFile; fileRef = D91131E719C18D7000191E5A /* Configer.m */; };
+		D911812D175C53C300251F1B /* Chart3MetroViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D911812A175C53C300251F1B /* Chart3MetroViewController.h */; };
+		D911812E175C53C300251F1B /* Chart3MetroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D911812B175C53C300251F1B /* Chart3MetroViewController.m */; };
+		D911812F175C53C300251F1B /* Chart3MetroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D911812C175C53C300251F1B /* Chart3MetroViewController.xib */; };
+		D911C58F178D31E30043BCF8 /* TabbarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D911C58D178D31E30043BCF8 /* TabbarViewController.h */; };
+		D911C590178D31E30043BCF8 /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D911C58E178D31E30043BCF8 /* TabbarViewController.m */; };
+		D9125C401796CCE100ADC6EA /* Chart4TableCellType2.h in Headers */ = {isa = PBXBuildFile; fileRef = D9125C3D1796CCE100ADC6EA /* Chart4TableCellType2.h */; };
+		D9125C411796CCE100ADC6EA /* Chart4TableCellType2.m in Sources */ = {isa = PBXBuildFile; fileRef = D9125C3E1796CCE100ADC6EA /* Chart4TableCellType2.m */; };
+		D914C31D17CF138C002A9D15 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D914C31C17CF138C002A9D15 /* AdSupport.framework */; };
+		D91B97C317DE24C600D34FA5 /* Cell4Roadname.h in Headers */ = {isa = PBXBuildFile; fileRef = D91B97C017DE24C600D34FA5 /* Cell4Roadname.h */; };
+		D91B97C417DE24C600D34FA5 /* Cell4Roadname.m in Sources */ = {isa = PBXBuildFile; fileRef = D91B97C117DE24C600D34FA5 /* Cell4Roadname.m */; };
+		D91B97C717DEBDBE00D34FA5 /* Cell4Roadname.xib in Resources */ = {isa = PBXBuildFile; fileRef = D91B97C617DEBDBE00D34FA5 /* Cell4Roadname.xib */; };
+		D920F4F319A78EF8004A955F /* iLiveTraffciLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4EB19A78EF8004A955F /* iLiveTraffciLocationManager.h */; };
+		D920F4F419A78EF8004A955F /* iLiveTraffciLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4EC19A78EF8004A955F /* iLiveTraffciLocationManager.m */; };
+		D920F4F519A78EF8004A955F /* iLiveTrafficConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4ED19A78EF8004A955F /* iLiveTrafficConfigure.h */; };
+		D920F4F619A78EF8004A955F /* iLiveTrafficConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4EE19A78EF8004A955F /* iLiveTrafficConfigure.m */; };
+		D920F4F719A78EF8004A955F /* iLiveTrafficScaleIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4EF19A78EF8004A955F /* iLiveTrafficScaleIndicatorView.h */; };
+		D920F4F819A78EF8004A955F /* iLiveTrafficScaleIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4F019A78EF8004A955F /* iLiveTrafficScaleIndicatorView.m */; };
+		D920F4F919A78EF8004A955F /* PPPickerSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4F119A78EF8004A955F /* PPPickerSheet.h */; };
+		D920F4FA19A78EF8004A955F /* PPPickerSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4F219A78EF8004A955F /* PPPickerSheet.m */; };
+		D920F50019A78F03004A955F /* NSDateFormatter+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4FC19A78F03004A955F /* NSDateFormatter+Extras.h */; };
+		D920F50119A78F03004A955F /* NSDateFormatter+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4FD19A78F03004A955F /* NSDateFormatter+Extras.m */; };
+		D920F50219A78F03004A955F /* UIViewController-Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4FE19A78F03004A955F /* UIViewController-Extras.h */; };
+		D920F50319A78F03004A955F /* UIViewController-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4FF19A78F03004A955F /* UIViewController-Extras.m */; };
+		D920F51919A78F1E004A955F /* iLiveTrafficMapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F50D19A78F1E004A955F /* iLiveTrafficMapViewController.h */; };
+		D920F51A19A78F1E004A955F /* iLiveTrafficMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F50E19A78F1E004A955F /* iLiveTrafficMapViewController.m */; };
+		D920F51B19A78F1E004A955F /* iLiveTrafficMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D920F50F19A78F1E004A955F /* iLiveTrafficMapViewController.xib */; };
+		D9273FDF174370FB00804318 /* Chart1Theme.h in Headers */ = {isa = PBXBuildFile; fileRef = D9273FDD174370FB00804318 /* Chart1Theme.h */; };
+		D9273FE0174370FB00804318 /* Chart1Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = D9273FDE174370FB00804318 /* Chart1Theme.m */; };
+		D92A90881749DB1400572450 /* Chart2ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D92A90851749DB1400572450 /* Chart2ViewController.h */; };
+		D92A90891749DB1400572450 /* Chart2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92A90861749DB1400572450 /* Chart2ViewController.m */; };
+		D92A908A1749DB1400572450 /* Chart2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92A90871749DB1400572450 /* Chart2ViewController.xib */; };
+		D939EDD519F66677008A9FF9 /* RoadInfos.h in Headers */ = {isa = PBXBuildFile; fileRef = D939EDD319F66677008A9FF9 /* RoadInfos.h */; };
+		D939EDD619F66677008A9FF9 /* RoadInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = D939EDD419F66677008A9FF9 /* RoadInfos.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D93B97C419CD54AB009E6865 /* FlowerCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = D93B97C219CD54AB009E6865 /* FlowerCollector.h */; };
+		D93B97C519CD54AB009E6865 /* FlowerCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = D93B97C319CD54AB009E6865 /* FlowerCollector.m */; };
+		D93CF1EB19D9C786003BF46F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93CF1EA19D9C786003BF46F /* Images.xcassets */; };
+		D942510C19AF7FBD004FF62D /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D942510B19AF7FBD004FF62D /* iflyMSC.framework */; };
+		D942C66D17AA2228007F7124 /* Canvas.h in Headers */ = {isa = PBXBuildFile; fileRef = D942C66B17AA2228007F7124 /* Canvas.h */; };
+		D942C66E17AA2228007F7124 /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = D942C66C17AA2228007F7124 /* Canvas.m */; };
+		D945B0A419FC06BF00035058 /* TabbarView.h in Headers */ = {isa = PBXBuildFile; fileRef = D945B0A219FC06BF00035058 /* TabbarView.h */; };
+		D945B0A519FC06BF00035058 /* TabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D945B0A319FC06BF00035058 /* TabbarView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D94858AD17CB1A58006B7486 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94858A717CB11E4006B7486 /* AudioToolbox.framework */; };
+		D94858AE17CB1A5F006B7486 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94858A117CB118C006B7486 /* AddressBook.framework */; };
+		D94858AF17CB1A66006B7486 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94858A317CB1195006B7486 /* SystemConfiguration.framework */; };
+		D955CC9A19C8B1EF0019AAEF /* PopupView.h in Headers */ = {isa = PBXBuildFile; fileRef = D955CC9819C8B1EF0019AAEF /* PopupView.h */; };
+		D955CC9B19C8B1EF0019AAEF /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = D955CC9919C8B1EF0019AAEF /* PopupView.m */; };
+		D955CC9E19C8BFF20019AAEF /* RecognizerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D955CC9C19C8BFF20019AAEF /* RecognizerFactory.h */; };
+		D955CC9F19C8BFF20019AAEF /* RecognizerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D955CC9D19C8BFF20019AAEF /* RecognizerFactory.m */; };
+		D955CCA219C8C3C10019AAEF /* ISRDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D955CCA019C8C3C10019AAEF /* ISRDataHelper.h */; };
+		D955CCA319C8C3C10019AAEF /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D955CCA119C8C3C10019AAEF /* ISRDataHelper.m */; };
+		D955CCA519C9BC110019AAEF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D955CCA419C9BC110019AAEF /* CoreTelephony.framework */; };
+		D959FD5517B22B560080C858 /* Chart4TableCellType3.h in Headers */ = {isa = PBXBuildFile; fileRef = D959FD5217B22B560080C858 /* Chart4TableCellType3.h */; };
+		D959FD5617B22B560080C858 /* Chart4TableCellType3.m in Sources */ = {isa = PBXBuildFile; fileRef = D959FD5317B22B560080C858 /* Chart4TableCellType3.m */; };
+		D959FD5717B22B560080C858 /* Chart4TableCellType3.xib in Resources */ = {isa = PBXBuildFile; fileRef = D959FD5417B22B560080C858 /* Chart4TableCellType3.xib */; };
+		D95D580617812FC80003AC41 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95D580517812FC80003AC41 /* MainWindow.xib */; };
+		D96E28391749E260009377A9 /* UIView+ZXQuartz.h in Headers */ = {isa = PBXBuildFile; fileRef = D96E28371749E260009377A9 /* UIView+ZXQuartz.h */; };
+		D96E283A1749E260009377A9 /* UIView+ZXQuartz.m in Sources */ = {isa = PBXBuildFile; fileRef = D96E28381749E260009377A9 /* UIView+ZXQuartz.m */; };
+		D978B81619F77AA70060FED4 /* RoadMapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D978B81319F77AA70060FED4 /* RoadMapViewController.h */; };
+		D978B81719F77AA70060FED4 /* RoadMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D978B81419F77AA70060FED4 /* RoadMapViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D978B81819F77AA70060FED4 /* RoadMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D978B81519F77AA70060FED4 /* RoadMapViewController.xib */; };
+		D97BE4AC1752FD93005BAF63 /* Chart4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97BE4A91752FD93005BAF63 /* Chart4ViewController.xib */; };
+		D97BE4B91753111F005BAF63 /* Chart4TableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D97BE4B71753111F005BAF63 /* Chart4TableCell.h */; };
+		D97BE4BA1753111F005BAF63 /* Chart4TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D97BE4B81753111F005BAF63 /* Chart4TableCell.m */; };
+		D97BE4BC175334F3005BAF63 /* Chart4TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97BE4BB175334F3005BAF63 /* Chart4TableCell.xib */; };
+		D981BF5A19CC71E90094BFD9 /* IFlyFlowerCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = D981BF5819CC71E90094BFD9 /* IFlyFlowerCollector.h */; };
+		D981BF5B19CC71E90094BFD9 /* libSunFlower.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D981BF5919CC71E90094BFD9 /* libSunFlower.a */; };
+		D989F0B619AC68AB0011A511 /* Chart4ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D989F0B419AC68AB0011A511 /* Chart4ViewController.h */; };
+		D989F0B719AC68AB0011A511 /* Chart4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D989F0B519AC68AB0011A511 /* Chart4ViewController.m */; };
+		D997225519F128D30054667F /* SlidingTabsControl.h in Headers */ = {isa = PBXBuildFile; fileRef = D997225119F128D30054667F /* SlidingTabsControl.h */; };
+		D997225619F128D30054667F /* SlidingTabsControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D997225219F128D30054667F /* SlidingTabsControl.m */; };
+		D997225719F128D30054667F /* SlidingTabsTab.h in Headers */ = {isa = PBXBuildFile; fileRef = D997225319F128D30054667F /* SlidingTabsTab.h */; };
+		D997225819F128D30054667F /* SlidingTabsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D997225419F128D30054667F /* SlidingTabsTab.m */; };
+		D99A4ED017429B2A00D302F2 /* Chart1ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D99A4ECD17429B2A00D302F2 /* Chart1ViewController.h */; };
+		D99A4ED117429B2A00D302F2 /* Chart1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99A4ECE17429B2A00D302F2 /* Chart1ViewController.m */; };
+		D99AEDB919E81F84009E602E /* iLiveTrafficMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D99AEDB619E81F84009E602E /* iLiveTrafficMenuViewController.h */; };
+		D99AEDBA19E81F84009E602E /* iLiveTrafficMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99AEDB719E81F84009E602E /* iLiveTrafficMenuViewController.m */; };
+		D99AEDBB19E81F84009E602E /* iLiveTrafficMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99AEDB819E81F84009E602E /* iLiveTrafficMenuViewController.xib */; };
+		D9A5D9D319F635970066E129 /* CustomizeRoadListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A5D9D019F635970066E129 /* CustomizeRoadListViewController.h */; };
+		D9A5D9D419F635970066E129 /* CustomizeRoadListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A5D9D119F635970066E129 /* CustomizeRoadListViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D9A5D9D519F635970066E129 /* CustomizeRoadListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A5D9D219F635970066E129 /* CustomizeRoadListViewController.xib */; };
+		D9AE7FF0172B911600A1804A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9AE7FEF172B911600A1804A /* CoreImage.framework */; };
+		D9B232C519D82ED000F399DF /* iLiveTraffic_Base_Map.tpk in Resources */ = {isa = PBXBuildFile; fileRef = D9B232C419D82ED000F399DF /* iLiveTraffic_Base_Map.tpk */; };
+		D9B75C0119D1ED79008862F1 /* Chart4TableCellType2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B75C0019D1ED79008862F1 /* Chart4TableCellType2.xib */; };
+		D9BCFBD917341F93001B30D7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9BCFBD817341F93001B30D7 /* CoreData.framework */; };
+		D9BCFBEB17341FB7001B30D7 /* TrafficeIndexController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFBE317341FB7001B30D7 /* TrafficeIndexController.m */; };
+		D9BCFBF117376B5D001B30D7 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFBF017376B5D001B30D7 /* Tools.m */; };
+		D9BCFBF717376F54001B30D7 /* DeviceInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFBF617376F54001B30D7 /* DeviceInfoController.m */; };
+		D9C950F3177802DA00FF5A71 /* WZGuideViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9C950F1177802DA00FF5A71 /* WZGuideViewController.h */; };
+		D9C950F4177802DA00FF5A71 /* WZGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C950F2177802DA00FF5A71 /* WZGuideViewController.m */; };
+		D9C9511A177824CE00FF5A71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C95119177824CE00FF5A71 /* main.m */; };
+		D9CBD3EC1757B51400AB3DE8 /* Chart1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9CBD3EB1757B51400AB3DE8 /* Chart1ViewController.xib */; };
+		D9D905C319E8479E00411B75 /* SDHelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D905C019E8479E00411B75 /* SDHelpViewController.h */; };
+		D9D905C419E8479E00411B75 /* SDHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D905C119E8479E00411B75 /* SDHelpViewController.m */; };
+		D9D905C519E8479E00411B75 /* SDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D905C219E8479E00411B75 /* SDHelpViewController.xib */; };
+		D9D9185719F275270002488C /* Downloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D9185419F275270002488C /* Downloader.h */; };
+		D9D9185819F275270002488C /* Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D9185519F275270002488C /* Downloader.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D9D9185919F275270002488C /* Downloader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D9185619F275270002488C /* Downloader.xib */; };
+		D9FBBB9619AC7ECB003940B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FBBB9519AC7ECA003940B8 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		045847AB524D49019304FEAC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B72722B1241EE2B00F251CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1B7BC05F127999C8001CEB5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1B8445F3123C8B2F0007F8FB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		1B844601123C8BE40007F8FB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* iLiveTrafficAppDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = iLiveTrafficAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* iLiveTrafficAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLiveTrafficAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* ILiveTraffic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ILiveTraffic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* ILiveTraffic_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILiveTraffic_Prefix.pch; sourceTree = "<group>"; };
+		621F56AF1728D09800B277DA /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* ILiveTraffic-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ILiveTraffic-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		9313FAD3EC344B33F805217D /* Pods.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc.xcconfig"; sourceTree = "<group>"; };
+		C1BB44289B5737C29C595DEF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D901A72119D0548600AAB29A /* Location_hangzhou.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Location_hangzhou.gpx; path = Resources/Location_hangzhou.gpx; sourceTree = "<group>"; };
+		D90A245E19F7B55600AA2527 /* SketchToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchToolbar.h; sourceTree = "<group>"; };
+		D90A245F19F7B55600AA2527 /* SketchToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchToolbar.m; sourceTree = "<group>"; };
+		D90A6E6317D9B90700121939 /* MainRoadSpeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainRoadSpeedViewController.h; sourceTree = "<group>"; };
+		D90A6E6417D9B90700121939 /* MainRoadSpeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainRoadSpeedViewController.m; sourceTree = "<group>"; };
+		D90A6E6517D9B90700121939 /* MainRoadSpeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainRoadSpeedViewController.xib; sourceTree = "<group>"; };
+		D90B9D931772AF8200368758 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		D90B9D951772AF9700368758 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D90B9D971772AFA600368758 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D90B9D991772AFB600368758 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		D90B9D9B1772AFC500368758 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D90B9D9D1772AFD200368758 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D90B9D9F1772AFDB00368758 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D9102D6019D1454500112161 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = lib/Crashlytics.framework; sourceTree = "<group>"; };
+		D91131E619C18D7000191E5A /* Configer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configer.h; sourceTree = "<group>"; };
+		D91131E719C18D7000191E5A /* Configer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configer.m; sourceTree = "<group>"; };
+		D911812A175C53C300251F1B /* Chart3MetroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart3MetroViewController.h; sourceTree = "<group>"; };
+		D911812B175C53C300251F1B /* Chart3MetroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart3MetroViewController.m; sourceTree = "<group>"; };
+		D911812C175C53C300251F1B /* Chart3MetroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart3MetroViewController.xib; sourceTree = "<group>"; };
+		D911C58D178D31E30043BCF8 /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
+		D911C58E178D31E30043BCF8 /* TabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarViewController.m; sourceTree = "<group>"; };
+		D9125C3D1796CCE100ADC6EA /* Chart4TableCellType2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart4TableCellType2.h; sourceTree = "<group>"; };
+		D9125C3E1796CCE100ADC6EA /* Chart4TableCellType2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart4TableCellType2.m; sourceTree = "<group>"; };
+		D914C31C17CF138C002A9D15 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		D91B97C017DE24C600D34FA5 /* Cell4Roadname.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell4Roadname.h; sourceTree = "<group>"; };
+		D91B97C117DE24C600D34FA5 /* Cell4Roadname.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell4Roadname.m; sourceTree = "<group>"; };
+		D91B97C617DEBDBE00D34FA5 /* Cell4Roadname.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell4Roadname.xib; sourceTree = "<group>"; };
+		D920F4EB19A78EF8004A955F /* iLiveTraffciLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveTraffciLocationManager.h; sourceTree = "<group>"; };
+		D920F4EC19A78EF8004A955F /* iLiveTraffciLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLiveTraffciLocationManager.m; sourceTree = "<group>"; };
+		D920F4ED19A78EF8004A955F /* iLiveTrafficConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveTrafficConfigure.h; sourceTree = "<group>"; };
+		D920F4EE19A78EF8004A955F /* iLiveTrafficConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLiveTrafficConfigure.m; sourceTree = "<group>"; };
+		D920F4EF19A78EF8004A955F /* iLiveTrafficScaleIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveTrafficScaleIndicatorView.h; sourceTree = "<group>"; };
+		D920F4F019A78EF8004A955F /* iLiveTrafficScaleIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLiveTrafficScaleIndicatorView.m; sourceTree = "<group>"; };
+		D920F4F119A78EF8004A955F /* PPPickerSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPickerSheet.h; sourceTree = "<group>"; };
+		D920F4F219A78EF8004A955F /* PPPickerSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPickerSheet.m; sourceTree = "<group>"; };
+		D920F4FC19A78F03004A955F /* NSDateFormatter+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Extras.h"; sourceTree = "<group>"; };
+		D920F4FD19A78F03004A955F /* NSDateFormatter+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Extras.m"; sourceTree = "<group>"; };
+		D920F4FE19A78F03004A955F /* UIViewController-Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController-Extras.h"; sourceTree = "<group>"; };
+		D920F4FF19A78F03004A955F /* UIViewController-Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController-Extras.m"; sourceTree = "<group>"; };
+		D920F50D19A78F1E004A955F /* iLiveTrafficMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveTrafficMapViewController.h; sourceTree = "<group>"; };
+		D920F50E19A78F1E004A955F /* iLiveTrafficMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLiveTrafficMapViewController.m; sourceTree = "<group>"; };
+		D920F50F19A78F1E004A955F /* iLiveTrafficMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iLiveTrafficMapViewController.xib; sourceTree = "<group>"; };
+		D9273FDD174370FB00804318 /* Chart1Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart1Theme.h; sourceTree = "<group>"; };
+		D9273FDE174370FB00804318 /* Chart1Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart1Theme.m; sourceTree = "<group>"; };
+		D92A90851749DB1400572450 /* Chart2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart2ViewController.h; sourceTree = "<group>"; };
+		D92A90861749DB1400572450 /* Chart2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart2ViewController.m; sourceTree = "<group>"; };
+		D92A90871749DB1400572450 /* Chart2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart2ViewController.xib; sourceTree = "<group>"; };
+		D939EDD319F66677008A9FF9 /* RoadInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadInfos.h; sourceTree = "<group>"; };
+		D939EDD419F66677008A9FF9 /* RoadInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadInfos.m; sourceTree = "<group>"; };
+		D93B97C219CD54AB009E6865 /* FlowerCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowerCollector.h; sourceTree = "<group>"; };
+		D93B97C319CD54AB009E6865 /* FlowerCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowerCollector.m; sourceTree = "<group>"; };
+		D93CF1EA19D9C786003BF46F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
+		D942510B19AF7FBD004FF62D /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = "lib/无UI/iflyMSC.framework"; sourceTree = "<group>"; };
+		D942C66B17AA2228007F7124 /* Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
+		D942C66C17AA2228007F7124 /* Canvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Canvas.m; sourceTree = "<group>"; };
+		D945B0A219FC06BF00035058 /* TabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarView.h; sourceTree = "<group>"; };
+		D945B0A319FC06BF00035058 /* TabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarView.m; sourceTree = "<group>"; };
+		D94858A117CB118C006B7486 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D94858A317CB1195006B7486 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D94858A717CB11E4006B7486 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D955CC9819C8B1EF0019AAEF /* PopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupView.h; sourceTree = "<group>"; };
+		D955CC9919C8B1EF0019AAEF /* PopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupView.m; sourceTree = "<group>"; };
+		D955CC9C19C8BFF20019AAEF /* RecognizerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecognizerFactory.h; sourceTree = "<group>"; };
+		D955CC9D19C8BFF20019AAEF /* RecognizerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecognizerFactory.m; sourceTree = "<group>"; };
+		D955CCA019C8C3C10019AAEF /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
+		D955CCA119C8C3C10019AAEF /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
+		D955CCA419C9BC110019AAEF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D955CCA619C9BC2E0019AAEF /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		D959FD5217B22B560080C858 /* Chart4TableCellType3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart4TableCellType3.h; sourceTree = "<group>"; };
+		D959FD5317B22B560080C858 /* Chart4TableCellType3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart4TableCellType3.m; sourceTree = "<group>"; };
+		D959FD5417B22B560080C858 /* Chart4TableCellType3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart4TableCellType3.xib; sourceTree = "<group>"; };
+		D95D580517812FC80003AC41 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		D96E28371749E260009377A9 /* UIView+ZXQuartz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZXQuartz.h"; sourceTree = "<group>"; };
+		D96E28381749E260009377A9 /* UIView+ZXQuartz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZXQuartz.m"; sourceTree = "<group>"; };
+		D978B81319F77AA70060FED4 /* RoadMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoadMapViewController.h; sourceTree = "<group>"; };
+		D978B81419F77AA70060FED4 /* RoadMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoadMapViewController.m; sourceTree = "<group>"; };
+		D978B81519F77AA70060FED4 /* RoadMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoadMapViewController.xib; sourceTree = "<group>"; };
+		D97BE4A91752FD93005BAF63 /* Chart4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart4ViewController.xib; sourceTree = "<group>"; };
+		D97BE4B71753111F005BAF63 /* Chart4TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart4TableCell.h; sourceTree = "<group>"; };
+		D97BE4B81753111F005BAF63 /* Chart4TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart4TableCell.m; sourceTree = "<group>"; };
+		D97BE4BB175334F3005BAF63 /* Chart4TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart4TableCell.xib; sourceTree = "<group>"; };
+		D981BF5819CC71E90094BFD9 /* IFlyFlowerCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyFlowerCollector.h; sourceTree = "<group>"; };
+		D981BF5919CC71E90094BFD9 /* libSunFlower.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSunFlower.a; sourceTree = "<group>"; };
+		D989F0B419AC68AB0011A511 /* Chart4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart4ViewController.h; sourceTree = "<group>"; };
+		D989F0B519AC68AB0011A511 /* Chart4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart4ViewController.m; sourceTree = "<group>"; };
+		D997225119F128D30054667F /* SlidingTabsControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingTabsControl.h; sourceTree = "<group>"; };
+		D997225219F128D30054667F /* SlidingTabsControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingTabsControl.m; sourceTree = "<group>"; };
+		D997225319F128D30054667F /* SlidingTabsTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingTabsTab.h; sourceTree = "<group>"; };
+		D997225419F128D30054667F /* SlidingTabsTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingTabsTab.m; sourceTree = "<group>"; };
+		D99A4ECD17429B2A00D302F2 /* Chart1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart1ViewController.h; sourceTree = "<group>"; };
+		D99A4ECE17429B2A00D302F2 /* Chart1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart1ViewController.m; sourceTree = "<group>"; };
+		D99AEDB619E81F84009E602E /* iLiveTrafficMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveTrafficMenuViewController.h; sourceTree = "<group>"; };
+		D99AEDB719E81F84009E602E /* iLiveTrafficMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLiveTrafficMenuViewController.m; sourceTree = "<group>"; };
+		D99AEDB819E81F84009E602E /* iLiveTrafficMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iLiveTrafficMenuViewController.xib; sourceTree = "<group>"; };
+		D9A5D9D019F635970066E129 /* CustomizeRoadListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizeRoadListViewController.h; sourceTree = "<group>"; };
+		D9A5D9D119F635970066E129 /* CustomizeRoadListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizeRoadListViewController.m; sourceTree = "<group>"; };
+		D9A5D9D219F635970066E129 /* CustomizeRoadListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomizeRoadListViewController.xib; sourceTree = "<group>"; };
+		D9AE7FEF172B911600A1804A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		D9B232C419D82ED000F399DF /* iLiveTraffic_Base_Map.tpk */ = {isa = PBXFileReference; lastKnownFileType = file; name = iLiveTraffic_Base_Map.tpk; path = Resources/iLiveTraffic_Base_Map.tpk; sourceTree = "<group>"; };
+		D9B75C0019D1ED79008862F1 /* Chart4TableCellType2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart4TableCellType2.xib; sourceTree = "<group>"; };
+		D9BCFBD817341F93001B30D7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D9BCFBE217341FB7001B30D7 /* TrafficeIndexController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficeIndexController.h; sourceTree = "<group>"; };
+		D9BCFBE317341FB7001B30D7 /* TrafficeIndexController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficeIndexController.m; sourceTree = "<group>"; };
+		D9BCFBEF17376B5D001B30D7 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		D9BCFBF017376B5D001B30D7 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		D9BCFBF517376F54001B30D7 /* DeviceInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfoController.h; sourceTree = "<group>"; };
+		D9BCFBF617376F54001B30D7 /* DeviceInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoController.m; sourceTree = "<group>"; };
+		D9C5D81819E7CAFD004DD37B /* ILiveTraffic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ILiveTraffic.entitlements; path = ILiveTraffic/ILiveTraffic.entitlements; sourceTree = "<group>"; };
+		D9C950F1177802DA00FF5A71 /* WZGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZGuideViewController.h; sourceTree = "<group>"; };
+		D9C950F2177802DA00FF5A71 /* WZGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZGuideViewController.m; sourceTree = "<group>"; };
+		D9C95119177824CE00FF5A71 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D9CBD3EB1757B51400AB3DE8 /* Chart1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart1ViewController.xib; sourceTree = "<group>"; };
+		D9D905C019E8479E00411B75 /* SDHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHelpViewController.h; sourceTree = "<group>"; };
+		D9D905C119E8479E00411B75 /* SDHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHelpViewController.m; sourceTree = "<group>"; };
+		D9D905C219E8479E00411B75 /* SDHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDHelpViewController.xib; sourceTree = "<group>"; };
+		D9D9185419F275270002488C /* Downloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Downloader.h; sourceTree = "<group>"; };
+		D9D9185519F275270002488C /* Downloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Downloader.m; sourceTree = "<group>"; };
+		D9D9185619F275270002488C /* Downloader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Downloader.xib; sourceTree = "<group>"; };
+		D9FBBB9519AC7ECA003940B8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F5464CC9FD5891D9A9BAAECC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D955CCA519C9BC110019AAEF /* CoreTelephony.framework in Frameworks */,
+				D942510C19AF7FBD004FF62D /* iflyMSC.framework in Frameworks */,
+				D9102D6119D1454500112161 /* Crashlytics.framework in Frameworks */,
+				D9FBBB9619AC7ECB003940B8 /* AVFoundation.framework in Frameworks */,
+				D914C31D17CF138C002A9D15 /* AdSupport.framework in Frameworks */,
+				D981BF5B19CC71E90094BFD9 /* libSunFlower.a in Frameworks */,
+				D94858AF17CB1A66006B7486 /* SystemConfiguration.framework in Frameworks */,
+				D94858AE17CB1A5F006B7486 /* AddressBook.framework in Frameworks */,
+				D94858AD17CB1A58006B7486 /* AudioToolbox.framework in Frameworks */,
+				1B72722C1241EE2B00F251CF /* CoreLocation.framework in Frameworks */,
+				1B7BC060127999C8001CEB5C /* QuartzCore.framework in Frameworks */,
+				D90B9DA01772AFDB00368758 /* Security.framework in Frameworks */,
+				D90B9D9E1772AFD200368758 /* OpenGLES.framework in Frameworks */,
+				D90B9D9C1772AFC500368758 /* MobileCoreServices.framework in Frameworks */,
+				D90B9D9A1772AFB600368758 /* MediaPlayer.framework in Frameworks */,
+				D90B9D981772AFA600368758 /* libz.dylib in Frameworks */,
+				D90B9D961772AF9700368758 /* libc++.dylib in Frameworks */,
+				D90B9D941772AF8200368758 /* CoreText.framework in Frameworks */,
+				D9BCFBD917341F93001B30D7 /* CoreData.framework in Frameworks */,
+				D9AE7FF0172B911600A1804A /* CoreImage.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				1B8445F4123C8B2F0007F8FB /* CoreFoundation.framework in Frameworks */,
+				1B844602123C8BE40007F8FB /* CFNetwork.framework in Frameworks */,
+				7A8BAF8C39FBF65E512802AF /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D9BCFBDA17341FB7001B30D7 /* roamer */,
+				1D3623240D0F684500981E51 /* iLiveTrafficAppDelegate.h */,
+				1D3623250D0F684500981E51 /* iLiveTrafficAppDelegate.m */,
+				D95D580517812FC80003AC41 /* MainWindow.xib */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* ILiveTraffic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		211EF8B505722B045EF70ACB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1BB44289B5737C29C595DEF /* Pods.debug.xcconfig */,
+				F5464CC9FD5891D9A9BAAECC /* Pods.release.xcconfig */,
+				9313FAD3EC344B33F805217D /* Pods.adhoc.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				D9C5D81819E7CAFD004DD37B /* ILiveTraffic.entitlements */,
+				621F56AF1728D09800B277DA /* Entitlements.plist */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				211EF8B505722B045EF70ACB /* Pods */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D981BF5319CC68BF0094BFD9 /* lib */,
+				D9C95119177824CE00FF5A71 /* main.m */,
+				32CA4F630368D1EE00C91783 /* ILiveTraffic_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D93CF1EA19D9C786003BF46F /* Images.xcassets */,
+				D9B232C419D82ED000F399DF /* iLiveTraffic_Base_Map.tpk */,
+				D901A72119D0548600AAB29A /* Location_hangzhou.gpx */,
+				8D1107310486CEB800E47090 /* ILiveTraffic-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9102D6019D1454500112161 /* Crashlytics.framework */,
+				D955CCA619C9BC2E0019AAEF /* libz.1.2.5.dylib */,
+				D955CCA419C9BC110019AAEF /* CoreTelephony.framework */,
+				D942510B19AF7FBD004FF62D /* iflyMSC.framework */,
+				D9FBBB9519AC7ECA003940B8 /* AVFoundation.framework */,
+				D914C31C17CF138C002A9D15 /* AdSupport.framework */,
+				D94858A717CB11E4006B7486 /* AudioToolbox.framework */,
+				D94858A317CB1195006B7486 /* SystemConfiguration.framework */,
+				D94858A117CB118C006B7486 /* AddressBook.framework */,
+				D90B9D9F1772AFDB00368758 /* Security.framework */,
+				D90B9D9D1772AFD200368758 /* OpenGLES.framework */,
+				D90B9D9B1772AFC500368758 /* MobileCoreServices.framework */,
+				D90B9D991772AFB600368758 /* MediaPlayer.framework */,
+				D90B9D971772AFA600368758 /* libz.dylib */,
+				D90B9D951772AF9700368758 /* libc++.dylib */,
+				D90B9D931772AF8200368758 /* CoreText.framework */,
+				D9BCFBD817341F93001B30D7 /* CoreData.framework */,
+				D9AE7FEF172B911600A1804A /* CoreImage.framework */,
+				1B7BC05F127999C8001CEB5C /* QuartzCore.framework */,
+				1B72722B1241EE2B00F251CF /* CoreLocation.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				1B8445F3123C8B2F0007F8FB /* CoreFoundation.framework */,
+				1B844601123C8BE40007F8FB /* CFNetwork.framework */,
+				045847AB524D49019304FEAC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D90A245D19F7B55600AA2527 /* SketchToolsBar */ = {
+			isa = PBXGroup;
+			children = (
+				D90A245E19F7B55600AA2527 /* SketchToolbar.h */,
+				D90A245F19F7B55600AA2527 /* SketchToolbar.m */,
+			);
+			path = SketchToolsBar;
+			sourceTree = "<group>";
+		};
+		D90A6E6217D9B90700121939 /* MainRoadSpeed */ = {
+			isa = PBXGroup;
+			children = (
+				D91B97B117DDFB4E00D34FA5 /* TableCell */,
+				D90A6E6317D9B90700121939 /* MainRoadSpeedViewController.h */,
+				D90A6E6417D9B90700121939 /* MainRoadSpeedViewController.m */,
+				D90A6E6517D9B90700121939 /* MainRoadSpeedViewController.xib */,
+			);
+			path = MainRoadSpeed;
+			sourceTree = "<group>";
+		};
+		D91131E519C18D5F00191E5A /* Configer */ = {
+			isa = PBXGroup;
+			children = (
+				D91131E619C18D7000191E5A /* Configer.h */,
+				D91131E719C18D7000191E5A /* Configer.m */,
+			);
+			path = Configer;
+			sourceTree = "<group>";
+		};
+		D9118173175C578F00251F1B /* Metro风格 */ = {
+			isa = PBXGroup;
+			children = (
+				D911812A175C53C300251F1B /* Chart3MetroViewController.h */,
+				D911812B175C53C300251F1B /* Chart3MetroViewController.m */,
+				D911812C175C53C300251F1B /* Chart3MetroViewController.xib */,
+			);
+			name = "Metro风格";
+			sourceTree = "<group>";
+		};
+		D911C58C178D31E30043BCF8 /* TabBarMainView */ = {
+			isa = PBXGroup;
+			children = (
+				D911C58D178D31E30043BCF8 /* TabbarViewController.h */,
+				D911C58E178D31E30043BCF8 /* TabbarViewController.m */,
+			);
+			path = TabBarMainView;
+			sourceTree = "<group>";
+		};
+		D91B97B117DDFB4E00D34FA5 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D91B97C017DE24C600D34FA5 /* Cell4Roadname.h */,
+				D91B97C117DE24C600D34FA5 /* Cell4Roadname.m */,
+				D91B97C617DEBDBE00D34FA5 /* Cell4Roadname.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		D920F4EA19A78EF8004A955F /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D920F4EB19A78EF8004A955F /* iLiveTraffciLocationManager.h */,
+				D920F4EC19A78EF8004A955F /* iLiveTraffciLocationManager.m */,
+				D920F4ED19A78EF8004A955F /* iLiveTrafficConfigure.h */,
+				D920F4EE19A78EF8004A955F /* iLiveTrafficConfigure.m */,
+				D920F4EF19A78EF8004A955F /* iLiveTrafficScaleIndicatorView.h */,
+				D920F4F019A78EF8004A955F /* iLiveTrafficScaleIndicatorView.m */,
+				D920F4F119A78EF8004A955F /* PPPickerSheet.h */,
+				D920F4F219A78EF8004A955F /* PPPickerSheet.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		D920F4FB19A78F03004A955F /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				D920F4FC19A78F03004A955F /* NSDateFormatter+Extras.h */,
+				D920F4FD19A78F03004A955F /* NSDateFormatter+Extras.m */,
+				D920F4FE19A78F03004A955F /* UIViewController-Extras.h */,
+				D920F4FF19A78F03004A955F /* UIViewController-Extras.m */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		D920F50919A78F1E004A955F /* 主控程序 */ = {
+			isa = PBXGroup;
+			children = (
+				D920F50D19A78F1E004A955F /* iLiveTrafficMapViewController.h */,
+				D920F50E19A78F1E004A955F /* iLiveTrafficMapViewController.m */,
+				D920F50F19A78F1E004A955F /* iLiveTrafficMapViewController.xib */,
+			);
+			name = "主控程序";
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		D939EDD219F6663A008A9FF9 /* RoadsInfo-道路定制信息 */ = {
+			isa = PBXGroup;
+			children = (
+				D939EDD319F66677008A9FF9 /* RoadInfos.h */,
+				D939EDD419F66677008A9FF9 /* RoadInfos.m */,
+			);
+			name = "RoadsInfo-道路定制信息";
+			path = RoadsInfo;
+			sourceTree = "<group>";
+		};
+		D93B97C119CD53C3009E6865 /* FlowerCollector */ = {
+			isa = PBXGroup;
+			children = (
+				D93B97C219CD54AB009E6865 /* FlowerCollector.h */,
+				D93B97C319CD54AB009E6865 /* FlowerCollector.m */,
+			);
+			path = FlowerCollector;
+			sourceTree = "<group>";
+		};
+		D945B0A119FC06BF00035058 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D945B0A219FC06BF00035058 /* TabbarView.h */,
+				D945B0A319FC06BF00035058 /* TabbarView.m */,
+			);
+			name = TabBar;
+			path = ../ZXQuartz/TabBar;
+			sourceTree = "<group>";
+		};
+		D959FD4F17B229AB0080C858 /* 粗粒度Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D97BE4B71753111F005BAF63 /* Chart4TableCell.h */,
+				D97BE4B81753111F005BAF63 /* Chart4TableCell.m */,
+				D97BE4BB175334F3005BAF63 /* Chart4TableCell.xib */,
+			);
+			name = "粗粒度Cell";
+			sourceTree = "<group>";
+		};
+		D959FD5017B229CE0080C858 /* 中粒度(我的收藏)Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D9B75C0019D1ED79008862F1 /* Chart4TableCellType2.xib */,
+				D9125C3D1796CCE100ADC6EA /* Chart4TableCellType2.h */,
+				D9125C3E1796CCE100ADC6EA /* Chart4TableCellType2.m */,
+			);
+			name = "中粒度(我的收藏)Cell";
+			sourceTree = "<group>";
+		};
+		D959FD5117B229E70080C858 /* 细粒度Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D959FD5217B22B560080C858 /* Chart4TableCellType3.h */,
+				D959FD5317B22B560080C858 /* Chart4TableCellType3.m */,
+				D959FD5417B22B560080C858 /* Chart4TableCellType3.xib */,
+			);
+			name = "细粒度Cell";
+			sourceTree = "<group>";
+		};
+		D95AAD6717D6DDDF00697B24 /* iFly */ = {
+			isa = PBXGroup;
+			children = (
+				D93B97C119CD53C3009E6865 /* FlowerCollector */,
+				D955CCA019C8C3C10019AAEF /* ISRDataHelper.h */,
+				D955CCA119C8C3C10019AAEF /* ISRDataHelper.m */,
+				D955CC9C19C8BFF20019AAEF /* RecognizerFactory.h */,
+				D955CC9D19C8BFF20019AAEF /* RecognizerFactory.m */,
+				D955CC9819C8B1EF0019AAEF /* PopupView.h */,
+				D955CC9919C8B1EF0019AAEF /* PopupView.m */,
+			);
+			path = iFly;
+			sourceTree = "<group>";
+		};
+		D95C82F0174147C0002BAF19 /* CorePlotCharts-4图表 */ = {
+			isa = PBXGroup;
+			children = (
+				D945B0A119FC06BF00035058 /* TabBar */,
+				D911C58C178D31E30043BCF8 /* TabBarMainView */,
+				D97BE4A61752FD72005BAF63 /* 主要道路车速 */,
+				D9F08574174F19F400CE9484 /* 区域拥堵指数表 */,
+				D9F0856B174DEB7E00CE9484 /* 主要交通指标 */,
+				D9F0856A174DEB6100CE9484 /* 拥堵指数走势图 */,
+			);
+			name = "CorePlotCharts-4图表";
+			path = CorePlotCharts;
+			sourceTree = "<group>";
+		};
+		D96E28361749E260009377A9 /* ZXQuartz */ = {
+			isa = PBXGroup;
+			children = (
+				D96E28371749E260009377A9 /* UIView+ZXQuartz.h */,
+				D96E28381749E260009377A9 /* UIView+ZXQuartz.m */,
+			);
+			path = ZXQuartz;
+			sourceTree = "<group>";
+		};
+		D978B81219F77A7A0060FED4 /* RoadMap-道路地图 */ = {
+			isa = PBXGroup;
+			children = (
+				D90A245D19F7B55600AA2527 /* SketchToolsBar */,
+				D978B81319F77AA70060FED4 /* RoadMapViewController.h */,
+				D978B81419F77AA70060FED4 /* RoadMapViewController.m */,
+				D978B81519F77AA70060FED4 /* RoadMapViewController.xib */,
+			);
+			name = "RoadMap-道路地图";
+			path = RoadMap;
+			sourceTree = "<group>";
+		};
+		D97BE4A61752FD72005BAF63 /* 主要道路车速 */ = {
+			isa = PBXGroup;
+			children = (
+				D97BE4A91752FD93005BAF63 /* Chart4ViewController.xib */,
+				D989F0B419AC68AB0011A511 /* Chart4ViewController.h */,
+				D989F0B519AC68AB0011A511 /* Chart4ViewController.m */,
+				D97BE4B6175310DB005BAF63 /* TableCell */,
+			);
+			name = "主要道路车速";
+			sourceTree = "<group>";
+		};
+		D97BE4B6175310DB005BAF63 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D959FD5117B229E70080C858 /* 细粒度Cell */,
+				D959FD5017B229CE0080C858 /* 中粒度(我的收藏)Cell */,
+				D959FD4F17B229AB0080C858 /* 粗粒度Cell */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
+		D981BF4E19CC68A70094BFD9 /* iFlytekAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				D981BF5819CC71E90094BFD9 /* IFlyFlowerCollector.h */,
+				D981BF5919CC71E90094BFD9 /* libSunFlower.a */,
+			);
+			name = iFlytekAnalytics;
+			path = lib/iFlytekAnalytics;
+			sourceTree = "<group>";
+		};
+		D981BF5319CC68BF0094BFD9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				D981BF4E19CC68A70094BFD9 /* iFlytekAnalytics */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		D997225019F128D30054667F /* SlidingTabs */ = {
+			isa = PBXGroup;
+			children = (
+				D997225119F128D30054667F /* SlidingTabsControl.h */,
+				D997225219F128D30054667F /* SlidingTabsControl.m */,
+				D997225319F128D30054667F /* SlidingTabsTab.h */,
+				D997225419F128D30054667F /* SlidingTabsTab.m */,
+			);
+			path = SlidingTabs;
+			sourceTree = "<group>";
+		};
+		D99AEDB519E81F84009E602E /* AboutView */ = {
+			isa = PBXGroup;
+			children = (
+				D99AEDB619E81F84009E602E /* iLiveTrafficMenuViewController.h */,
+				D99AEDB719E81F84009E602E /* iLiveTrafficMenuViewController.m */,
+				D99AEDB819E81F84009E602E /* iLiveTrafficMenuViewController.xib */,
+			);
+			path = AboutView;
+			sourceTree = "<group>";
+		};
+		D9A5D9CF19F635970066E129 /* CustomizeRoad-道路定制功能 */ = {
+			isa = PBXGroup;
+			children = (
+				D978B81219F77A7A0060FED4 /* RoadMap-道路地图 */,
+				D939EDD219F6663A008A9FF9 /* RoadsInfo-道路定制信息 */,
+				D9A5D9D019F635970066E129 /* CustomizeRoadListViewController.h */,
+				D9A5D9D119F635970066E129 /* CustomizeRoadListViewController.m */,
+				D9A5D9D219F635970066E129 /* CustomizeRoadListViewController.xib */,
+			);
+			name = "CustomizeRoad-道路定制功能";
+			path = CustomizeRoad;
+			sourceTree = "<group>";
+		};
+		D9BCFBDA17341FB7001B30D7 /* roamer */ = {
+			isa = PBXGroup;
+			children = (
+				D9A5D9CF19F635970066E129 /* CustomizeRoad-道路定制功能 */,
+				D9D9184C19F272510002488C /* Downloader */,
+				D997225019F128D30054667F /* SlidingTabs */,
+				D9D905BF19E8479E00411B75 /* Helper */,
+				D99AEDB519E81F84009E602E /* AboutView */,
+				D91131E519C18D5F00191E5A /* Configer */,
+				D920F50919A78F1E004A955F /* 主控程序 */,
+				D920F4FB19A78F03004A955F /* Extra */,
+				D920F4EA19A78EF8004A955F /* Others */,
+				D90A6E6217D9B90700121939 /* MainRoadSpeed */,
+				D95AAD6717D6DDDF00697B24 /* iFly */,
+				D9C950F0177802DA00FF5A71 /* WZGuide */,
+				D96E28361749E260009377A9 /* ZXQuartz */,
+				D95C82F0174147C0002BAF19 /* CorePlotCharts-4图表 */,
+				D9BCFBEE17376B4C001B30D7 /* Tools */,
+				D9BCFBDB17341FB7001B30D7 /* CoreData */,
+			);
+			path = roamer;
+			sourceTree = "<group>";
+		};
+		D9BCFBDB17341FB7001B30D7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D9BCFBE117341FB7001B30D7 /* ModelController */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D9BCFBE117341FB7001B30D7 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				D9BCFBE217341FB7001B30D7 /* TrafficeIndexController.h */,
+				D9BCFBE317341FB7001B30D7 /* TrafficeIndexController.m */,
+				D9BCFBF517376F54001B30D7 /* DeviceInfoController.h */,
+				D9BCFBF617376F54001B30D7 /* DeviceInfoController.m */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		D9BCFBEE17376B4C001B30D7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D9BCFBEF17376B5D001B30D7 /* Tools.h */,
+				D9BCFBF017376B5D001B30D7 /* Tools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D9C950F0177802DA00FF5A71 /* WZGuide */ = {
+			isa = PBXGroup;
+			children = (
+				D9C950F1177802DA00FF5A71 /* WZGuideViewController.h */,
+				D9C950F2177802DA00FF5A71 /* WZGuideViewController.m */,
+			);
+			path = WZGuide;
+			sourceTree = "<group>";
+		};
+		D9D905BF19E8479E00411B75 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D9D905C019E8479E00411B75 /* SDHelpViewController.h */,
+				D9D905C119E8479E00411B75 /* SDHelpViewController.m */,
+				D9D905C219E8479E00411B75 /* SDHelpViewController.xib */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D9D9184C19F272510002488C /* Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				D9D9185419F275270002488C /* Downloader.h */,
+				D9D9185519F275270002488C /* Downloader.m */,
+				D9D9185619F275270002488C /* Downloader.xib */,
+			);
+			path = Downloader;
+			sourceTree = "<group>";
+		};
+		D9F0856A174DEB6100CE9484 /* 拥堵指数走势图 */ = {
+			isa = PBXGroup;
+			children = (
+				D9CBD3EB1757B51400AB3DE8 /* Chart1ViewController.xib */,
+				D99A4ECD17429B2A00D302F2 /* Chart1ViewController.h */,
+				D99A4ECE17429B2A00D302F2 /* Chart1ViewController.m */,
+				D9273FDD174370FB00804318 /* Chart1Theme.h */,
+				D9273FDE174370FB00804318 /* Chart1Theme.m */,
+			);
+			name = "拥堵指数走势图";
+			sourceTree = "<group>";
+		};
+		D9F0856B174DEB7E00CE9484 /* 主要交通指标 */ = {
+			isa = PBXGroup;
+			children = (
+				D942C66B17AA2228007F7124 /* Canvas.h */,
+				D942C66C17AA2228007F7124 /* Canvas.m */,
+				D92A90851749DB1400572450 /* Chart2ViewController.h */,
+				D92A90861749DB1400572450 /* Chart2ViewController.m */,
+				D92A90871749DB1400572450 /* Chart2ViewController.xib */,
+			);
+			name = "主要交通指标";
+			sourceTree = "<group>";
+		};
+		D9F08574174F19F400CE9484 /* 区域拥堵指数表 */ = {
+			isa = PBXGroup;
+			children = (
+				D9118173175C578F00251F1B /* Metro风格 */,
+			);
+			name = "区域拥堵指数表";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D95C7E5317412D18002BAF19 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D939EDD519F66677008A9FF9 /* RoadInfos.h in Headers */,
+				D997225719F128D30054667F /* SlidingTabsTab.h in Headers */,
+				D920F50019A78F03004A955F /* NSDateFormatter+Extras.h in Headers */,
+				D920F4F919A78EF8004A955F /* PPPickerSheet.h in Headers */,
+				D981BF5A19CC71E90094BFD9 /* IFlyFlowerCollector.h in Headers */,
+				D920F4F319A78EF8004A955F /* iLiveTraffciLocationManager.h in Headers */,
+				D920F4F519A78EF8004A955F /* iLiveTrafficConfigure.h in Headers */,
+				D920F4F719A78EF8004A955F /* iLiveTrafficScaleIndicatorView.h in Headers */,
+				D9D905C319E8479E00411B75 /* SDHelpViewController.h in Headers */,
+				D920F50219A78F03004A955F /* UIViewController-Extras.h in Headers */,
+				D90A246019F7B55600AA2527 /* SketchToolbar.h in Headers */,
+				D91131E819C18D7000191E5A /* Configer.h in Headers */,
+				D93B97C419CD54AB009E6865 /* FlowerCollector.h in Headers */,
+				D99A4ED017429B2A00D302F2 /* Chart1ViewController.h in Headers */,
+				D9273FDF174370FB00804318 /* Chart1Theme.h in Headers */,
+				D92A90881749DB1400572450 /* Chart2ViewController.h in Headers */,
+				D96E28391749E260009377A9 /* UIView+ZXQuartz.h in Headers */,
+				D97BE4B91753111F005BAF63 /* Chart4TableCell.h in Headers */,
+				D989F0B619AC68AB0011A511 /* Chart4ViewController.h in Headers */,
+				D911812D175C53C300251F1B /* Chart3MetroViewController.h in Headers */,
+				D978B81619F77AA70060FED4 /* RoadMapViewController.h in Headers */,
+				D9C950F3177802DA00FF5A71 /* WZGuideViewController.h in Headers */,
+				D955CC9A19C8B1EF0019AAEF /* PopupView.h in Headers */,
+				D955CCA219C8C3C10019AAEF /* ISRDataHelper.h in Headers */,
+				D9D9185719F275270002488C /* Downloader.h in Headers */,
+				D955CC9E19C8BFF20019AAEF /* RecognizerFactory.h in Headers */,
+				D911C58F178D31E30043BCF8 /* TabbarViewController.h in Headers */,
+				D9125C401796CCE100ADC6EA /* Chart4TableCellType2.h in Headers */,
+				D942C66D17AA2228007F7124 /* Canvas.h in Headers */,
+				D959FD5517B22B560080C858 /* Chart4TableCellType3.h in Headers */,
+				D920F51919A78F1E004A955F /* iLiveTrafficMapViewController.h in Headers */,
+				D90A6E6617D9B90700121939 /* MainRoadSpeedViewController.h in Headers */,
+				D91B97C317DE24C600D34FA5 /* Cell4Roadname.h in Headers */,
+				D997225519F128D30054667F /* SlidingTabsControl.h in Headers */,
+				D99AEDB919E81F84009E602E /* iLiveTrafficMenuViewController.h in Headers */,
+				D9A5D9D319F635970066E129 /* CustomizeRoadListViewController.h in Headers */,
+				D945B0A419FC06BF00035058 /* TabbarView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* ILiveTraffic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ILiveTraffic" */;
+			buildPhases = (
+				E1774A67ABE745A98AB4E7A7 /* Check Pods Manifest.lock */,
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				D95C7E5317412D18002BAF19 /* Headers */,
+				32DD63DCB09D45D79B9C5EAF /* Copy Pods Resources */,
+				354719E519D1379700A65320 /* ShellScript */,
+				D937435E19D730BE00D9E496 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ILiveTraffic;
+			productName = iLiveTraffic;
+			productReference = 1D6058910D05DD3D006BFB54 /* ILiveTraffic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Alcor;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = E7KG5H55PT;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ILiveTraffic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* ILiveTraffic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621F56B01728D09900B277DA /* Entitlements.plist in Resources */,
+				D92A908A1749DB1400572450 /* Chart2ViewController.xib in Resources */,
+				D97BE4AC1752FD93005BAF63 /* Chart4ViewController.xib in Resources */,
+				D97BE4BC175334F3005BAF63 /* Chart4TableCell.xib in Resources */,
+				D9CBD3EC1757B51400AB3DE8 /* Chart1ViewController.xib in Resources */,
+				D978B81819F77AA70060FED4 /* RoadMapViewController.xib in Resources */,
+				D9A5D9D519F635970066E129 /* CustomizeRoadListViewController.xib in Resources */,
+				D99AEDBB19E81F84009E602E /* iLiveTrafficMenuViewController.xib in Resources */,
+				D9B75C0119D1ED79008862F1 /* Chart4TableCellType2.xib in Resources */,
+				D911812F175C53C300251F1B /* Chart3MetroViewController.xib in Resources */,
+				D9D905C519E8479E00411B75 /* SDHelpViewController.xib in Resources */,
+				D9D9185919F275270002488C /* Downloader.xib in Resources */,
+				D95D580617812FC80003AC41 /* MainWindow.xib in Resources */,
+				D959FD5717B22B560080C858 /* Chart4TableCellType3.xib in Resources */,
+				D9B232C519D82ED000F399DF /* iLiveTraffic_Base_Map.tpk in Resources */,
+				D920F51B19A78F1E004A955F /* iLiveTrafficMapViewController.xib in Resources */,
+				D90A6E6817D9B90700121939 /* MainRoadSpeedViewController.xib in Resources */,
+				D901A72219D0548600AAB29A /* Location_hangzhou.gpx in Resources */,
+				D93CF1EB19D9C786003BF46F /* Images.xcassets in Resources */,
+				D91B97C717DEBDBE00D34FA5 /* Cell4Roadname.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32DD63DCB09D45D79B9C5EAF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		354719E519D1379700A65320 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./lib/Crashlytics.framework/run df5790710b6debf17578f252f8aaadcb7de2af79 061f7c3d5db5767f4da078d7f1780736764e064e6b43bd688384bfcda13fb6bd";
+		};
+		D937435E19D730BE00D9E496 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "version=`/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" $PRODUCT_SETTINGS_PATH`\nversion=`expr $version + 1`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $version\" $PRODUCT_SETTINGS_PATH\n#/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $version\" $PRODUCT_SETTINGS_PATH 这行代码会让version也自增，一般不需要";
+		};
+		E1774A67ABE745A98AB4E7A7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D3623260D0F684500981E51 /* iLiveTrafficAppDelegate.m in Sources */,
+				D920F50119A78F03004A955F /* NSDateFormatter+Extras.m in Sources */,
+				D945B0A519FC06BF00035058 /* TabbarView.m in Sources */,
+				D93B97C519CD54AB009E6865 /* FlowerCollector.m in Sources */,
+				D920F51A19A78F1E004A955F /* iLiveTrafficMapViewController.m in Sources */,
+				D9A5D9D419F635970066E129 /* CustomizeRoadListViewController.m in Sources */,
+				D920F4FA19A78EF8004A955F /* PPPickerSheet.m in Sources */,
+				D920F4F619A78EF8004A955F /* iLiveTrafficConfigure.m in Sources */,
+				D9BCFBEB17341FB7001B30D7 /* TrafficeIndexController.m in Sources */,
+				D9BCFBF117376B5D001B30D7 /* Tools.m in Sources */,
+				D955CC9F19C8BFF20019AAEF /* RecognizerFactory.m in Sources */,
+				D955CCA319C8C3C10019AAEF /* ISRDataHelper.m in Sources */,
+				D955CC9B19C8B1EF0019AAEF /* PopupView.m in Sources */,
+				D997225619F128D30054667F /* SlidingTabsControl.m in Sources */,
+				D90A246119F7B55600AA2527 /* SketchToolbar.m in Sources */,
+				D9BCFBF717376F54001B30D7 /* DeviceInfoController.m in Sources */,
+				D99A4ED117429B2A00D302F2 /* Chart1ViewController.m in Sources */,
+				D9273FE0174370FB00804318 /* Chart1Theme.m in Sources */,
+				D92A90891749DB1400572450 /* Chart2ViewController.m in Sources */,
+				D96E283A1749E260009377A9 /* UIView+ZXQuartz.m in Sources */,
+				D989F0B719AC68AB0011A511 /* Chart4ViewController.m in Sources */,
+				D99AEDBA19E81F84009E602E /* iLiveTrafficMenuViewController.m in Sources */,
+				D920F50319A78F03004A955F /* UIViewController-Extras.m in Sources */,
+				D978B81719F77AA70060FED4 /* RoadMapViewController.m in Sources */,
+				D920F4F419A78EF8004A955F /* iLiveTraffciLocationManager.m in Sources */,
+				D97BE4BA1753111F005BAF63 /* Chart4TableCell.m in Sources */,
+				D9D9185819F275270002488C /* Downloader.m in Sources */,
+				D911812E175C53C300251F1B /* Chart3MetroViewController.m in Sources */,
+				D9C950F4177802DA00FF5A71 /* WZGuideViewController.m in Sources */,
+				D9C9511A177824CE00FF5A71 /* main.m in Sources */,
+				D939EDD619F66677008A9FF9 /* RoadInfos.m in Sources */,
+				D911C590178D31E30043BCF8 /* TabbarViewController.m in Sources */,
+				D997225819F128D30054667F /* SlidingTabsTab.m in Sources */,
+				D9125C411796CCE100ADC6EA /* Chart4TableCellType2.m in Sources */,
+				D9D905C419E8479E00411B75 /* SDHelpViewController.m in Sources */,
+				D942C66E17AA2228007F7124 /* Canvas.m in Sources */,
+				D959FD5617B22B560080C858 /* Chart4TableCellType3.m in Sources */,
+				D920F4F819A78EF8004A955F /* iLiveTrafficScaleIndicatorView.m in Sources */,
+				D90A6E6717D9B90700121939 /* MainRoadSpeedViewController.m in Sources */,
+				D91131E919C18D7000191E5A /* Configer.m in Sources */,
+				D91B97C417DE24C600D34FA5 /* Cell4Roadname.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1BB44289B5737C29C595DEF /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhihua pu (35996QZL85)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: zhihua pu (35996QZL85)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: zhihua pu (35996QZL85)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/无UI",
+					"$(PROJECT_DIR)/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ILiveTraffic_Prefix.pch;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "ILiveTraffic-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/iFlytekAnalytics",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/CorePlot\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/MMProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/PPRevealSideViewController\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/SBJson\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Shimmer\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/UIDeviceAddition\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SRCROOT)/lib/iFlytekAnalytics/libSunFlower.a",
+				);
+				PRODUCT_NAME = ILiveTraffic;
+				PROVISIONING_PROFILE = "fb4a96c9-842b-482c-9639-99be52fcce77";
+				"PROVISIONING_PROFILE[sdk=*]" = "fb4a96c9-842b-482c-9639-99be52fcce77";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "fb4a96c9-842b-482c-9639-99be52fcce77";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Classes/roamer/Downloader/ILiveTraffic-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7s armv7";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5464CC9FD5891D9A9BAAECC /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhihua pu (35996QZL85)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/无UI",
+					"$(PROJECT_DIR)/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ILiveTraffic_Prefix.pch;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "ILiveTraffic-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/iFlytekAnalytics",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/CorePlot\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/MMProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/PPRevealSideViewController\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/SBJson\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Shimmer\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/UIDeviceAddition\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SRCROOT)/lib/iFlytekAnalytics/libSunFlower.a",
+				);
+				PRODUCT_NAME = ILiveTraffic;
+				PROVISIONING_PROFILE = "fb4a96c9-842b-482c-9639-99be52fcce77";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Classes/roamer/Downloader/ILiveTraffic-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7s armv7";
+			};
+			name = Release;
+		};
+		337D6D5A172D04CE00736F8E /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: zhihua pu (E7KG5H55PT)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: zhihua pu (35996QZL85)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = NO;
+				MOMC_NO_MAX_PROPERTY_COUNT_WARNINGS = NO;
+				MOMC_NO_WARNINGS = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "fb4a96c9-842b-482c-9639-99be52fcce77";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = AdHoc;
+		};
+		337D6D5B172D04CE00736F8E /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9313FAD3EC344B33F805217D /* Pods.adhoc.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhihua pu (35996QZL85)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: zhihua pu (35996QZL85)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: zhihua pu (35996QZL85)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/无UI",
+					"$(PROJECT_DIR)/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ILiveTraffic_Prefix.pch;
+				GCC_VERSION = "";
+				INFOPLIST_FILE = "ILiveTraffic-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib/iFlytekAnalytics",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/CorePlot\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/MMProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/PPRevealSideViewController\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/SBJson\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Shimmer\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/UIDeviceAddition\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SRCROOT)/lib/iFlytekAnalytics/libSunFlower.a",
+				);
+				PRODUCT_NAME = ILiveTraffic;
+				PROVISIONING_PROFILE = "fb4a96c9-842b-482c-9639-99be52fcce77";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Classes/roamer/Downloader/ILiveTraffic-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7s armv7";
+			};
+			name = AdHoc;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhihua pu (35996QZL85)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: zhihua pu (35996QZL85)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INPUT_FILETYPE = automatic;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "DEBUG=1";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = NO;
+				MOMC_NO_MAX_PROPERTY_COUNT_WARNINGS = NO;
+				MOMC_NO_WARNINGS = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "fb4a96c9-842b-482c-9639-99be52fcce77";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: zhihua pu (E7KG5H55PT)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: zhihua pu (35996QZL85)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = NO;
+				MOMC_NO_MAX_PROPERTY_COUNT_WARNINGS = NO;
+				MOMC_NO_WARNINGS = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "fb4a96c9-842b-482c-9639-99be52fcce77";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ILiveTraffic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				337D6D5B172D04CE00736F8E /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ILiveTraffic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				337D6D5A172D04CE00736F8E /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

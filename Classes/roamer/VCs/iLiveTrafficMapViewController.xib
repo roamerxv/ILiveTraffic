@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="iLiveTrafficMapViewController">
+            <connections>
+                <outlet property="aboutBtn" destination="68" id="keu-Ot-Ivx"/>
+                <outlet property="cityCongestDescLabel" destination="XkH-hg-ebP" id="7vE-7N-WcN"/>
+                <outlet property="cityCongestLabel" destination="18" id="sGA-4M-SVG"/>
+                <outlet property="customizeBtn" destination="apF-Fn-cSo" id="kYH-AM-sIE"/>
+                <outlet property="downloadMapBtn" destination="gR4-ZP-Ueb" id="OBo-24-szE"/>
+                <outlet property="locationBtn" destination="14" id="150"/>
+                <outlet property="mapView" destination="GO8-Yg-Rhe" id="x4t-qU-VzY"/>
+                <outlet property="maskView" destination="kVe-TT-2bV" id="1RQ-nR-5xr"/>
+                <outlet property="ttsBtn" destination="159" id="160"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GO8-Yg-Rhe" userLabel="MapView" customClass="AGSMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVe-TT-2bV" userLabel="View-遮罩图层">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ios_legend" translatesAutoresizingMaskIntoConstraints="NO" id="OD4-4k-535" userLabel="Image View-图例">
+                    <rect key="frame" x="0.0" y="16" width="552" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="zAW-1a-AcL"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14" userLabel="Button-定位当前位置">
+                    <rect key="frame" x="552" y="16" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="tPf-t4-7fJ"/>
+                        <constraint firstAttribute="height" constant="48" id="zbS-qM-NtS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                    <state key="normal" image="button_location">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="locationBtnClicked:" destination="-1" eventType="touchUpInside" id="31"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68" userLabel="Button-About">
+                    <rect key="frame" x="568" y="555" width="32" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="B9h-WV-AGo"/>
+                        <constraint firstAttribute="width" constant="32" id="gUS-KY-UeJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="button_more">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="menuBtnClicked:" destination="-1" eventType="touchUpInside" id="69"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="159" userLabel="Button-语音接受">
+                    <rect key="frame" x="552" y="110" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="idg-iq-h3M"/>
+                        <constraint firstAttribute="height" constant="48" id="v1O-UY-H52"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                    <state key="normal" image="voice_tts_button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="speechRecognizer:" destination="-1" eventType="touchUpInside" id="162"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56" userLabel="Button-显示图表">
+                    <rect key="frame" x="552" y="62" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="Oxn-LZ-1VT"/>
+                        <constraint firstAttribute="height" constant="48" id="nah-0A-k1o"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                    <state key="normal" image="button_chart">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="chartBtnClicked:" destination="-1" eventType="touchUpInside" id="148"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR4-ZP-Ueb" userLabel="Button - 调用下载">
+                    <rect key="frame" x="552" y="158" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="LoZ-QC-BTr"/>
+                        <constraint firstAttribute="width" constant="48" id="Qx3-zC-Vbc"/>
+                    </constraints>
+                    <state key="normal" image="download_map">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="downloadBtnClicked:" destination="-2" eventType="touchUpInside" id="en4-WS-cXo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apF-Fn-cSo" userLabel="Button-定制">
+                    <rect key="frame" x="552" y="206" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="7SU-uB-IJC"/>
+                        <constraint firstAttribute="height" constant="48" id="7mQ-61-ZcM"/>
+                    </constraints>
+                    <state key="normal" title="定制">
+                        <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="customizeBtnClicked:" destination="-1" eventType="touchUpInside" id="CyT-eR-S0z"/>
+                    </connections>
+                </button>
+                <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcK-ba-NMt" userLabel="View-指数区域背景">
+                    <rect key="frame" x="0.0" y="500" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="UzV-U0-wgA"/>
+                        <constraint firstAttribute="height" constant="100" id="lAl-8a-HEs"/>
+                    </constraints>
+                </view>
+                <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="bottom" text="0.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18" userLabel="Label-全市拥堵指数">
+                    <rect key="frame" x="0.0" y="537" width="89" height="55"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
+                        <bool key="isElement" value="NO"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="89" id="N6p-S2-tFF"/>
+                        <constraint firstAttribute="height" constant="55" id="vvc-r0-dxN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="64"/>
+                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拥堵情况" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkH-hg-ebP" userLabel="Label-全市拥堵指数中文描述">
+                    <rect key="frame" x="0.0" y="500" width="84" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Svv-Wv-7D7"/>
+                        <constraint firstAttribute="width" constant="84" id="gtZ-LA-VPM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwT-gR-UM2" userLabel="Button-全市拥堵指数的按钮">
+                    <rect key="frame" x="0.0" y="500" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="IlQ-VN-AUF"/>
+                        <constraint firstAttribute="height" constant="100" id="xoN-y3-gvt"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onCityCongestIndexButtonClick:" destination="-1" eventType="touchUpInside" id="x04-Jd-tpT"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstItem="kVe-TT-2bV" firstAttribute="top" secondItem="1" secondAttribute="top" id="0JT-WN-Wx6"/>
+                <constraint firstItem="XkH-hg-ebP" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="6vU-EN-yKA"/>
+                <constraint firstAttribute="bottom" secondItem="XkH-hg-ebP" secondAttribute="bottom" constant="60" id="7E0-wU-66T"/>
+                <constraint firstAttribute="bottom" secondItem="pcK-ba-NMt" secondAttribute="bottom" id="7US-ZT-jwU"/>
+                <constraint firstAttribute="trailing" secondItem="GO8-Yg-Rhe" secondAttribute="trailing" id="9Kj-mG-H4k"/>
+                <constraint firstAttribute="bottom" secondItem="kVe-TT-2bV" secondAttribute="bottom" id="AIO-Du-xKn"/>
+                <constraint firstAttribute="bottom" secondItem="nwT-gR-UM2" secondAttribute="bottom" id="Acy-xO-dUo"/>
+                <constraint firstItem="apF-Fn-cSo" firstAttribute="top" secondItem="gR4-ZP-Ueb" secondAttribute="bottom" id="CFb-wd-Qsf"/>
+                <constraint firstAttribute="trailing" secondItem="159" secondAttribute="trailing" id="CbS-XL-Px9"/>
+                <constraint firstAttribute="trailing" secondItem="14" secondAttribute="trailing" id="Gh9-6d-yR5"/>
+                <constraint firstAttribute="trailing" secondItem="68" secondAttribute="trailing" id="Hy2-4L-PLY"/>
+                <constraint firstItem="18" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Itn-Ha-CH1"/>
+                <constraint firstItem="14" firstAttribute="top" secondItem="1" secondAttribute="top" constant="16" id="M17-K5-xjM"/>
+                <constraint firstItem="gR4-ZP-Ueb" firstAttribute="top" secondItem="159" secondAttribute="bottom" id="MTr-yQ-5rS"/>
+                <constraint firstItem="OD4-4k-535" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="TjV-os-pfl"/>
+                <constraint firstAttribute="trailing" secondItem="gR4-ZP-Ueb" secondAttribute="trailing" id="Vr1-P0-eST"/>
+                <constraint firstAttribute="bottom" secondItem="GO8-Yg-Rhe" secondAttribute="bottom" id="ZPL-oT-G5L"/>
+                <constraint firstAttribute="bottom" secondItem="18" secondAttribute="bottom" constant="8" id="a1D-kn-Edt"/>
+                <constraint firstItem="56" firstAttribute="top" secondItem="1" secondAttribute="top" constant="62" id="aXh-VJ-Joo"/>
+                <constraint firstAttribute="trailing" secondItem="OD4-4k-535" secondAttribute="trailing" constant="48" id="bsw-Z8-ogj"/>
+                <constraint firstItem="GO8-Yg-Rhe" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="dXt-6E-E73"/>
+                <constraint firstAttribute="trailing" secondItem="56" secondAttribute="trailing" id="eBo-KZ-s1n"/>
+                <constraint firstAttribute="trailing" secondItem="56" secondAttribute="trailing" id="fex-Fk-heh"/>
+                <constraint firstAttribute="bottom" secondItem="68" secondAttribute="bottom" id="g6m-z8-xim"/>
+                <constraint firstAttribute="trailing" secondItem="kVe-TT-2bV" secondAttribute="trailing" id="gCe-2p-cq5"/>
+                <constraint firstItem="159" firstAttribute="top" secondItem="56" secondAttribute="bottom" id="hIi-2u-mm6"/>
+                <constraint firstItem="OD4-4k-535" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="j52-uP-m2x"/>
+                <constraint firstItem="56" firstAttribute="leading" secondItem="OD4-4k-535" secondAttribute="trailing" constant="16" id="jJ9-Kt-YvQ"/>
+                <constraint firstItem="kVe-TT-2bV" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="kQ9-Qj-g0X"/>
+                <constraint firstAttribute="trailing" secondItem="apF-Fn-cSo" secondAttribute="trailing" id="oJU-RI-mSm"/>
+                <constraint firstItem="56" firstAttribute="top" secondItem="1" secondAttribute="top" constant="62" id="ogs-Jh-7LJ"/>
+                <constraint firstItem="pcK-ba-NMt" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="pZ6-Pc-U6f"/>
+                <constraint firstItem="nwT-gR-UM2" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="wb1-nW-JzH"/>
+                <constraint firstItem="OD4-4k-535" firstAttribute="top" secondItem="1" secondAttribute="top" constant="16" id="ybR-xp-fuN"/>
+                <constraint firstItem="GO8-Yg-Rhe" firstAttribute="top" secondItem="1" secondAttribute="top" id="z8f-eh-IAO"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="TjV-os-pfl"/>
+                    <exclude reference="aXh-VJ-Joo"/>
+                    <exclude reference="fex-Fk-heh"/>
+                    <exclude reference="jJ9-Kt-YvQ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="140" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_chart" width="64" height="64"/>
+        <image name="button_location" width="64" height="64"/>
+        <image name="button_more" width="64" height="106"/>
+        <image name="download_map" width="64" height="64"/>
+        <image name="ios_legend" width="576" height="64"/>
+        <image name="voice_tts_button" width="64" height="64"/>
+    </resources>
+</document>

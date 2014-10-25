@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Chart4TableCellType2"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Chart4CellType2Identifier" rowHeight="53" id="8" customClass="Chart4TableCellType2">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="8" id="zyh-A8-cOX">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="52"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9" userLabel="当前车速">
+                        <rect key="frame" x="0.0" y="0.0" width="81" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="81" id="5t7-5d-Chz"/>
+                            <constraint firstAttribute="height" constant="52" id="cgk-0c-AyT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10" userLabel="道路名称">
+                        <rect key="frame" x="89" y="0.0" width="200" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="Zuh-ih-8zc"/>
+                            <constraint firstAttribute="height" constant="52" id="vnq-rK-CY4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="47" placeholderIntrinsicHeight="43" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35" userLabel="Button-删除收藏">
+                        <rect key="frame" x="545" y="4" width="47" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="47" id="6Pb-NR-GaL"/>
+                            <constraint firstAttribute="height" constant="43" id="NH6-55-eJC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <state key="normal" image="favorite_selected">
+                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="35" firstAttribute="top" secondItem="zyh-A8-cOX" secondAttribute="topMargin" constant="-4" id="2D8-Cl-yun"/>
+                    <constraint firstItem="10" firstAttribute="leading" secondItem="9" secondAttribute="trailing" constant="8" id="7Xs-SH-E0P"/>
+                    <constraint firstItem="9" firstAttribute="top" secondItem="zyh-A8-cOX" secondAttribute="topMargin" constant="-8" id="OeO-37-Mae"/>
+                    <constraint firstItem="9" firstAttribute="leading" secondItem="zyh-A8-cOX" secondAttribute="leadingMargin" constant="-8" id="lTD-W0-5wj"/>
+                    <constraint firstItem="10" firstAttribute="top" secondItem="zyh-A8-cOX" secondAttribute="topMargin" constant="-8" id="qpK-3d-fqO"/>
+                    <constraint firstItem="35" firstAttribute="trailing" secondItem="zyh-A8-cOX" secondAttribute="trailingMargin" id="sqL-dc-THl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="currentSpeed" destination="9" id="33"/>
+                <outlet property="roadName" destination="10" id="31"/>
+                <outlet property="selectBtn" destination="35" id="37"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="154.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="favorite_selected" width="48" height="48"/>
+    </resources>
+</document>

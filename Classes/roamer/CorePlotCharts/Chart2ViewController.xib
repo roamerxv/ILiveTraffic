@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Chart2ViewController">
+            <connections>
+                <outlet property="activityIndicatorView" destination="ltJ-Xv-RbQ" id="jJw-v6-sGQ"/>
+                <outlet property="label_last_update" destination="532" id="537"/>
+                <outlet property="label_name_1" destination="353" id="756"/>
+                <outlet property="label_name_2" destination="355" id="757"/>
+                <outlet property="label_name_3" destination="359" id="758"/>
+                <outlet property="label_name_4" destination="357" id="759"/>
+                <outlet property="label_value_1" destination="354" id="490"/>
+                <outlet property="label_value_2" destination="356" id="489"/>
+                <outlet property="label_value_3" destination="358" id="491"/>
+                <outlet property="label_value_4" destination="360" id="492"/>
+                <outlet property="pieChartCanvasView" destination="50D-dG-jjP" id="JdU-O0-lgm"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar userInteractionEnabled="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="303">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <items>
+                        <navigationItem id="c24-eK-Gg1"/>
+                    </items>
+                </navigationBar>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="主要交通指标" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="534">
+                    <rect key="frame" x="12" y="18" width="116" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.10448298559999999" green="0.78469705899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="532" userLabel="最后更新时间">
+                    <rect key="frame" x="475" y="18" width="119" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="7g7-y0-O1U"/>
+                        <constraint firstAttribute="width" constant="119" id="oZT-hO-dF6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="10"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TH8-eg-bbb" userLabel="View-区域1">
+                    <rect key="frame" x="1" y="460" width="298" height="60"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="交通拥堵指数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="353">
+                            <rect key="frame" x="6" y="-11" width="93" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="354" userLabel="value_1">
+                            <rect key="frame" x="10" y="28" width="140" height="30"/>
+                            <accessibility key="accessibilityConfiguration" label=""/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.094117656350135803" green="0.65882354974746704" blue="0.364705890417099" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="oMK-v1-Rcp"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNN-Z9-PL6" userLabel="View-区域2">
+                    <rect key="frame" x="301" y="460" width="298" height="60"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="355">
+                            <rect key="frame" x="6" y="-11" width="175" height="41"/>
+                            <string key="text">地面主次干道平均速度	</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="356" userLabel="value_2">
+                            <rect key="frame" x="10" y="28" width="137" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="M3G-A3-exs"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMm-0u-uQY" userLabel="View-区域3">
+                    <rect key="frame" x="1" y="521" width="298" height="60"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="359">
+                            <rect key="frame" x="6" y="-11" width="107" height="41"/>
+                            <string key="text">拥堵里程比例	</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="358" userLabel="value_3">
+                            <rect key="frame" x="10" y="28" width="137" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="3rM-bf-lq9"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1K9-Pm-cmA" userLabel="View-区域4">
+                    <rect key="frame" x="301" y="521" width="298" height="60"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="357">
+                            <rect key="frame" x="6" y="-11" width="148" height="41"/>
+                            <string key="text">中河上塘高架平均速度	</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="360" userLabel="value_4">
+                            <rect key="frame" x="10" y="28" width="137" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="4fE-LG-vyy"/>
+                    </constraints>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50D-dG-jjP" userLabel="View-饼图区域">
+                    <rect key="frame" x="0.0" y="54" width="600" height="396"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ltJ-Xv-RbQ">
+                    <rect key="frame" x="282" y="281" width="37" height="37"/>
+                    <color key="color" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="532" secondAttribute="trailing" constant="6" id="2ft-zX-hvM"/>
+                <constraint firstItem="1K9-Pm-cmA" firstAttribute="bottom" secondItem="FMm-0u-uQY" secondAttribute="bottom" id="2uJ-k8-Hie"/>
+                <constraint firstAttribute="trailing" secondItem="LNN-Z9-PL6" secondAttribute="trailing" constant="1" id="4HC-B1-v0I"/>
+                <constraint firstAttribute="centerY" secondItem="ltJ-Xv-RbQ" secondAttribute="centerY" id="67Z-Ed-ady"/>
+                <constraint firstItem="LNN-Z9-PL6" firstAttribute="leading" secondItem="1K9-Pm-cmA" secondAttribute="leading" id="6UT-GQ-xVw"/>
+                <constraint firstItem="FMm-0u-uQY" firstAttribute="top" secondItem="TH8-eg-bbb" secondAttribute="bottom" constant="1" id="8MB-xc-q4P"/>
+                <constraint firstItem="TH8-eg-bbb" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="1" id="98u-Df-qks"/>
+                <constraint firstAttribute="bottom" secondItem="FMm-0u-uQY" secondAttribute="bottom" constant="5" id="C2n-aX-ufQ"/>
+                <constraint firstItem="TH8-eg-bbb" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" constant="-80" id="CHx-Nf-eeH"/>
+                <constraint firstItem="LNN-Z9-PL6" firstAttribute="trailing" secondItem="1K9-Pm-cmA" secondAttribute="trailing" id="Ghh-xr-QkJ"/>
+                <constraint firstItem="303" firstAttribute="top" secondItem="1" secondAttribute="top" id="HVe-Qc-sVD"/>
+                <constraint firstItem="LNN-Z9-PL6" firstAttribute="leading" secondItem="TH8-eg-bbb" secondAttribute="trailing" constant="2" id="LZA-vi-Dxt"/>
+                <constraint firstItem="TH8-eg-bbb" firstAttribute="trailing" secondItem="FMm-0u-uQY" secondAttribute="trailing" id="NZf-QW-wgF"/>
+                <constraint firstAttribute="trailing" secondItem="303" secondAttribute="trailing" constant="280" id="ZKr-X1-OuQ"/>
+                <constraint firstItem="TH8-eg-bbb" firstAttribute="top" secondItem="50D-dG-jjP" secondAttribute="bottom" constant="10" id="cm1-jC-MIB"/>
+                <constraint firstItem="LNN-Z9-PL6" firstAttribute="bottom" secondItem="TH8-eg-bbb" secondAttribute="bottom" id="fvJ-RA-aQb"/>
+                <constraint firstItem="FMm-0u-uQY" firstAttribute="leading" secondItem="TH8-eg-bbb" secondAttribute="leading" id="kUs-bX-dL2"/>
+                <constraint firstItem="50D-dG-jjP" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="kks-Ou-0pR"/>
+                <constraint firstItem="50D-dG-jjP" firstAttribute="top" secondItem="303" secondAttribute="bottom" constant="10" id="mXJ-mb-WLn"/>
+                <constraint firstAttribute="centerX" secondItem="ltJ-Xv-RbQ" secondAttribute="centerX" id="nV6-in-vrQ"/>
+                <constraint firstItem="303" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="rAD-Dh-Qou"/>
+                <constraint firstItem="532" firstAttribute="top" secondItem="1" secondAttribute="top" constant="18" id="tup-tv-x2t"/>
+                <constraint firstItem="LNN-Z9-PL6" firstAttribute="width" secondItem="TH8-eg-bbb" secondAttribute="width" id="vep-2o-RIr"/>
+                <constraint firstAttribute="trailing" secondItem="50D-dG-jjP" secondAttribute="trailing" id="znT-me-6OS"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="C2n-aX-ufQ"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="CHx-Nf-eeH"/>
+                    <include reference="C2n-aX-ufQ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="151" y="110"/>
+        </view>
+    </objects>
+</document>

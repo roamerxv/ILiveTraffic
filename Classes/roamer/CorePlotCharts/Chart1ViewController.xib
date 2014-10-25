@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Chart1ViewController">
+            <connections>
+                <outlet property="activityIndicatorView" destination="3pV-dz-ht7" id="eH3-e5-gDj"/>
+                <outlet property="arear1_view" destination="whv-gE-5E4" id="FOV-zb-8Hh"/>
+                <outlet property="arear2_view" destination="PYl-br-ckt" id="rc3-hz-x45"/>
+                <outlet property="chart1_laoding_img" destination="P5f-bq-XrC" id="ogu-uH-sDS"/>
+                <outlet property="hostingView" destination="139" id="140"/>
+                <outlet property="lastweekString" destination="190" id="191"/>
+                <outlet property="lastweekTemp" destination="195" id="199"/>
+                <outlet property="lastweekTemp1" destination="192" id="278"/>
+                <outlet property="lastweekTemp2" destination="193" id="279"/>
+                <outlet property="lastweekWeather" destination="194" id="198"/>
+                <outlet property="returnBtn" destination="W0Y-qx-BXc" id="kg5-mn-hT9"/>
+                <outlet property="todayString" destination="152" id="157"/>
+                <outlet property="todayTemp" destination="156" id="183"/>
+                <outlet property="todayTemp1" destination="153" id="276"/>
+                <outlet property="todayTemp2" destination="154" id="277"/>
+                <outlet property="todayWeather" destination="155" id="181"/>
+                <outlet property="view" destination="137" id="138"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="137">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whv-gE-5E4" userLabel="View-上周天气区域">
+                    <rect key="frame" x="1" y="472" width="298" height="108"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="190" userLabel="上周日期">
+                            <rect key="frame" x="2" y="2" width="120" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="ZTn-8x-g53"/>
+                                <constraint firstAttribute="width" constant="120" id="aJF-qx-xD4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="194" userLabel="上周天气">
+                            <rect key="frame" x="9" y="25" width="139" height="26"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="26" id="CCh-XV-sng"/>
+                                <constraint firstAttribute="width" constant="139" id="gbU-Ov-bKg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="192" userLabel="上周最高温度">
+                            <rect key="frame" x="90" y="60" width="59" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="bYd-fO-ZdU"/>
+                                <constraint firstAttribute="width" constant="59" id="xkt-zB-Fnh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="90" y="60" width="0.0" height="0.0"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="193" userLabel="上周最低温度">
+                            <rect key="frame" x="11" y="60" width="63" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="GPw-I2-NoA"/>
+                                <constraint firstAttribute="width" constant="63" id="S4Q-Je-bV8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="195" userLabel="上周当前温度">
+                            <rect key="frame" x="12" y="78" width="132" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="132" id="Us0-Ak-P8g"/>
+                                <constraint firstAttribute="height" constant="28" id="zsM-hj-Ccg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="12" y="80" width="0.0" height="0.0"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="193" firstAttribute="top" secondItem="whv-gE-5E4" secondAttribute="top" constant="60" id="2yd-74-FwD"/>
+                        <constraint firstAttribute="bottom" secondItem="195" secondAttribute="bottom" constant="2" id="9CP-zE-EaG"/>
+                        <constraint firstItem="194" firstAttribute="top" secondItem="whv-gE-5E4" secondAttribute="top" constant="25" id="A4P-mP-3Pw"/>
+                        <constraint firstItem="192" firstAttribute="top" secondItem="whv-gE-5E4" secondAttribute="top" constant="60" id="BVI-Qk-DMj"/>
+                        <constraint firstAttribute="height" constant="108" id="C8N-vN-P0Z"/>
+                        <constraint firstItem="195" firstAttribute="leading" secondItem="whv-gE-5E4" secondAttribute="leading" constant="12" id="U4I-uC-bnp"/>
+                        <constraint firstItem="190" firstAttribute="top" secondItem="whv-gE-5E4" secondAttribute="top" constant="2" id="bEM-jg-Lyr"/>
+                        <constraint firstItem="193" firstAttribute="leading" secondItem="whv-gE-5E4" secondAttribute="leading" constant="11" id="hEK-RN-EZT"/>
+                        <constraint firstItem="194" firstAttribute="leading" secondItem="whv-gE-5E4" secondAttribute="leading" constant="9" id="ia4-5z-5GO"/>
+                        <constraint firstItem="190" firstAttribute="leading" secondItem="whv-gE-5E4" secondAttribute="leading" constant="2" id="nzv-sc-yCp"/>
+                        <constraint firstItem="192" firstAttribute="leading" secondItem="193" secondAttribute="trailing" constant="16" id="tXE-pl-QZW"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYl-br-ckt" userLabel="View-当日天气区域">
+                    <rect key="frame" x="301" y="472" width="298" height="108"/>
+                    <subviews>
+                        <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="152" userLabel="当天日期">
+                            <rect key="frame" x="5" y="2" width="120" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="rNg-gB-jsN"/>
+                                <constraint firstAttribute="height" constant="21" id="smQ-Ou-RmE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="5" y="2" width="0.0" height="0.0"/>
+                            </variation>
+                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="5" y="2" width="0.0" height="0.0"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="5" y="2" width="0.0" height="0.0"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="155" userLabel="当日天气">
+                            <rect key="frame" x="9" y="25" width="139" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="139" id="Bcz-Pr-j4e"/>
+                                <constraint firstAttribute="height" constant="25" id="pmF-jv-EqJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="9" y="25" width="0.0" height="0.0"/>
+                            </variation>
+                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="9" y="25" width="0.0" height="0.0"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="9" y="25" width="0.0" height="0.0"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="153" userLabel="当日最高温度">
+                            <rect key="frame" x="90" y="60" width="59" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Odr-St-sse"/>
+                                <constraint firstAttribute="width" constant="59" id="qtq-cT-Rd9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="81" y="60" width="0.0" height="0.0"/>
+                            </variation>
+                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="81" y="60" width="0.0" height="0.0"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="81" y="60" width="0.0" height="0.0"/>
+                            </variation>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="154" userLabel="当日最低温度">
+                            <rect key="frame" x="11" y="60" width="63" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Mq9-dy-DBu"/>
+                                <constraint firstAttribute="width" constant="63" id="qFf-SQ-LHN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="11" y="60" width="0.0" height="0.0"/>
+                            </variation>
+                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="11" y="60" width="0.0" height="0.0"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="11" y="60" width="0.0" height="0.0"/>
+                            </variation>
+                        </label>
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="156" userLabel="当日当前温度">
+                            <rect key="frame" x="12" y="78" width="132" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="132" id="07E-W7-l2O"/>
+                                <constraint firstAttribute="height" constant="28" id="V9m-fE-emR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="14" y="80" width="0.0" height="0.0"/>
+                            </variation>
+                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="14" y="80" width="0.0" height="0.0"/>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                <rect key="frame" x="14" y="80" width="0.0" height="0.0"/>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.065865056039999995" green="1" blue="0.9683097115" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="154" firstAttribute="top" secondItem="PYl-br-ckt" secondAttribute="top" constant="60" id="3jk-Mh-6GZ"/>
+                        <constraint firstItem="152" firstAttribute="top" secondItem="PYl-br-ckt" secondAttribute="top" constant="2" id="Cfn-RC-xxz"/>
+                        <constraint firstItem="155" firstAttribute="leading" secondItem="PYl-br-ckt" secondAttribute="leading" constant="9" id="HZe-KL-UVv"/>
+                        <constraint firstItem="153" firstAttribute="top" secondItem="PYl-br-ckt" secondAttribute="top" constant="60" id="UQm-A7-aub"/>
+                        <constraint firstItem="153" firstAttribute="leading" secondItem="154" secondAttribute="trailing" constant="16" id="Zeg-oE-2Bw"/>
+                        <constraint firstAttribute="bottom" secondItem="156" secondAttribute="bottom" constant="2" id="a69-dn-4kF"/>
+                        <constraint firstItem="152" firstAttribute="leading" secondItem="PYl-br-ckt" secondAttribute="leading" constant="5" id="bDY-GC-kSG"/>
+                        <constraint firstItem="155" firstAttribute="top" secondItem="PYl-br-ckt" secondAttribute="top" constant="25" id="hbE-Uz-jKW"/>
+                        <constraint firstItem="156" firstAttribute="leading" secondItem="PYl-br-ckt" secondAttribute="leading" constant="12" id="l0C-Vh-4Yu"/>
+                        <constraint firstAttribute="height" constant="108" id="pFx-HL-bnG"/>
+                        <constraint firstItem="154" firstAttribute="leading" secondItem="PYl-br-ckt" secondAttribute="leading" constant="11" id="yDd-db-KCH"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="拥堵指数走势" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="200">
+                    <rect key="frame" x="8" y="18" width="119" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.10448298559999999" green="0.78469705899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="139" customClass="CPTGraphHostingView">
+                    <rect key="frame" x="0.0" y="41" width="600" height="426"/>
+                    <color key="backgroundColor" red="0.87064798914262176" green="1" blue="0.83017904865402359" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart1_laoding_img" translatesAutoresizingMaskIntoConstraints="NO" id="P5f-bq-XrC" userLabel="Image View-载入等待底图">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3pV-dz-ht7">
+                    <rect key="frame" x="281" y="282" width="37" height="37"/>
+                    <color key="color" red="0.065865056039999995" green="1" blue="0.9683097115" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0Y-qx-BXc" userLabel="Button - 关闭当前视窗">
+                    <rect key="frame" x="546" y="16" width="46" height="30"/>
+                    <state key="normal" title="关闭">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeBtnClicked:" destination="-1" eventType="touchUpInside" id="WF9-aw-7Vr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PYl-br-ckt" secondAttribute="trailing" constant="1" id="2y5-5k-tnC"/>
+                <constraint firstAttribute="centerX" secondItem="3pV-dz-ht7" secondAttribute="centerX" id="4zg-mK-osZ"/>
+                <constraint firstItem="PYl-br-ckt" firstAttribute="width" secondItem="whv-gE-5E4" secondAttribute="width" id="6z3-V2-pcL"/>
+                <constraint firstAttribute="trailing" secondItem="P5f-bq-XrC" secondAttribute="trailing" id="7un-9N-1dj"/>
+                <constraint firstItem="P5f-bq-XrC" firstAttribute="top" secondItem="137" secondAttribute="top" id="Bje-1Z-n52"/>
+                <constraint firstItem="whv-gE-5E4" firstAttribute="leading" secondItem="137" secondAttribute="leading" constant="1" id="F6V-81-5DG"/>
+                <constraint firstItem="PYl-br-ckt" firstAttribute="top" secondItem="139" secondAttribute="bottom" constant="5" id="FOt-PA-teN"/>
+                <constraint firstItem="PYl-br-ckt" firstAttribute="leading" secondItem="whv-gE-5E4" secondAttribute="trailing" constant="2" id="I4K-dp-eOd"/>
+                <constraint firstItem="139" firstAttribute="top" secondItem="137" secondAttribute="top" constant="41" id="KHJ-jE-5eg"/>
+                <constraint firstItem="whv-gE-5E4" firstAttribute="top" secondItem="139" secondAttribute="bottom" constant="5" id="Rp5-6s-90s"/>
+                <constraint firstAttribute="centerY" secondItem="3pV-dz-ht7" secondAttribute="centerY" id="ZSC-0N-cBU"/>
+                <constraint firstAttribute="bottom" secondItem="139" secondAttribute="bottom" constant="133" id="aGd-tp-Fa4"/>
+                <constraint firstAttribute="bottom" secondItem="P5f-bq-XrC" secondAttribute="bottom" id="d2c-75-SR3"/>
+                <constraint firstItem="139" firstAttribute="leading" secondItem="137" secondAttribute="leading" id="j3W-Ar-1NN"/>
+                <constraint firstAttribute="trailing" secondItem="139" secondAttribute="trailing" id="kVl-ad-nSO"/>
+                <constraint firstItem="P5f-bq-XrC" firstAttribute="leading" secondItem="137" secondAttribute="leading" id="uzt-X0-yVF"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="236" y="220"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chart1_laoding_img" width="640" height="1136"/>
+    </resources>
+</document>
