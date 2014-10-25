@@ -10,42 +10,31 @@
 	<string>ILiveTraffic</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C5616873-1859-40C0-BAD3-94AF3A246DE1</key>
-		<string>http://192.168.10.23:18080/svn/ilivetraffic_ios_v2/trunk</string>
+		<key>404F0A2A6B11066C3ACF90237499818DD6362B89</key>
+		<string>https://github.com/roamerxv/ILiveTraffic.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Client/ILiveTraffic/ILiveTraffic.xcworkspace</string>
+	<string>ILiveTraffic.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C5616873-1859-40C0-BAD3-94AF3A246DE1</key>
-		<string>../../..</string>
-	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>C5616873-1859-40C0-BAD3-94AF3A246DE1</key>
-		<string>http://192.168.10.23:18080/svn/ilivetraffic_ios_v2</string>
+		<key>404F0A2A6B11066C3ACF90237499818DD6362B89</key>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://192.168.10.23:18080/svn/ilivetraffic_ios_v2/trunk/Client/ILiveTraffic/ILiveTraffic.xcworkspace</string>
+	<string>https://github.com/roamerxv/ILiveTraffic.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C5616873-1859-40C0-BAD3-94AF3A246DE1</string>
+	<string>404F0A2A6B11066C3ACF90237499818DD6362B89</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
-			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
-			<string>branches</string>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
-			<string>tags</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>trunk</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C5616873-1859-40C0-BAD3-94AF3A246DE1</string>
+			<string>404F0A2A6B11066C3ACF90237499818DD6362B89</string>
 			<key>IDESourceControlWCCName</key>
-			<string>iLiveTraffic2</string>
+			<string>ILiveTraffic</string>
 		</dict>
 	</array>
 </dict>
