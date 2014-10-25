@@ -17,7 +17,7 @@ static iLiveTrafficAppDelegate *shared;
 
 @implementation iLiveTrafficAppDelegate
 
-@synthesize window;
+@synthesize window; 
 @synthesize toolbar;
 @synthesize barItemUpdate;
 @synthesize barItemNavigaton;
