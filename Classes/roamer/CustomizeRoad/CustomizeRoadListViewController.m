@@ -194,7 +194,7 @@
 -(void) alertNameExited:(NSString * )name{
     NSString * message = [NSString stringWithFormat:@"%@\n已经存在了，请重新输入!",name];
     AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"提示" andText:message andCancelButton:NO forAlertType:AlertFailure];
-    [alert.defaultButton setTitle:@"知道了！" forState:UIControlStateNormal];
+    [alert.defaultButton setTitle:@"知道了" forState:UIControlStateNormal];
     alert.completionBlock = ^void (AMSmoothAlertView *alertObj, UIButton *button) {
         if(button == alertObj.defaultButton) {
             [self addItemBtnClicked:nil];
