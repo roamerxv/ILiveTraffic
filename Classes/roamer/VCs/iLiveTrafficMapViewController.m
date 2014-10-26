@@ -1204,7 +1204,6 @@ static bool isSilenceCheckTPKVersion  = true;
 
 #pragma mark - 判断地图版本,通过 Tools 中的 asynchronousQueryServerBaseMapTpkFileVersion 方法回调
 - (void) checkBaseMapVersion:(NSNotification*) notification{
-    //判断后台是否有下载进程
     Tools * tools = [Tools sharedInstance];
     [MMProgressHUD dismiss];
     NSDictionary* obj = (NSDictionary*)[notification object];//获取到传递的对象
@@ -1233,7 +1232,7 @@ static bool isSilenceCheckTPKVersion  = true;
             });
         }
 
-    }else  if ([localVersion isEqualToString:serverVersion]){
+    }else  if ([localVersion isEqualToString:serverVersion]){  //如果本地版本和服务器版本一样
         // 主线程刷新界面开始
         if ([NSThread isMainThread])
         {
@@ -1250,6 +1249,7 @@ static bool isSilenceCheckTPKVersion  = true;
             });
         }
         // 主线程刷新界面结束
+        // 如果只是用于改变 按钮图片，则就退出
         if (self.isCheckTPKFileByShowButton){
             return ;
         }
@@ -1268,7 +1268,7 @@ static bool isSilenceCheckTPKVersion  = true;
         }
         // 主线程刷新界面结束
 
-    }else{
+    }else{ //如果本地版本和服务器版本不一样
         // 主线程刷新界面开始
         if ([NSThread isMainThread])
         {
@@ -1285,6 +1285,7 @@ static bool isSilenceCheckTPKVersion  = true;
             });
         }
         // 主线程刷新界面结束
+
         if (self.isCheckTPKFileByShowButton){
             return ;
         }
@@ -1317,6 +1318,7 @@ static bool isSilenceCheckTPKVersion  = true;
             [self showDownloadView];
         }
     };
+    [MMProgressHUD dismiss];
     [alert show];
 }
 
