@@ -76,14 +76,14 @@
     if (customezieRoadsInfoArray == nil || [customezieRoadsInfoArray count] <= 0 ) {
         //初始化2个不可删除的预制道路
         RoadInfos * roadInfo_home = [[RoadInfos alloc]init ];
-        roadInfo_home.name=@"家";
+        roadInfo_home.name=@"上班";
         roadInfo_home.order= [NSNumber numberWithInt:0];
         RoadInfos * roadInfo_company = [[RoadInfos alloc]init ];
-        roadInfo_company.name=@"公司";
+        roadInfo_company.name=@"下班";
         roadInfo_company.order=[NSNumber numberWithInt:1];
 
         RoadInfos * roadInfo_temp = [[RoadInfos alloc]init ];
-        roadInfo_temp.name=@"test";
+        roadInfo_temp.name=@"家庭";
         roadInfo_temp.order=[NSNumber numberWithInt:2];
 
         NSMutableArray  * roadsInfoArray = [[NSMutableArray alloc]init];
@@ -157,6 +157,36 @@
         if(indexPath == nil) return ;
 
         DLog(@"长按了%d号记录", indexPath.row);
+        self.stAlertView = [[STAlertView alloc] initWithTitle:@"请输入信息"
+            message:@"填写新的的名称"
+            textFieldHint:@"唯一的名称"
+           textFieldValue:nil
+        cancelButtonTitle:@"放弃"
+        otherButtonTitles:@"保存"
+        cancelButtonBlock:^{
+
+        } otherButtonBlock:^(NSString * result){
+            for ( RoadInfos *  roadInfos in customezieRoadsInfoArray){
+                if ([roadInfos.name isEqualToString:result]){
+                    NSString * message = [NSString stringWithFormat:@"%@\n已经存在了，请重新输入!",result];
+                    AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"提示" andText:message andCancelButton:NO forAlertType:AlertFailure];
+                    [alert.defaultButton setTitle:@"退出" forState:UIControlStateNormal];
+                    alert.completionBlock = ^void (AMSmoothAlertView *alertObj, UIButton *button) {
+                        if(button == alertObj.defaultButton) {
+
+                        } else {
+                        }
+                    };
+                    [alert show];
+                    return;
+                }
+            }
+            RoadInfos * roadInfo_item =[customezieRoadsInfoArray objectAtIndex:indexPath.row];
+            roadInfo_item.name=result;
+            [Tools saveCustomizeRoadToFile:customezieRoadsInfoArray];
+            //刷新table view
+            [self.tableView reloadData];
+        }];
     }
 }
 
@@ -185,6 +215,7 @@
             for ( RoadInfos *  roadInfos in customezieRoadsInfoArray){
                 if ([roadInfos.name isEqualToString:result]){
                     [self alertNameExited:result ];
+                    return;
                 }
             }
             //在当前table里面增加一条记录

@@ -19,7 +19,7 @@
 		7A8BAF8C39FBF65E512802AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 045847AB524D49019304FEAC /* libPods.a */; };
 		D901A72219D0548600AAB29A /* Location_hangzhou.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D901A72119D0548600AAB29A /* Location_hangzhou.gpx */; };
 		D90A246019F7B55600AA2527 /* SketchToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = D90A245E19F7B55600AA2527 /* SketchToolbar.h */; };
-		D90A246119F7B55600AA2527 /* SketchToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A245F19F7B55600AA2527 /* SketchToolbar.m */; };
+		D90A246119F7B55600AA2527 /* SketchToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A245F19F7B55600AA2527 /* SketchToolbar.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		D90A6E6617D9B90700121939 /* MainRoadSpeedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D90A6E6317D9B90700121939 /* MainRoadSpeedViewController.h */; };
 		D90A6E6717D9B90700121939 /* MainRoadSpeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A6E6417D9B90700121939 /* MainRoadSpeedViewController.m */; };
 		D90A6E6817D9B90700121939 /* MainRoadSpeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90A6E6517D9B90700121939 /* MainRoadSpeedViewController.xib */; };

@@ -22,7 +22,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/roamer/VCs/iLiveTrafficMapViewController.m"
@@ -118,7 +118,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/roamer/CustomizeRoad/RoadMap/SketchToolsBar/SketchToolbar.m"
@@ -160,6 +160,38 @@
             startingLineNumber = "1232"
             endingLineNumber = "1232"
             landmarkName = "-checkBaseMapVersion:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Classes/roamer/CustomizeRoad/RoadMap/SketchToolsBar/SketchToolbar.m"
+            timestampString = "436016730.995859"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "-exitView"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Classes/roamer/CustomizeRoad/RoadMap/SketchToolsBar/SketchToolbar.m"
+            timestampString = "436016734.468972"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "-exitView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

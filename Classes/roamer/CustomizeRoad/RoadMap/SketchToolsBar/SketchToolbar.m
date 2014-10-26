@@ -177,7 +177,7 @@
 }
 
 -(IBAction)exitView{
-    [self saveTool];
+//    [self save];
     //退出当前界面
     self.sketchLayer = nil;
     self.graphicsLayer = nil;
@@ -259,7 +259,6 @@
 
 -(void) dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AGSSketchGraphicsLayerGeometryDidChangeNotification object:nil];
-    [super dealloc];
 }
 
 
