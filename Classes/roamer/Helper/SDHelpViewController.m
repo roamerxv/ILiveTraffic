@@ -74,7 +74,6 @@
             iv.frame = rect;
             
             [self.scrollView addSubview:iv];
-            [iv release];
             cx += self.scrollView.frame.size.width;
         }
         
@@ -103,7 +102,6 @@
 
 -(void)dealloc{
     self.scrollView = nil;
-    [super dealloc];
 }
 
 @end

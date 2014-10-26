@@ -109,7 +109,7 @@ static bool isSilenceCheckTPKVersion  = true;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [[UIColor whiteColor] autorelease];
+    self.window.backgroundColor = [UIColor whiteColor];
     
     //创建一个NSInvocationOperation对象，并初始化到方法
     //在这里，selector参数后的值是你想在另外一个线程中运行的方法（函数，Method）
@@ -129,7 +129,7 @@ static bool isSilenceCheckTPKVersion  = true;
 #pragma mark 用TabBar的方式来切换图表
 -(IBAction)showPlotCoreChart:(id)data
 {
-    TabbarViewController * chartMainTabBarViewController = [[[TabbarViewController alloc]init] autorelease];
+    TabbarViewController * chartMainTabBarViewController = [[TabbarViewController alloc]init];
     [self presentViewController:chartMainTabBarViewController animated:YES completion:nil];
 }
 
@@ -158,7 +158,7 @@ static bool isSilenceCheckTPKVersion  = true;
 //调用成功(大数据量的时候可能会多次调用)，获得soap信息
 -(void) connection:(NSURLConnection *) connection didReceiveData:(NSData *)responseData
 {
-    DLog(@"（在大数据量的时候，可能是一部分）获取的返回responseData 是:%@",[[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease]);
+    DLog(@"（在大数据量的时候，可能是一部分）获取的返回responseData 是:%@",[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
     [self.receivedData appendData:responseData];
 }
 
@@ -176,7 +176,7 @@ static bool isSilenceCheckTPKVersion  = true;
         if ([result_count intValue] > 0)
         {
             //    弹出查询路段的车速表单视图
-            MainRoadSpeedViewController * mainRoadSpeedViewController = [[[MainRoadSpeedViewController alloc] init] autorelease];
+            MainRoadSpeedViewController * mainRoadSpeedViewController = [[MainRoadSpeedViewController alloc] init];
             [mainRoadSpeedViewController  inputData:wsReturnValueString];
             [mainRoadSpeedViewController resizeView:50.0f];
             [self presentViewController:mainRoadSpeedViewController animated:YES completion:nil];
@@ -188,7 +188,6 @@ static bool isSilenceCheckTPKVersion  = true;
 
         }
     }
-    [parser dealloc];
 }
 
 #pragma mark 语音识别
@@ -289,7 +288,7 @@ static bool isSilenceCheckTPKVersion  = true;
         NSURL *url = [[NSURL alloc] initWithString:urlString];
         //异步请求
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
+        [[NSURLConnection alloc] initWithRequest:request delegate:self];
 
 
     }
@@ -463,7 +462,6 @@ static bool isSilenceCheckTPKVersion  = true;
     [MMProgressHUD dismiss];
     UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"错误" message:error.description delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     [alertView show];
-    [alertView release];
 }
 
 //arcgis query task 结束以后调用
@@ -651,7 +649,7 @@ static bool isSilenceCheckTPKVersion  = true;
 		locationManager =[[CLLocationManager alloc] init];
 	}
 	
-    self.receivedData=[[NSMutableData data] retain];  
+    self.receivedData=[[NSMutableData data] init];
     
     //讯飞APP 配置 begin
     //开始进行用户词表的上传
@@ -954,7 +952,6 @@ static bool isSilenceCheckTPKVersion  = true;
     iLiveTrafficMenuViewController *vc = [[iLiveTrafficMenuViewController alloc] init];
     [vc setMapVC:self];
     [self.revealSideViewController pushViewController:vc onDirection:PPRevealSideDirectionRight animated:YES];
-    [vc release];
 }
 
 #pragma mark 获得位置信息
@@ -1097,7 +1094,7 @@ static bool isSilenceCheckTPKVersion  = true;
 -(void) getArearCongestIndex{
     DLog(@"调用远程方法，获得指数数据");
     //    调用远程方法，获得各个分区指数数据
-    NSNumberFormatter * f = [[[NSNumberFormatter alloc] init] autorelease];
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
     NSURL *url = [[NSURL alloc] initWithString:[[Tools getServerHost] stringByAppendingString:@"/congest_index/congest_index_of_net_for_date.json" ] ];
     NSError *error =nil ;
@@ -1164,7 +1161,7 @@ static bool isSilenceCheckTPKVersion  = true;
 //点击全市拥堵指数
 -(IBAction)onCityCongestIndexButtonClick:(id)sender{
     DLog(@"全市拥堵指数区域被点击");
-    Chart1ViewController * vc = [[[Chart1ViewController alloc]init] autorelease];
+    Chart1ViewController * vc = [[Chart1ViewController alloc]init];
     vc.displayReturnButton = true;
     [vc setMapVC:self];
     [self.revealSideViewController pushViewController:vc onDirection:PPRevealSideDirectionBottom  withOffset:110.0 animated:YES];
@@ -1349,7 +1346,6 @@ static bool isSilenceCheckTPKVersion  = true;
     self.slider = nil;
     self.dataTimeLabel = nil;
     self.siView = nil;
-    [super dealloc];
 }
 
 @end

@@ -66,10 +66,12 @@ NSMutableArray *arear_array = [NSMutableArray arrayWithObjects:
 +(NSString *)createUUID{
     CFUUIDRef puuid = CFUUIDCreate( nil );
     CFStringRef uuidString = CFUUIDCreateString( nil, puuid );
-    NSString * result = (NSString *)CFStringCreateCopy( NULL, uuidString);
+//    NSString * result = (NSString *)CFStringCreateCopy( NULL, uuidString);
+
+    NSString * result = (NSString *)CFBridgingRelease(CFStringCreateCopy( NULL, uuidString));
     CFRelease(puuid);
     CFRelease(uuidString);
-    return [result autorelease];
+    return result;
 }
 
 +(NSString *) uniqueGlobalDeviceIdentifier
@@ -80,7 +82,7 @@ NSMutableArray *arear_array = [NSMutableArray arrayWithObjects:
 
 +(UIColor *) getLevelColrorWithCongestIndexString:(NSString *)indexString
 {
-    NSNumberFormatter * f = [[[NSNumberFormatter alloc] init] autorelease];
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     return [self getLevelColrorWithCongestIndex:[f numberFromString:indexString].floatValue ];
 }
 
@@ -191,7 +193,7 @@ NSMutableArray *arear_array = [NSMutableArray arrayWithObjects:
 
 +(int) getCurrentHour{
     NSDate *  senddate=[NSDate date];
-    NSDateFormatter  *dateformatter=[[[NSDateFormatter alloc] init] autorelease];
+    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
     [dateformatter setDateFormat:@"HH"];
     int  hour =  [[dateformatter stringFromDate:senddate] intValue];
     return hour;

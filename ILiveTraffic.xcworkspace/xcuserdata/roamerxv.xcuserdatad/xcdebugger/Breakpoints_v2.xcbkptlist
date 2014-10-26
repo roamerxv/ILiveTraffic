@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/roamer/VCs/iLiveTrafficMapViewController.m"
-            timestampString = "435923574.898893"
+            timestampString = "436029187.222967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "570"
-            endingLineNumber = "570"
+            startingLineNumber = "568"
+            endingLineNumber = "568"
             landmarkName = "-viewDidAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/roamer/VCs/iLiveTrafficMapViewController.m"
-            timestampString = "436015070.368723"
+            timestampString = "436029187.222967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1204"
-            endingLineNumber = "1204"
+            startingLineNumber = "1201"
+            endingLineNumber = "1201"
             landmarkName = "-checkBaseMapVersion:"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/roamer/VCs/iLiveTrafficMapViewController.m"
-            timestampString = "436015070.368723"
+            timestampString = "436029187.222967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1232"
-            endingLineNumber = "1232"
+            startingLineNumber = "1229"
+            endingLineNumber = "1229"
             landmarkName = "-checkBaseMapVersion:"
             landmarkType = "5">
          </BreakpointContent>

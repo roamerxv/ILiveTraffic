@@ -137,24 +137,23 @@ static iLiveTrafficAppDelegate *shared;
     DLog(@"%@", [Tools uniqueGlobalDeviceIdentifier]);
     
     self.deviceInfoID = [Tools uniqueGlobalDeviceIdentifier];
-    [[[[DeviceInfoController alloc] init] autorelease] saveDeviceID:self.deviceInfoID];
+    [[[DeviceInfoController alloc] init] saveDeviceID:self.deviceInfoID];
     
     DLog(@"应用中变量-设备号是：%@", self.deviceInfoID);
     //
 
 
     // 判断是否要显示评价提示的窗口
-    if ([[[[DeviceInfoController alloc] init] autorelease] showCommentAllert])
+    if ([[[DeviceInfoController alloc] init] showCommentAllert])
     {
         UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"参与评价" message:@"欢迎对我们的应用提出您宝贵的意见和建议,这对我们来说很重要!" delegate:self cancelButtonTitle:@"以后再说" otherButtonTitles:@"好的", nil];
         [alert show];
-        [alert release];
     }
 	
     
 	NSString* coverpath = [[NSBundle mainBundle] pathForResource:@"cover" ofType:@"jpg"];
 	NSData * coverData= [[NSData alloc] initWithContentsOfFile:coverpath];
-	coverImage = [[[UIImage alloc] initWithData:coverData] autorelease];
+	coverImage = [[UIImage alloc] initWithData:coverData];
     
     
     [[UIApplication sharedApplication ] setIdleTimerDisabled:YES];
@@ -254,33 +253,18 @@ static iLiveTrafficAppDelegate *shared;
 
 - (void)dealloc {
 
-	if (updateBarImage != nil)
-		[updateBarImage release];
-	if (cancelBarImage != nil)
-		[cancelBarImage release];
-	if (coverImage != nil) {
-		[coverImage release];
-	}
+    updateBarImage = nil;
+    cancelBarImage = nil;
+    coverImage = nil ;
+    activeView = nil;
 	
-	if (activeView != nil)
-		[activeView release];
-	
-	if (activeViewLoadingMap != nil)
-		[activeViewLoadingMap release];
-    /******************
-     modified by wbgao
-     ******************/
-//	if (mapView != nil)
-//		[mapView release];
-	
-    if (window != nil)
-		[window release];
-    
+    activeViewLoadingMap = nil;
+    window = nil;
+
     self.mapViewController = nil;
     self.configure = nil;
     self.locationManager = nil;
 	
-    [queue release];
     queue = nil;
     [super dealloc];
 }

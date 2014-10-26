@@ -152,7 +152,7 @@
     static NSString* identifier = @"MyIdentifier";
     UITableViewCell *cell = (UITableViewCell*) [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
     }
@@ -203,7 +203,7 @@
 
 #pragma mark - Others
 -(IBAction)helpBtnClicked:(id)sender{
-    SDHelpViewController *vc = [[[SDHelpViewController alloc] init] autorelease];
+    SDHelpViewController *vc = [[SDHelpViewController alloc] init];
     [self presentViewController:vc animated:YES completion:nil];
 }
 
@@ -215,7 +215,6 @@
 
 -(void)dealloc{
     self.mapVC = nil;
-    [super dealloc];
 }
 
 @end

@@ -57,7 +57,7 @@
     if (self) {
         // Custom initialization
         self.title = @"拥堵指数走势图";
-        self.receivedData=[[NSMutableData data] retain];  
+        self.receivedData=[[NSMutableData data] init];
     }
     return self;
 }
@@ -178,7 +178,7 @@
     //异步请求
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self] ;
     
 }
 
@@ -199,7 +199,7 @@
 //调用成功(大数据量的时候可能会多次调用)，获得soap信息
 -(void) connection:(NSURLConnection *) connection didReceiveData:(NSData *)responseData
 {
-    DLog(@"（在大数据量的时候，可能是一部分）获取的返回responseData 是:%@",[[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease]);
+    DLog(@"（在大数据量的时候，可能是一部分）获取的返回responseData 是:%@",[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
     [self.receivedData appendData:responseData];
 }
 
@@ -238,7 +238,6 @@
             }
             i++;
         }
-        [f release];
         [self renderPlot];
     }else{
         DLog(@"$$$$$$$%@", error);
@@ -347,9 +346,9 @@
     plotSpace.xRange = xPlotRange;
     plotSpace.yRange = yPlotRange;
     // 设置上周趋势图的绘图器
-    CPTScatterPlot* boundLinePlot  = [[[CPTScatterPlot alloc] init] autorelease];
+    CPTScatterPlot* boundLinePlot  = [[CPTScatterPlot alloc] init];
     // 设置当然趋势图的绘制器
-    CPTScatterPlot* boundLinePlot1  = [[[CPTScatterPlot alloc] init] autorelease];
+    CPTScatterPlot* boundLinePlot1  = [[CPTScatterPlot alloc] init];
     //设置线形格式
     CPTMutableLineStyle* lineStyle = [CPTMutableLineStyle lineStyle];
     lineStyle.miterLimit = 0.1f;
@@ -434,7 +433,6 @@
         newLabel.offset=x.labelOffset+x.majorTickLength;
         newLabel.rotation = 0;
         [labelArray addObject:newLabel];
-        [newLabel release];
     }
     x.axisLabels=[NSSet setWithArray:labelArray];
     
@@ -615,7 +613,6 @@
 
 -(void)dealloc{
     self.mapVC = nil;
-    [super dealloc];
 }
 
 

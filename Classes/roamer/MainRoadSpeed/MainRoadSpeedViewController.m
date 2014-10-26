@@ -83,10 +83,10 @@
     NSString * roadName = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"road_name"] ];
     roadName  =  [roadName stringByReplacingOccurrencesOfString:@"（" withString:@"(" ];
     roadName  =  [roadName stringByReplacingOccurrencesOfString:@"）" withString:@")" ];
-    cell.roadSpeed.text = [[[NSString alloc]initWithFormat:@"%.1f",((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue ]autorelease];
+    cell.roadSpeed.text = [[NSString alloc]initWithFormat:@"%.1f",((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue ];
     cell.roadName.text = roadName;
     //    设置颜色
-    UIColor * color = [[[UIColor alloc ]init]autorelease];
+    UIColor * color = [[UIColor alloc ]init];
     int clazz = ((NSNumber  *)[rowData objectForKey:@"road_class"]).intValue;
     float speed = ((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue;
     color = [Tools getColorWithSpeed:speed withClazz:clazz];

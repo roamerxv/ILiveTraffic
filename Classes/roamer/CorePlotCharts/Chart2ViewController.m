@@ -37,7 +37,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.receivedData=[[NSMutableData data] retain];  
+        self.receivedData=[[NSMutableData data] init];
     }
     return self;
 }
@@ -83,7 +83,7 @@
   
     self.activityIndicatorView.hidden = FALSE;
     //    调用远程方法，获得指数数据
-    NSNumberFormatter * f = [[[NSNumberFormatter alloc] init] autorelease];
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
     
     
@@ -91,7 +91,7 @@
     DLog(@"开始调用的url是:%@",[url absoluteString] );
     //异步请求
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
 }
 
@@ -113,7 +113,7 @@
 //调用成功(大数据量的时候可能会多次调用)，获得soap信息
 -(void) connection:(NSURLConnection *) connection didReceiveData:(NSData *)responseData
 {
-    DLog(@"（在大数据量的时候，可能是一部分）获取的返回responseData 是:%@",[[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease]);
+    DLog(@"（在大数据量的时候，可能是一部分）获取的返回responseData 是:%@",[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
     [self.receivedData appendData:responseData];
 }
 
@@ -136,8 +136,8 @@
                 case 0:
                 {
                     label_value_1.text =(NSString *) [item objectForKey:@"index_value"];
-                    NSDateFormatter * dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-                    [dateFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"] autorelease]];
+                    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+                    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
                     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'+08:00'"];
                     NSTimeInterval seconds5Minutes = 5 * 60;
                     NSDate* updateTime = [[dateFormatter dateFromString:(NSString *)[item objectForKey:@"record_date"]] dateByAddingTimeInterval:seconds5Minutes];

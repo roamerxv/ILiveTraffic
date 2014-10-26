@@ -11,7 +11,7 @@
 		1B7BC060127999C8001CEB5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7BC05F127999C8001CEB5C /* QuartzCore.framework */; };
 		1B8445F4123C8B2F0007F8FB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8445F3123C8B2F0007F8FB /* CoreFoundation.framework */; };
 		1B844602123C8BE40007F8FB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B844601123C8BE40007F8FB /* CFNetwork.framework */; };
-		1D3623260D0F684500981E51 /* iLiveTrafficAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iLiveTrafficAppDelegate.m */; };
+		1D3623260D0F684500981E51 /* iLiveTrafficAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iLiveTrafficAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
@@ -19,7 +19,7 @@
 		7A8BAF8C39FBF65E512802AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 045847AB524D49019304FEAC /* libPods.a */; };
 		D901A72219D0548600AAB29A /* Location_hangzhou.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D901A72119D0548600AAB29A /* Location_hangzhou.gpx */; };
 		D90A246019F7B55600AA2527 /* SketchToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = D90A245E19F7B55600AA2527 /* SketchToolbar.h */; };
-		D90A246119F7B55600AA2527 /* SketchToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A245F19F7B55600AA2527 /* SketchToolbar.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D90A246119F7B55600AA2527 /* SketchToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A245F19F7B55600AA2527 /* SketchToolbar.m */; };
 		D90A6E6617D9B90700121939 /* MainRoadSpeedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D90A6E6317D9B90700121939 /* MainRoadSpeedViewController.h */; };
 		D90A6E6717D9B90700121939 /* MainRoadSpeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A6E6417D9B90700121939 /* MainRoadSpeedViewController.m */; };
 		D90A6E6817D9B90700121939 /* MainRoadSpeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90A6E6517D9B90700121939 /* MainRoadSpeedViewController.xib */; };
@@ -51,9 +51,9 @@
 		D920F4F719A78EF8004A955F /* iLiveTrafficScaleIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4EF19A78EF8004A955F /* iLiveTrafficScaleIndicatorView.h */; };
 		D920F4F819A78EF8004A955F /* iLiveTrafficScaleIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4F019A78EF8004A955F /* iLiveTrafficScaleIndicatorView.m */; };
 		D920F4F919A78EF8004A955F /* PPPickerSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4F119A78EF8004A955F /* PPPickerSheet.h */; };
-		D920F4FA19A78EF8004A955F /* PPPickerSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4F219A78EF8004A955F /* PPPickerSheet.m */; };
+		D920F4FA19A78EF8004A955F /* PPPickerSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4F219A78EF8004A955F /* PPPickerSheet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D920F50019A78F03004A955F /* NSDateFormatter+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4FC19A78F03004A955F /* NSDateFormatter+Extras.h */; };
-		D920F50119A78F03004A955F /* NSDateFormatter+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4FD19A78F03004A955F /* NSDateFormatter+Extras.m */; };
+		D920F50119A78F03004A955F /* NSDateFormatter+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4FD19A78F03004A955F /* NSDateFormatter+Extras.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D920F50219A78F03004A955F /* UIViewController-Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4FE19A78F03004A955F /* UIViewController-Extras.h */; };
 		D920F50319A78F03004A955F /* UIViewController-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4FF19A78F03004A955F /* UIViewController-Extras.m */; };
 		D920F51919A78F1E004A955F /* iLiveTrafficMapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F50D19A78F1E004A955F /* iLiveTrafficMapViewController.h */; };
@@ -65,7 +65,7 @@
 		D92A90891749DB1400572450 /* Chart2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92A90861749DB1400572450 /* Chart2ViewController.m */; };
 		D92A908A1749DB1400572450 /* Chart2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92A90871749DB1400572450 /* Chart2ViewController.xib */; };
 		D939EDD519F66677008A9FF9 /* RoadInfos.h in Headers */ = {isa = PBXBuildFile; fileRef = D939EDD319F66677008A9FF9 /* RoadInfos.h */; };
-		D939EDD619F66677008A9FF9 /* RoadInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = D939EDD419F66677008A9FF9 /* RoadInfos.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D939EDD619F66677008A9FF9 /* RoadInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = D939EDD419F66677008A9FF9 /* RoadInfos.m */; };
 		D93B97C419CD54AB009E6865 /* FlowerCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = D93B97C219CD54AB009E6865 /* FlowerCollector.h */; };
 		D93B97C519CD54AB009E6865 /* FlowerCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = D93B97C319CD54AB009E6865 /* FlowerCollector.m */; };
 		D93CF1EB19D9C786003BF46F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93CF1EA19D9C786003BF46F /* Images.xcassets */; };
@@ -73,7 +73,7 @@
 		D942C66D17AA2228007F7124 /* Canvas.h in Headers */ = {isa = PBXBuildFile; fileRef = D942C66B17AA2228007F7124 /* Canvas.h */; };
 		D942C66E17AA2228007F7124 /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = D942C66C17AA2228007F7124 /* Canvas.m */; };
 		D945B0A419FC06BF00035058 /* TabbarView.h in Headers */ = {isa = PBXBuildFile; fileRef = D945B0A219FC06BF00035058 /* TabbarView.h */; };
-		D945B0A519FC06BF00035058 /* TabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D945B0A319FC06BF00035058 /* TabbarView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D945B0A519FC06BF00035058 /* TabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D945B0A319FC06BF00035058 /* TabbarView.m */; };
 		D94858AD17CB1A58006B7486 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94858A717CB11E4006B7486 /* AudioToolbox.framework */; };
 		D94858AE17CB1A5F006B7486 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94858A117CB118C006B7486 /* AddressBook.framework */; };
 		D94858AF17CB1A66006B7486 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D94858A317CB1195006B7486 /* SystemConfiguration.framework */; };
@@ -91,7 +91,7 @@
 		D96E28391749E260009377A9 /* UIView+ZXQuartz.h in Headers */ = {isa = PBXBuildFile; fileRef = D96E28371749E260009377A9 /* UIView+ZXQuartz.h */; };
 		D96E283A1749E260009377A9 /* UIView+ZXQuartz.m in Sources */ = {isa = PBXBuildFile; fileRef = D96E28381749E260009377A9 /* UIView+ZXQuartz.m */; };
 		D978B81619F77AA70060FED4 /* RoadMapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D978B81319F77AA70060FED4 /* RoadMapViewController.h */; };
-		D978B81719F77AA70060FED4 /* RoadMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D978B81419F77AA70060FED4 /* RoadMapViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D978B81719F77AA70060FED4 /* RoadMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D978B81419F77AA70060FED4 /* RoadMapViewController.m */; };
 		D978B81819F77AA70060FED4 /* RoadMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D978B81519F77AA70060FED4 /* RoadMapViewController.xib */; };
 		D97BE4AC1752FD93005BAF63 /* Chart4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97BE4A91752FD93005BAF63 /* Chart4ViewController.xib */; };
 		D97BE4B91753111F005BAF63 /* Chart4TableCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D97BE4B71753111F005BAF63 /* Chart4TableCell.h */; };
@@ -102,7 +102,7 @@
 		D989F0B619AC68AB0011A511 /* Chart4ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D989F0B419AC68AB0011A511 /* Chart4ViewController.h */; };
 		D989F0B719AC68AB0011A511 /* Chart4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D989F0B519AC68AB0011A511 /* Chart4ViewController.m */; };
 		D997225519F128D30054667F /* SlidingTabsControl.h in Headers */ = {isa = PBXBuildFile; fileRef = D997225119F128D30054667F /* SlidingTabsControl.h */; };
-		D997225619F128D30054667F /* SlidingTabsControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D997225219F128D30054667F /* SlidingTabsControl.m */; };
+		D997225619F128D30054667F /* SlidingTabsControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D997225219F128D30054667F /* SlidingTabsControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D997225719F128D30054667F /* SlidingTabsTab.h in Headers */ = {isa = PBXBuildFile; fileRef = D997225319F128D30054667F /* SlidingTabsTab.h */; };
 		D997225819F128D30054667F /* SlidingTabsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = D997225419F128D30054667F /* SlidingTabsTab.m */; };
 		D99A4ED017429B2A00D302F2 /* Chart1ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D99A4ECD17429B2A00D302F2 /* Chart1ViewController.h */; };
@@ -111,7 +111,7 @@
 		D99AEDBA19E81F84009E602E /* iLiveTrafficMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D99AEDB719E81F84009E602E /* iLiveTrafficMenuViewController.m */; };
 		D99AEDBB19E81F84009E602E /* iLiveTrafficMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99AEDB819E81F84009E602E /* iLiveTrafficMenuViewController.xib */; };
 		D9A5D9D319F635970066E129 /* CustomizeRoadListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A5D9D019F635970066E129 /* CustomizeRoadListViewController.h */; };
-		D9A5D9D419F635970066E129 /* CustomizeRoadListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A5D9D119F635970066E129 /* CustomizeRoadListViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D9A5D9D419F635970066E129 /* CustomizeRoadListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A5D9D119F635970066E129 /* CustomizeRoadListViewController.m */; };
 		D9A5D9D519F635970066E129 /* CustomizeRoadListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A5D9D219F635970066E129 /* CustomizeRoadListViewController.xib */; };
 		D9AE7FF0172B911600A1804A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9AE7FEF172B911600A1804A /* CoreImage.framework */; };
 		D9B232C519D82ED000F399DF /* iLiveTraffic_Base_Map.tpk in Resources */ = {isa = PBXBuildFile; fileRef = D9B232C419D82ED000F399DF /* iLiveTraffic_Base_Map.tpk */; };
@@ -128,7 +128,7 @@
 		D9D905C419E8479E00411B75 /* SDHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D905C119E8479E00411B75 /* SDHelpViewController.m */; };
 		D9D905C519E8479E00411B75 /* SDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D905C219E8479E00411B75 /* SDHelpViewController.xib */; };
 		D9D9185719F275270002488C /* Downloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D9185419F275270002488C /* Downloader.h */; };
-		D9D9185819F275270002488C /* Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D9185519F275270002488C /* Downloader.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D9D9185819F275270002488C /* Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D9185519F275270002488C /* Downloader.m */; };
 		D9D9185919F275270002488C /* Downloader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D9185619F275270002488C /* Downloader.xib */; };
 		D9FBBB9619AC7ECB003940B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FBBB9519AC7ECA003940B8 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
@@ -1055,7 +1055,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: zhihua pu (35996QZL85)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: zhihua pu (35996QZL85)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: zhihua pu (35996QZL85)";
@@ -1123,7 +1123,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: zhihua pu (35996QZL85)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -1181,7 +1181,7 @@
 		337D6D5A172D04CE00736F8E /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: zhihua pu (E7KG5H55PT)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: zhihua pu (35996QZL85)";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -1209,7 +1209,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: zhihua pu (35996QZL85)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: zhihua pu (35996QZL85)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: zhihua pu (35996QZL85)";
@@ -1268,7 +1268,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: zhihua pu (35996QZL85)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: zhihua pu (35996QZL85)";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -1293,7 +1293,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: zhihua pu (E7KG5H55PT)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: zhihua pu (35996QZL85)";
 				GCC_C_LANGUAGE_STANDARD = c99;

@@ -16,7 +16,7 @@
 #pragma mark - Init
 -(id)init{
     self = [super init];
-    self.locationManager = [[[CLLocationManager alloc] init] autorelease];
+    self.locationManager = [[CLLocationManager alloc] init];
     [self.locationManager startUpdatingLocation];
 
     return self;
@@ -64,8 +64,6 @@
 -(void)dealloc{
     [self stopNavigation];
     self.locationManager = nil;
-
-    [super dealloc];
 }
 
 @end

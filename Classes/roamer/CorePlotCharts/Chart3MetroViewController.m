@@ -107,7 +107,7 @@
     DLog(@"调用远程方法，获得指数数据");
     itemArray =[[NSMutableArray alloc]init ];
     //    调用远程方法，获得指数数据
-    NSNumberFormatter * f = [[[NSNumberFormatter alloc] init] autorelease];
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
     NSURL *url = [[NSURL alloc] initWithString:[[Tools getServerHost] stringByAppendingString:@"/congest_index/congest_index_of_net_for_date.json" ] ];
     NSError *error =nil ;
@@ -137,8 +137,8 @@
     for (int i = 0 ; i< self.itemArray.count; i++) {
         if ( i == 0)
         {
-            NSDateFormatter * dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-            [dateFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"] autorelease]];
+            NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
             [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'+08:00'"];
             NSTimeInterval seconds5Minutes = 5 * 60;
             NSDate* updateTime = [[dateFormatter dateFromString:(NSString *)[[itemArray objectAtIndex:i] objectForKey:@"record_date"]] dateByAddingTimeInterval:seconds5Minutes];

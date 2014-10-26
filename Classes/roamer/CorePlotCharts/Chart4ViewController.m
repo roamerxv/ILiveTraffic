@@ -106,7 +106,7 @@
     self.current_roadtype = 0;
     if (self) {
         // Custom initialization
-        self.receivedData=[[NSMutableData data] retain];  
+        self.receivedData=[[NSMutableData data] init];
     }
     return self;
 }
@@ -117,7 +117,6 @@
     // Do any additional setup after loading the view from its nib.
     tabs = [[SlidingTabsControl alloc] initWithTabCount:4 withWidth:[[UIScreen mainScreen] bounds].size.width delegate:self];
     [self.view addSubview:tabs];
-    [tabs release];
     self.isSearching = NO;
     is_favorite = true;
     [self createTableFooter];
@@ -129,7 +128,7 @@
     [super viewDidAppear:animated];
     [FlowerCollector OnEvent:SHOW_CHART_4_IN_CHARTS];
 
-    NSNumber * type = [[[NSNumber alloc]initWithInt:self.current_roadtype] autorelease];
+    NSNumber * type = [[NSNumber alloc]initWithInt:self.current_roadtype];
     [self performSelectorOnMainThread:@selector(getDataWithType:) withObject:type waitUntilDone:NO];
 }
 
@@ -183,7 +182,7 @@
 #pragma mark SlidingTabsControl Delegate
 - (UILabel*) labelFor:(SlidingTabsControl*)slidingTabsControl atIndex:(NSUInteger)tabIndex;
 {
-    UILabel* label = [[[UILabel alloc] init] autorelease];
+    UILabel* label = [[UILabel alloc] init];
     if (tabIndex == 0 ) {
         label.text = @"我的收藏";
     }else if (tabIndex == 1)
@@ -231,7 +230,7 @@
     self.searchDisplayController.searchBar.text=@"";
     [self.searchDisplayController setActive:NO];
     //    调用远程方法，获得指数数据
-    NSNumberFormatter * f = [[[NSNumberFormatter alloc] init] autorelease];
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init] ;
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
     NSURL * url = nil;
     if (typeOfInt == 0 )
@@ -247,7 +246,7 @@
     //异步请求
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
-    [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
 //异步调用如果调用有错误，则出现此信息
@@ -269,7 +268,7 @@
 //调用成功(大数据量的时候可能会多次调用)，获得soap信息
 -(void) connection:(NSURLConnection *) connection didReceiveData:(NSData *)responseData
 {
-    DLog(@"（在大数据量的时候，可能是一部分）获取的返回responseData 是:%@",[[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] autorelease]);
+    DLog(@"（在大数据量的时候，可能是一部分）获取的返回responseData 是:%@",[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
     [self.receivedData appendData:responseData];
 }
 
@@ -292,8 +291,8 @@
     DLog(@"返回的数据有%d条记录",[self.itemArray count]);
     if ([self.itemArray count ] > 0)
     {
-        NSDateFormatter * dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-        [dateFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"] autorelease]];
+        NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
         [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'+08:00'"];
         NSTimeInterval seconds5Minutes = 5 * 60;
         NSDate* updateTime = [[dateFormatter dateFromString:(NSString *)[[itemArray objectAtIndex:0] objectForKey:@"record_date"]] dateByAddingTimeInterval:seconds5Minutes];
@@ -365,12 +364,12 @@
         NSDictionary * rowData =  (self.isSearching)?[searchResults objectAtIndex:row]:[itemArray objectAtIndex:row];
         
         cell.roadName.text = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"road_name"] ];
-        cell.currentSpeed.text = [[[NSString alloc]initWithFormat:@"%.1f",((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue ] autorelease];
+        cell.currentSpeed.text = [[NSString alloc]initWithFormat:@"%.1f",((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue ];
         //    cell.upAndDown.text = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"up_and_down"] ];
         //    cell.lastHourSpeed.text = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"last_hour_avg_speed"] ];
         //    cell.lastWeekSpeed.text = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"last_week_avg_speed"] ];
         //    设置颜色
-        UIColor * color = [[[UIColor alloc ]init]autorelease];
+        UIColor * color = [[UIColor alloc ]init];
         int clazz = ((NSNumber  *)[rowData objectForKey:@"road_class"]).intValue;
         float speed = ((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue;
         color = [Tools getColorWithSpeed:speed withClazz:clazz];
@@ -399,7 +398,7 @@
             NSString * roadName = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"road_name"] ];
             roadName  =  [roadName stringByReplacingOccurrencesOfString:@"（" withString:@"(" ];
             roadName  =  [roadName stringByReplacingOccurrencesOfString:@"）" withString:@")" ];
-            cell.currentSpeed.text = [[[NSString alloc]initWithFormat:@"%.1f",((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue ]autorelease];
+            cell.currentSpeed.text = [[NSString alloc]initWithFormat:@"%.1f",((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue ];
             cell.roadName.text = roadName;
             //    cell.upAndDown.text = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"up_and_down"] ];
             //    cell.lastHourSpeed.text = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"last_hour_avg_speed"] ];
@@ -505,12 +504,12 @@
             cell.roadName.text=@"";
             cell.subRoadName.text=@"";
         }
-        cell.currentSpeed.text = [[[NSString alloc]initWithFormat:@"%.1f",((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue ] autorelease];
+        cell.currentSpeed.text = [[NSString alloc]initWithFormat:@"%.1f",((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue ];
         //    cell.upAndDown.text = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"up_and_down"] ];
         //    cell.lastHourSpeed.text = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"last_hour_avg_speed"] ];
         //    cell.lastWeekSpeed.text = [[NSString alloc]initWithFormat:@"%@",[rowData objectForKey:@"last_week_avg_speed"] ];
         //    设置颜色
-        UIColor * color = [[[UIColor alloc ]init]autorelease];
+        UIColor * color = [[UIColor alloc ]init];
         int clazz = ((NSNumber  *)[rowData objectForKey:@"road_class"]).intValue;
         float speed = ((NSNumber  *)[rowData objectForKey:@"speed"]).floatValue;
         color = [Tools getColorWithSpeed:speed withClazz:clazz];
@@ -588,7 +587,7 @@
         
         NSString * urlString = [[NSString alloc] initWithFormat: [[Tools getServerHost] stringByAppendingString:@"/customer_road/main_road_speed_favorite_delete?roadName=%@&clientID=%@"], [roadName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding ], delegate.deviceInfoID  ];
         DLog(@"调用的urlString：%@",urlString  );
-        NSURL * url_collect = [[[NSURL alloc] initWithString:urlString] autorelease];
+        NSURL * url_collect = [[NSURL alloc] initWithString:urlString];
         NSError *error =nil ;
         NSStringEncoding encoding;
         [[NSString alloc] initWithContentsOfURL:url_collect  usedEncoding:&encoding error:&error];
@@ -658,7 +657,7 @@
             NSString * roadName = (NSString *)[rowData objectForKey:@"road_name"];
             NSString * urlString = [[NSString alloc] initWithFormat: [[Tools getServerHost] stringByAppendingString:@"/customer_road/main_road_speed_favorite_delete?roadName=%@&clientID=%@"], [roadName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding ], delegate.deviceInfoID  ];
             DLog(@"调用的urlString：%@",urlString  );
-            NSURL * url_collect = [[[NSURL alloc] initWithString:urlString] autorelease];
+            NSURL * url_collect = [[NSURL alloc] initWithString:urlString];
             NSError *error =nil ;
             NSStringEncoding encoding;
             [[NSString alloc] initWithContentsOfURL:url_collect  usedEncoding:&encoding error:&error];
@@ -689,7 +688,7 @@
             DLog(@"准备收藏的路段名称是：%@,设备号是:%@", roadName, delegate.deviceInfoID);
             NSString * urlString = [[NSString alloc] initWithFormat: [[Tools getServerHost] stringByAppendingString:@"/customer_road/main_road_speed_collect?roadName=%@&clientID=%@"], [roadName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding ], delegate.deviceInfoID  ];
             DLog(@"调用的urlString：%@",urlString  );
-            NSURL * url_collect = [[[NSURL alloc] initWithString:urlString] autorelease];
+            NSURL * url_collect = [[NSURL alloc] initWithString:urlString];
             NSError *error =nil ;
             NSStringEncoding encoding;
             [[NSString alloc] initWithContentsOfURL:url_collect  usedEncoding:&encoding error:&error];

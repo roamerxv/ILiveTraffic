@@ -51,7 +51,7 @@
 {
     DLog(@"$$$$%@",@"Draw rect");
     // 获得饼图数据
-    piesData=[[[NSMutableArray alloc]init ] autorelease];
+    piesData=[[NSMutableArray alloc]init ];
     [self renderPies];
 }
 
@@ -68,10 +68,10 @@
 -(void) getPiesData
 {
     //   获得全市拥堵指数
-    piesData=[[[NSMutableArray alloc]init ] autorelease];
-    NSNumberFormatter * f = [[[NSNumberFormatter alloc] init] autorelease];
+    piesData=[[NSMutableArray alloc]init ];
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    NSURL *url = [[[NSURL alloc] initWithString:[[Tools getServerHost] stringByAppendingString:@"/congest_index/congest_index_of_city_for_today.json"]] autorelease];
+    NSURL *url = [[NSURL alloc] initWithString:[[Tools getServerHost] stringByAppendingString:@"/congest_index/congest_index_of_city_for_today.json"]];
     NSError *error =nil ;
     NSStringEncoding encoding;
     //NSString *my_string = [[NSString alloc] initWithContentsOfURL:url
@@ -200,7 +200,7 @@
         [self  drawLineFrom:CGPointMake(start_x, start_y) to:CGPointMake(end_x, end_y)];
         
         // 画时钟数组
-        NSString * hour = [[NSString alloc] initWithString:@""] ;
+        NSString * hour = @"" ;
         switch (i)
         {
                 case 1:
