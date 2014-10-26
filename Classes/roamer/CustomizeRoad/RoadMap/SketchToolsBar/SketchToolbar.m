@@ -67,15 +67,28 @@
 		[self.clearTool addTarget:self action:@selector(clear) forControlEvents:UIControlEventTouchUpInside];
         [self.exitBtn addTarget:self action:@selector(exitView) forControlEvents:UIControlEventTouchUpInside];
 
-        // test relaod from plist graphics with sketch_order_number_to_plist
+        //  relaod from plist graphics with sketch_order_number_to_plist
         /**********************/
         NSDictionary * revertedGraphicsDict =  [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%d",self.save_sketch_order ]];
-        AGSGeometry* sketchGeometry = [self.sketchLayer.geometry copy];
-        AGSSimpleFillSymbol *filledSymbol = [[AGSSimpleFillSymbol alloc] init];
-        filledSymbol.color = [UIColor colorWithRed:0.951 green:0.666 blue:0.444 alpha:1.500];
 
-        AGSGraphic  * graphic = [AGSGraphic graphicWithGeometry:sketchGeometry symbol:filledSymbol attributes:nil ];
-        [graphicsLayer addGraphic: [graphic  initWithJSON:revertedGraphicsDict ]];
+        if (revertedGraphicsDict != nil){
+            NSDictionary * graphics_json = [revertedGraphicsDict objectForKey:@"graphics"];
+            NSDictionary * envelope_json = [revertedGraphicsDict objectForKey:@"envelope"];
+
+            if (graphics_json != nil)
+            {
+                AGSGeometry* sketchGeometry = [self.sketchLayer.geometry copy];
+                AGSSimpleFillSymbol *filledSymbol = [[AGSSimpleFillSymbol alloc] init];
+                filledSymbol.color = [UIColor colorWithRed:0.951 green:0.666 blue:0.444 alpha:1.500];
+                AGSGraphic  * graphic = [AGSGraphic graphicWithGeometry:sketchGeometry symbol:filledSymbol attributes:nil ];
+                [graphicsLayer addGraphic: [graphic  initWithJSON:graphics_json ]];
+            }
+            if (envelope_json != nil) {
+                [self.mapView  zoomToEnvelope: [[AGSEnvelope alloc]initWithJSON:envelope_json] animated:YES];
+            }
+        }
+        /*********************/
+
 
 
         NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
@@ -163,8 +176,11 @@
                 [maskLayer addGraphic:revertedGraphics];
                 [self.mapView addMapLayer:maskLayer withName:@"Mask Layer"];
                 
-                //保存到本地文件
-                NSDictionary * revertedGraphicsDict =  [revertedGraphics encodeToJSON ];
+                //保存envelope 和 graphics 到 NSDirctionary 中
+                NSMutableDictionary * revertedGraphicsDict = [[NSMutableDictionary alloc] init];
+                [revertedGraphicsDict setValue:[revertedGraphics encodeToJSON ] forKey:@"graphics"];
+                [revertedGraphicsDict setValue:[self.mapView.visibleAreaEnvelope encodeToJSON ] forKey:@"envelope"];
+
                 // 保存到plist 中
                 [[NSUserDefaults standardUserDefaults] setObject:revertedGraphicsDict forKey:[NSString stringWithFormat:@"%d",self.save_sketch_order] ];
                 [self.sketchTools setEnabled:(self.graphicsLayer.graphicsCount>0) forSegmentAtIndex:1];
@@ -259,6 +275,18 @@
 
 -(void) dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AGSSketchGraphicsLayerGeometryDidChangeNotification object:nil];
+    self.sketchLayer=nil;
+    self.mapView=nil;
+    self.graphicsLayer=nil;
+
+    self.sketchTools=nil ;
+    self.undoTool=nil;
+    self.redoTool=nil;
+    self.saveTool=nil;
+    self.clearTool=nil;
+    self.exitBtn=nil;
+
+    self.activeGraphic=nil;
 }
 
 

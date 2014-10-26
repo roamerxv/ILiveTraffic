@@ -51,7 +51,7 @@
 #define RUN_ABOUT_FUNCTION @"0000000040"
 //点击语音识别功能
 #define RUN_SPEECH_RECOGNIZER @"0000000050"
-//定制个性化道路
+//定制个性化道路(我的出行)
 #define RUN_CUSTOMIZE_ROAD_FUNCTION @"0000000060"
 
 @interface FlowerCollector : NSObject
