@@ -187,6 +187,14 @@
                     [self alertNameExited:result ];
                 }
             }
+            //在当前table里面增加一条记录
+            RoadInfos * roadInfo_item = [[RoadInfos alloc]init ];
+            roadInfo_item.name=result;
+            roadInfo_item.order=[NSNumber  numberWithInt:([customezieRoadsInfoArray count]+1)];
+            [customezieRoadsInfoArray addObject:roadInfo_item];
+            [Tools saveCustomizeRoadToFile:customezieRoadsInfoArray];
+            //刷新table view
+            [self.tableView reloadData];
         }];
 
 }

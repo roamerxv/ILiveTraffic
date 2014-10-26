@@ -974,12 +974,11 @@ static bool isSilenceCheckTPKVersion  = true;
         self.isLocationMode = false;
         [self.locationBtn setImage:[UIImage imageNamed:@"button_location.png"] forState:UIControlStateNormal];
 //        [SVProgressHUD showErrorWithStatus:@"对不起，您的当前位置不在本地图的有效范围之内!" ];
-        [MMProgressHUD showWithTitle:@"注意" status:@"对不起，您的当前位置不在本地图的有效范围之内!"];
-        double delayInSeconds = 3.0;
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            [MMProgressHUD dismiss];
-        });
+        NSString * message = @"对不起，您的当前位置\n不在本地图的有效范围之内!";
+        AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"提示" andText:message andCancelButton:NO forAlertType:AlertFailure];
+        [alert.defaultButton setTitle:@"OK" forState:UIControlStateNormal];
+        [alert show];
+
         [self.locationManager stopUpdatingLocation];
         [self.mapView.locationDisplay stopDataSource];
         [self.mapView zoomToScale:self.currentScale animated:YES];
@@ -1014,12 +1013,10 @@ static bool isSilenceCheckTPKVersion  = true;
     [self.mapView.locationDisplay stopDataSource];
     self.locateCenterBtn.hidden = TRUE;
 //    [SVProgressHUD showErrorWithStatus:@"对不起，无法正确定位。\n请确定您的手机已启用定位服务!\n设置->隐私->定位服务启用->杭州路况->启用" ];
-    [MMProgressHUD showWithTitle:@"注意" status:@"对不起，无法正确定位。\n请确定您的手机已启用定位服务!\n设置->隐私->定位服务启用->杭州路况->启用"];
-    double delayInSeconds = 3.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [MMProgressHUD dismiss];
-    });
+    NSString * message = @"对不起，无法正确定位。\n请确定您的手机已启用定位服务!";
+    AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"提示" andText:message andCancelButton:NO forAlertType:AlertFailure];
+    [alert.defaultButton setTitle:@"OK" forState:UIControlStateNormal];
+    [alert show];
 
     self.isLocationMode = false;
     [self.mapView zoomToScale:self.currentScale animated:YES];
