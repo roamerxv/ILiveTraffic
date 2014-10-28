@@ -99,6 +99,9 @@
 		D97BE4BC175334F3005BAF63 /* Chart4TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97BE4BB175334F3005BAF63 /* Chart4TableCell.xib */; };
 		D981BF5A19CC71E90094BFD9 /* IFlyFlowerCollector.h in Headers */ = {isa = PBXBuildFile; fileRef = D981BF5819CC71E90094BFD9 /* IFlyFlowerCollector.h */; };
 		D981BF5B19CC71E90094BFD9 /* libSunFlower.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D981BF5919CC71E90094BFD9 /* libSunFlower.a */; };
+		D989E56A19FF741600AF4143 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D989E56719FF741600AF4143 /* libWeChatSDK.a */; };
+		D989E56B19FF741600AF4143 /* WXApi.h in Headers */ = {isa = PBXBuildFile; fileRef = D989E56819FF741600AF4143 /* WXApi.h */; };
+		D989E56C19FF741600AF4143 /* WXApiObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D989E56919FF741600AF4143 /* WXApiObject.h */; };
 		D989F0B619AC68AB0011A511 /* Chart4ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D989F0B419AC68AB0011A511 /* Chart4ViewController.h */; };
 		D989F0B719AC68AB0011A511 /* Chart4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D989F0B519AC68AB0011A511 /* Chart4ViewController.m */; };
 		D997225519F128D30054667F /* SlidingTabsControl.h in Headers */ = {isa = PBXBuildFile; fileRef = D997225119F128D30054667F /* SlidingTabsControl.h */; };
@@ -233,6 +236,9 @@
 		D97BE4BB175334F3005BAF63 /* Chart4TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart4TableCell.xib; sourceTree = "<group>"; };
 		D981BF5819CC71E90094BFD9 /* IFlyFlowerCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFlyFlowerCollector.h; sourceTree = "<group>"; };
 		D981BF5919CC71E90094BFD9 /* libSunFlower.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSunFlower.a; sourceTree = "<group>"; };
+		D989E56719FF741600AF4143 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		D989E56819FF741600AF4143 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		D989E56919FF741600AF4143 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		D989F0B419AC68AB0011A511 /* Chart4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart4ViewController.h; sourceTree = "<group>"; };
 		D989F0B519AC68AB0011A511 /* Chart4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart4ViewController.m; sourceTree = "<group>"; };
 		D997225119F128D30054667F /* SlidingTabsControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingTabsControl.h; sourceTree = "<group>"; };
@@ -297,6 +303,7 @@
 				D90B9D941772AF8200368758 /* CoreText.framework in Frameworks */,
 				D9BCFBD917341F93001B30D7 /* CoreData.framework in Frameworks */,
 				D9AE7FF0172B911600A1804A /* CoreImage.framework in Frameworks */,
+				D989E56A19FF741600AF4143 /* libWeChatSDK.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -561,7 +568,7 @@
 			name = "细粒度Cell";
 			sourceTree = "<group>";
 		};
-		D95AAD6717D6DDDF00697B24 /* iFly */ = {
+		D95AAD6717D6DDDF00697B24 /* 讯飞 */ = {
 			isa = PBXGroup;
 			children = (
 				D93B97C119CD53C3009E6865 /* FlowerCollector */,
@@ -572,6 +579,7 @@
 				D955CC9819C8B1EF0019AAEF /* PopupView.h */,
 				D955CC9919C8B1EF0019AAEF /* PopupView.m */,
 			);
+			name = "讯飞";
 			path = iFly;
 			sourceTree = "<group>";
 		};
@@ -649,6 +657,24 @@
 			name = lib;
 			sourceTree = "<group>";
 		};
+		D989E56519FF73EE00AF4143 /* 微信 */ = {
+			isa = PBXGroup;
+			children = (
+				D989E56619FF741600AF4143 /* WeChatSDK_64 */,
+			);
+			name = "微信";
+			sourceTree = "<group>";
+		};
+		D989E56619FF741600AF4143 /* WeChatSDK_64 */ = {
+			isa = PBXGroup;
+			children = (
+				D989E56719FF741600AF4143 /* libWeChatSDK.a */,
+				D989E56819FF741600AF4143 /* WXApi.h */,
+				D989E56919FF741600AF4143 /* WXApiObject.h */,
+			);
+			path = WeChatSDK_64;
+			sourceTree = "<group>";
+		};
 		D997225019F128D30054667F /* SlidingTabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -686,6 +712,7 @@
 		D9BCFBDA17341FB7001B30D7 /* roamer */ = {
 			isa = PBXGroup;
 			children = (
+				D989E56519FF73EE00AF4143 /* 微信 */,
 				D9A5D9CF19F635970066E129 /* CustomizeRoad-道路定制功能 */,
 				D9D9184C19F272510002488C /* Downloader */,
 				D997225019F128D30054667F /* SlidingTabs */,
@@ -696,7 +723,7 @@
 				D920F4FB19A78F03004A955F /* Extra */,
 				D920F4EA19A78EF8004A955F /* Others */,
 				D90A6E6217D9B90700121939 /* MainRoadSpeed */,
-				D95AAD6717D6DDDF00697B24 /* iFly */,
+				D95AAD6717D6DDDF00697B24 /* 讯飞 */,
 				D9C950F0177802DA00FF5A71 /* WZGuide */,
 				D96E28361749E260009377A9 /* ZXQuartz */,
 				D95C82F0174147C0002BAF19 /* CorePlotCharts-4图表 */,
@@ -809,11 +836,13 @@
 				D981BF5A19CC71E90094BFD9 /* IFlyFlowerCollector.h in Headers */,
 				D920F4F319A78EF8004A955F /* iLiveTraffciLocationManager.h in Headers */,
 				D920F4F519A78EF8004A955F /* iLiveTrafficConfigure.h in Headers */,
+				D989E56C19FF741600AF4143 /* WXApiObject.h in Headers */,
 				D920F4F719A78EF8004A955F /* iLiveTrafficScaleIndicatorView.h in Headers */,
 				D9D905C319E8479E00411B75 /* SDHelpViewController.h in Headers */,
 				D920F50219A78F03004A955F /* UIViewController-Extras.h in Headers */,
 				D90A246019F7B55600AA2527 /* SketchToolbar.h in Headers */,
 				D91131E819C18D7000191E5A /* Configer.h in Headers */,
+				D989E56B19FF741600AF4143 /* WXApi.h in Headers */,
 				D93B97C419CD54AB009E6865 /* FlowerCollector.h in Headers */,
 				D99A4ED017429B2A00D302F2 /* Chart1ViewController.h in Headers */,
 				D9273FDF174370FB00804318 /* Chart1Theme.h in Headers */,
@@ -1078,6 +1107,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/iFlytekAnalytics",
+					"$(PROJECT_DIR)/Classes/roamer/WeChatSDK_64",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -1144,6 +1174,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/iFlytekAnalytics",
+					"$(PROJECT_DIR)/Classes/roamer/WeChatSDK_64",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -1231,6 +1262,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib/iFlytekAnalytics",
+					"$(PROJECT_DIR)/Classes/roamer/WeChatSDK_64",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (

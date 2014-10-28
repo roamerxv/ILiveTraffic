@@ -50,6 +50,9 @@
 - (void)setFrame:(CGRect)frame {
 
     frame.size.width = self.window.frame.size.width;
+    CGRect frame_temp = self.roadName.frame;
+    frame_temp.size.width = 200;
+    self.roadName.frame = frame_temp;
     [super setFrame:frame];
 
 }

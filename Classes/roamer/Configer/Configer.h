@@ -68,7 +68,7 @@
 #define SHOW_COMMENT_INTERVAL_VALUE 30
 
 //MMProgressHUD 显示的等待时间长
-#define MMProgressHUD_DELAY_SECONDS  1.0
+#define MMProgressHUD_DELAY_SECONDS  2.0
 
 //定制道路的 区域宽度
 #define CUSTOMIZE_ROAD_BUFFER_WIDTH 0.005
