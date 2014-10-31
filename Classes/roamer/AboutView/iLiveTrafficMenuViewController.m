@@ -81,7 +81,9 @@
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [FlowerCollector OnEvent:RUN_ABOUT_FUNCTION];
-    [self refreshDownloadBtn];
+    //设置成一个 下载状态不涵盖的 状态。用于表示不用下载
+    [DownloadTPKFileThread setCurrentDownloadStatus:-1];
+    [self refreshDownloadBtnAndState];
 
 }
 
@@ -107,17 +109,19 @@
     }else  if ([localVersion isEqualToString:serverVersion])
     {  //如果本地版本和服务器版本一样
         // 主线程刷新界面开始
+        //设置成一个 下载状态不涵盖的 状态。用于表示不用下载
+        [DownloadTPKFileThread setCurrentDownloadStatus:-1];
         if ([NSThread isMainThread])
         {
             [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"地图是最新版本%@",localVersion ] forState:UIControlStateNormal];
-            [self refreshUIStatus:NO];
+            [self refreshDownloadBtnAndState];
         }
         else
         {
             dispatch_sync(dispatch_get_main_queue(), ^{
                 //Update UI in UI thread here
                 [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"地图是最新版本%@",localVersion ] forState:UIControlStateNormal];
-                [self refreshUIStatus:NO];
+                [self refreshDownloadBtnAndState];
 
             });
         }
@@ -126,17 +130,19 @@
     { //如果本地版本和服务器版本不一样
         Tools * tools = [Tools sharedInstance];
         tools.baseMapVersionAtServer = serverVersion;
+        [DownloadTPKFileThread setCurrentDownloadStatus:TCBlobDownloadStateReady];
         if ([NSThread isMainThread])
         {
             [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"有新地图%@,点击更新",serverVersion ] forState:UIControlStateNormal];
-            [self refreshUIStatus:YES];
+            [self refreshDownloadBtnAndState];
+
         }
         else
         {
             dispatch_sync(dispatch_get_main_queue(), ^{
                 //Update UI in UI thread here
                 [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"有新地图%@,点击更新",serverVersion ] forState:UIControlStateNormal];
-                [self refreshUIStatus:YES];
+                [self refreshDownloadBtnAndState];
             });
         }
     }
@@ -144,38 +150,65 @@
 
 #pragma mark - 监听下载暂停通知
 -(void) downloadCanceled:(NSNotification*) notification{
-    [self refreshDownloadBtn];
-    [self.downloadTPKBtn setTitle:@"下载暂停，点击继续" forState:UIControlStateNormal];
+    [DownloadTPKFileThread setCurrentDownloadStatus:TCBlobDownloadStateCancelled];
+    [self refreshDownloadBtnAndState];
 }
 
 #pragma mark - 监听下载完成的通知
 -(void)downloadFinished:(NSNotification*) notification{
-    [self refreshUIStatus:NO];
     NSString * localVersion = [[NSUserDefaults standardUserDefaults] stringForKey:@"LocalBaseMapTPKVersion"];
     [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"地图是最新版本%@",localVersion ] forState:UIControlStateNormal];
-    self.progressView.hidden = YES;
+    //设置成一个 下载状态不涵盖的 状态。用于表示不用下载
+    [DownloadTPKFileThread setCurrentDownloadStatus:-1];
+    [self refreshDownloadBtnAndState];
 }
 
 #pragma mark - 监听消息的回调，用于刷新进度条
 - (void) refreshProgressBar:(NSNotification*) notification{
     NSNumber* percent = (NSNumber *)[notification object];//获取到传递的对象
     [self.progressView setProgress:[percent floatValue]];
-    [self refreshDownloadBtn];
+    [self refreshDownloadBtnAndState];
 }
 
-#pragma mark - 刷新下载按钮和进度条
--(void) refreshUIStatus:(BOOL) canDownload{
-    if (canDownload)
+#pragma mark - 根据下载状态显示按钮文字和进度条状态
+-(void) refreshDownloadBtnAndState{
+    if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateReady)
     {
-        [self.downloadTPKBtn setEnabled:YES];
         [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
-        self.progressView.hidden = NO;
-    }else{
-        [self.downloadTPKBtn setEnabled:NO];
+        self.downloadTPKBtn.enabled = YES ;
+        self.progressView.hidden = YES ;
+    }else if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateDownloading){
+        [self.downloadTPKBtn setTitle:@"正在下载,点击暂停" forState:UIControlStateNormal];
+        [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
+        self.downloadTPKBtn.enabled = YES ;
+        self.progressView.hidden = NO ;
+    }else if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateCancelled){
+        [self.downloadTPKBtn setTitle:@"下载暂停,点击继续下载" forState:UIControlStateNormal];
+        [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
+        self.downloadTPKBtn.enabled = YES ;
+        self.progressView.hidden = NO ;
+    }else{//不需要下载
         [self.downloadTPKBtn setBackgroundColor:[UIColor clearColor] ];
+        self.downloadTPKBtn.enabled = NO ;
         self.progressView.hidden = YES;
     }
 }
+
+
+
+//#pragma mark - 刷新下载按钮和进度条
+//-(void) refreshUIStatus:(BOOL) canDownload{
+//    if (canDownload)
+//    {
+//        [self.downloadTPKBtn setEnabled:YES];
+//        [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
+//        self.progressView.hidden = NO;
+//    }else{
+//        [self.downloadTPKBtn setEnabled:NO];
+//        [self.downloadTPKBtn setBackgroundColor:[UIColor clearColor] ];
+//        self.progressView.hidden = YES;
+//    }
+//}
 
 #pragma mark - 点击下载地图按钮
 -(IBAction)downloadBtnClicked:(id)sender{
@@ -209,21 +242,6 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 
 }
-
-#pragma mark - 根据下载状态显示按钮文字
--(void) refreshDownloadBtn{
-    if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateReady)
-    {
-
-    }else if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateDownloading){
-        [self.downloadTPKBtn setTitle:@"正在下载,点击暂停" forState:UIControlStateNormal];
-        [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
-    }else if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateCancelled){
-        [self.downloadTPKBtn setTitle:@"下载暂停,点击继续下载" forState:UIControlStateNormal];
-        [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
-    }
-}
-
 
 #pragma mark - UITableViewDatasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
