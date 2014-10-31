@@ -17,8 +17,8 @@
     IBOutlet UITextView * textView;
     IBOutlet UILabel * label_version;
     IBOutlet UIButton * infoBtn;
-    IBOutlet UIButton * commentBtn;
     IBOutlet UIImageView * legendImg ;
+
 }
 
 @property(retain) iLiveTrafficMapViewController *mapVC;
@@ -28,10 +28,17 @@
 @property(nonatomic,retain) IBOutlet UILabel * label_version;
 @property(nonatomic,retain) IBOutlet UIButton * infoBtn;
 @property(nonatomic,retain) IBOutlet UIButton * commentBtn;
+@property(nonatomic,retain) IBOutlet UIButton * downloadTPKBtn;
 @property(nonatomic,retain) IBOutlet UIImageView * legendImg;
+
+@property(nonatomic,retain) IBOutlet UIProgressView * progressView;
 
 -(IBAction)helpBtnClicked:(id)sender;
 -(IBAction) goToDownlaodPage:(id)sender;
 -(IBAction) goToCommentPage:(id)sender;
+
+//下载按钮点击
+-(IBAction) downloadBtnClicked:(id)sender;
+
 
 @end

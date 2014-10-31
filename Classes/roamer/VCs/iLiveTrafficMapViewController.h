@@ -180,12 +180,8 @@
 
 @property(nonatomic,retain)  IFlyDataUploader * _iFly_uploader ;
 @property (nonatomic, strong) IFlySpeechRecognizer * _iFlySpeechRecognizer;
-@property(nonatomic) bool isCheckTPKFileByShowButton  ; //检查地图包版本的时候 ，是用于改变下载按钮的图片还是用于显示提示信息。 true 是用于改变按钮图片，false 是用于点击下载按钮的时候进行提示
 
 @property(nonatomic,retain) IBOutlet UIView * maskView;
-
-//下载按钮点击
--(IBAction) downloadBtnClicked:(id)sender;
 
 //道路定制
 -(IBAction) customizeBtnClicked:(id)sender;

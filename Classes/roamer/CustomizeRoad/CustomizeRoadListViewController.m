@@ -155,6 +155,9 @@
         NSIndexPath * indexPath = [self.tableView indexPathForRowAtPoint:point];
 
         if(indexPath == nil) return ;
+        if(indexPath.row <= 1){
+            return;
+        }
 
         DLog(@"长按了%d号记录", indexPath.row);
         self.stAlertView = [[STAlertView alloc] initWithTitle:@"请输入信息"

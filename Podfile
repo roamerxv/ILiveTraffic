@@ -16,7 +16,11 @@ pod 'TCBlobDownload', '=1.5.0'
 pod 'UAProgressView'   #圆形进度条
 pod 'GPUImage' , :inhibit_warnings => true
 pod 'AMSmoothAlert'  # 弹出式提示窗
-pod "STAlertView"  #带输入的弹出提示窗
+pod 'STAlertView'  #带输入的弹出提示窗
+
+#pod "CNPGridMenu" #弹出式的菜单
+
+pod 'KLCPopup' #弹出式菜单
 
 
 # Remove 64-bit build architecture from Pods targets

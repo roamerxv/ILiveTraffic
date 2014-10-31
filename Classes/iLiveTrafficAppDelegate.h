@@ -22,6 +22,8 @@
 #import "IFlyFlowerCollector.h"
 #import "Configer.h"
 
+#import "WXApi.h"
+
 #import <Crashlytics/Crashlytics.h>
 
 @class ViewController;

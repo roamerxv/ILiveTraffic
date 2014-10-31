@@ -108,6 +108,19 @@
                     <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qR9-bU-x8G">
+                    <rect key="frame" x="552" y="552" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="c7v-LF-9JB"/>
+                        <constraint firstAttribute="height" constant="48" id="gPe-Po-uk2"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="OnStateButtonImage">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareMenuBtnClicked:" destination="-1" eventType="touchUpInside" id="ZDj-Jm-POT"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
@@ -115,6 +128,8 @@
                 <constraint firstItem="OpY-im-BQE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="CXg-uZ-eYU"/>
                 <constraint firstItem="OpY-im-BQE" firstAttribute="leading" secondItem="cIg-AL-IcJ" secondAttribute="leading" id="JO8-AF-9pT"/>
                 <constraint firstAttribute="bottom" secondItem="OpY-im-BQE" secondAttribute="bottom" id="KLM-kq-Mgo"/>
+                <constraint firstAttribute="bottom" secondItem="qR9-bU-x8G" secondAttribute="bottom" id="WJk-yA-468"/>
+                <constraint firstAttribute="trailing" secondItem="qR9-bU-x8G" secondAttribute="trailing" id="Wdx-so-LRF"/>
                 <constraint firstItem="OpY-im-BQE" firstAttribute="trailing" secondItem="cIg-AL-IcJ" secondAttribute="trailing" id="XkM-7T-cQC"/>
                 <constraint firstItem="OpY-im-BQE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ocd-TI-pbY"/>
                 <constraint firstAttribute="trailing" secondItem="OpY-im-BQE" secondAttribute="trailing" id="pcs-42-5Jg"/>
@@ -123,6 +138,7 @@
         </view>
     </objects>
     <resources>
+        <image name="OnStateButtonImage" width="56" height="56"/>
         <image name="clear" width="32" height="32"/>
         <image name="clearX" width="32" height="32"/>
         <image name="exit" width="32" height="32"/>

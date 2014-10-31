@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <ArcGIS/ArcGIS.h>
 #import "SketchToolbar.h"
+#import "KLCPopup.h"
 
-@interface RoadMapViewController : UIViewController{
+
+@interface RoadMapViewController : UIViewController<UIPopoverControllerDelegate>{
     AGSMapView* mapView;
 }
 
@@ -22,5 +24,7 @@
 
 @property (nonatomic,strong) IBOutlet UIToolbar* toolbar;
 @property (nonatomic,strong) SketchToolbar* sketchToolbar;
+
+-(IBAction) shareMenuBtnClicked:(id)sender;
 
 @end

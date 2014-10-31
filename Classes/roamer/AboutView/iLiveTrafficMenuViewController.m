@@ -24,6 +24,8 @@
 @synthesize infoBtn;
 @synthesize commentBtn;
 @synthesize legendImg;
+@synthesize downloadTPKBtn;
+@synthesize progressView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -51,43 +53,88 @@
     NSDictionary* infoDict =[[NSBundle mainBundle] infoDictionary];
     NSString* versionNum =[infoDict objectForKey:@"CFBundleShortVersionString"];
     versionLabel.text = versionNum;
-    // 检测新版本
-//    [NSThread detachNewThreadSelector:@selector(checkVersion:) toTarget:self withObject:nil];
+    //监听讯飞查询网络参数的消息,判断是否有新地图
+    [[NSNotificationCenter defaultCenter]  addObserver:self selector:@selector(checkBaseMapVersion:) name:SUNFLOWERNOTIFICATION object:nil];
+    //检查地图包版本，进行按钮图片的修改（逻辑在回调函数里面实现，这里定义一个开关键）
+    [Tools asynchronousQueryServerBaseMapTpkFileVersion];
+
+
 }
 
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [FlowerCollector OnEvent:RUN_ABOUT_FUNCTION];
+
 }
 
-#pragma mark - 检测新版本
 
--(void) checkVersion:(id)sender{
-    NSURL *url = [[NSURL alloc] initWithString:[[Tools getServerHost] stringByAppendingString:[[NSString alloc] initWithFormat:@"/system/check_version?platform=000000&version=%@",versionLabel.text ]]];
-    DLog(@"开始检测新版本。当前版本是%@\n调用的url是:%@", versionLabel.text,url);
-    NSError *error =nil ;
-    NSStringEncoding encoding;
-    //NSString *my_string = [[NSString alloc] initWithContentsOfURL:url
-    //                                                     encoding:NSUTF8StringEncoding
-    //                                                        error:&error];
-    NSString * checkResult = [[NSString alloc] initWithContentsOfURL:url
-                                                                 usedEncoding:&encoding
-                                                                        error:&error];
-    if (error == NULL)
-    {
-        DLog(@"返回的值:%@",checkResult);
-        if([checkResult isEqualToString:@""] ||  [checkResult isEqualToString:@"error"] )
-        {
-            self.checkNewImageBtn.alpha =0.0f ;
-            self.checkNewImageBtn.enabled = false;
-            
-        }else{
-            self.checkNewImageBtn.alpha = 1.0f ;
-            self.checkNewImageBtn.enabled = true ;
-        }
+#pragma mark - 判断地图版本,通过 Tools 中的 asynchronousQueryServerBaseMapTpkFileVersion 方法回调
+- (void) checkBaseMapVersion:(NSNotification*) notification{
+    NSDictionary* obj = (NSDictionary*)[notification object];//获取到传递的对象
+    DLog(@"获取到传递的对象%@",obj);
+    NSString * serverVersion = [IFlyFlowerCollector getOnlineParams:@"BaseMapTPKVersion"];
+    if ([[(NSString *)[obj objectForKey:@"config_update"] uppercaseString] isEqualToString:@"YES"])
+    { //如果本地对象还没设置,则来拆分对象获得服务器端设置
+        serverVersion = (NSString *) [(NSDictionary*)[obj objectForKey:@"online_params"] objectForKey:@"BaseMapTPKVersion"];
     }else{
-        DLog(@"检测版本的调用发生错误,错误是:%@，url是:%@",error,url);
+            serverVersion = [IFlyFlowerCollector getOnlineParams:@"BaseMapTPKVersion"];
     }
+    NSString * localVersion = [[NSUserDefaults standardUserDefaults] stringForKey:@"LocalBaseMapTPKVersion"];
+    DLog(@"服务器上设置的tpk 文件版本是%@,本地的版本是%@", serverVersion,localVersion);
+    if (localVersion == nil){
+        localVersion =@"未知";
+    }
+    if (serverVersion == nil){
+        [self.downloadTPKBtn setTitle:@"地图版本未知" forState:UIControlStateNormal];
+    }else  if ([localVersion isEqualToString:serverVersion])
+    {  //如果本地版本和服务器版本一样
+        // 主线程刷新界面开始
+        if ([NSThread isMainThread])
+        {
+            [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"地图是最新版本%@",localVersion ] forState:UIControlStateNormal];
+            [self refreshUIStatus:NO];
+        }
+        else
+        {
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                //Update UI in UI thread here
+                [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"地图是最新版本%@",localVersion ] forState:UIControlStateNormal];
+                [self refreshUIStatus:NO];
+
+            });
+        }
+        // 主线程刷新界面结束
+    }else
+    { //如果本地版本和服务器版本不一样
+        if ([NSThread isMainThread])
+        {
+            [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"有新地图%@,点击更新",localVersion ] forState:UIControlStateNormal];
+            [self refreshUIStatus:YES];
+        }
+        else
+        {
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                //Update UI in UI thread here
+                [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"有新地图%@,点击更新",localVersion ] forState:UIControlStateNormal];
+                [self refreshUIStatus:YES];
+            });
+        }
+    }
+}
+
+
+#pragma mark - 刷新下载按钮和进度条
+-(void) refreshUIStatus:(BOOL) canDownload{
+    if (canDownload)
+    {
+        [self.downloadTPKBtn setEnabled:YES];
+        [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
+    }else{
+        [self.downloadTPKBtn setEnabled:NO];
+        [self.downloadTPKBtn setBackgroundColor:[UIColor clearColor] ];
+
+    }
+
 }
 
 #pragma mark -跳转到下载页面
@@ -108,6 +155,25 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 
 }
+
+#pragma mark - 点击下载地图按钮
+-(IBAction)downloadBtnClicked:(id)sender{
+    DLog(@"下载地图");
+//    isSilenceCheckTPKVersion = false;
+//    self.isCheckTPKFileByShowButton = false;
+//    Tools * tools = [Tools sharedInstance];
+//    if (tools.backgroudIsDownlaoding){ //如果有下载进程，直接显示，不用做版本检查
+//        [MMProgressHUD dismiss];
+//        [self showDownloadView];
+//        return ;
+//    }else{
+//        [MMProgressHUD showWithTitle:@"检查" status:@"开始检查版本"];
+//        [Tools asynchronousQueryServerBaseMapTpkFileVersion];
+//    }
+//
+//    DLog(@"下载按钮被点击");
+}
+
 
 #pragma mark - UITableViewDatasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

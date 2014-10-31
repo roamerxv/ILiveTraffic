@@ -58,6 +58,10 @@
 //语音识别关键词
 #define USERWORDS   @"{\"userword\":[{\"name\":\"iflytek\",\"words\":[\"体育场路\",\"秋涛路\",\"浣纱路\",\"凤起路\",\"环城西路\",\"建国路\",\"中山路\",\"中河路\",\"中河地面路\",\"环城西路\",\"文三路\",\"环城东路\",\"延安路\",\"文一路\",\"秋涛路\",\"湖墅路\",\"庆春路\",\"灵溪隧道\",\"曙光路\",\"上塘地面路\",\"南山路\",\"天城路\",\"莫干山路\",\"庆春路\",\"北山路\",\"凤起东路\",\"体育场路\",\"解放路\",\"潮王路\",\"秋涛北路\",\"曙光路\",\"中河地面路\",\"灵隐路\",\"望江路\",\"东新路\",\"湖墅路\",\"文二路\",\"文晖路\",\"艮山西路\",\"绍兴路\",\"环城北路\",\"天目山路\",\"德胜东路\",\"西溪路\",\"钱江四桥\",\"文一西路\",\"钱江四桥\",\"虎跑路\",\"杨公堤\",\"湖滨隧道\",\"梅灵路\",\"中河高架路\",\"石祥路\",\"上塘高架路\",\"石桥高架路\"]}]}"
 
+//微信sdk的参数
+#define WEBCHART_APP_ID @"64206ae5"
+
+
 //ArcGIS rest 服务参数
 #define baseMapServiceURL @"http://www.hzctrc.com/arcgis/rest/services/V32/mobilebasetest/MapServer"
 //#define trafficMapServiceURL @"http://www.hzctrc.com/arcgis/rest/services/V32/mobiletraffictest/MapServer"
@@ -71,7 +75,7 @@
 #define MMProgressHUD_DELAY_SECONDS  2.0
 
 //定制道路的 区域宽度
-#define CUSTOMIZE_ROAD_BUFFER_WIDTH 0.005
+#define CUSTOMIZE_ROAD_BUFFER_WIDTH 0.0023
 
 @interface Configer : NSObject
 

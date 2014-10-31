@@ -4,6 +4,7 @@ PODS:
   - ArcGIS-Runtime-SDK-iOS (10.2.3)
   - CorePlot (1.5.1)
   - GPUImage (0.1.6)
+  - KLCPopup (1.0)
   - MMProgressHUD (0.2.3)
   - PPRevealSideViewController (1.1.0)
   - SBJson (4.0.1)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - ArcGIS-Runtime-SDK-iOS (= 10.2.3)
   - CorePlot
   - GPUImage
+  - KLCPopup
   - MMProgressHUD
   - PPRevealSideViewController (~> 1.1.0)
   - SBJson
@@ -33,6 +35,7 @@ SPEC CHECKSUMS:
   ArcGIS-Runtime-SDK-iOS: 4f8c8a4992385b225ffd10a6dd2c0151335f437d
   CorePlot: b15cb1a9a687b9576545104248d6e22033e678bb
   GPUImage: cecb0830bb9428f50192042e3c7b53810f51388e
+  KLCPopup: 23548d0454ca156b0eb684f791f234b9c2134369
   MMProgressHUD: 416686cee2e9af16691e82ebfdcf7caf1dd6f621
   PPRevealSideViewController: b49265e0b6c5493aed29a6821c8eb8d84b7e109a
   SBJson: d71212c078abf4679d54b0d0565260c474e46235

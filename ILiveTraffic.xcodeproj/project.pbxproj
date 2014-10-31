@@ -127,6 +127,9 @@
 		D9C950F4177802DA00FF5A71 /* WZGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C950F2177802DA00FF5A71 /* WZGuideViewController.m */; };
 		D9C9511A177824CE00FF5A71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C95119177824CE00FF5A71 /* main.m */; };
 		D9CBD3EC1757B51400AB3DE8 /* Chart1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9CBD3EB1757B51400AB3DE8 /* Chart1ViewController.xib */; };
+		D9D3B5011A01E37500C9A8F5 /* SharePopViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D3B4FE1A01E37500C9A8F5 /* SharePopViewController.h */; };
+		D9D3B5021A01E37500C9A8F5 /* SharePopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D3B4FF1A01E37500C9A8F5 /* SharePopViewController.m */; };
+		D9D3B5031A01E37500C9A8F5 /* SharePopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D3B5001A01E37500C9A8F5 /* SharePopViewController.xib */; };
 		D9D905C319E8479E00411B75 /* SDHelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D905C019E8479E00411B75 /* SDHelpViewController.h */; };
 		D9D905C419E8479E00411B75 /* SDHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D905C119E8479E00411B75 /* SDHelpViewController.m */; };
 		D9D905C519E8479E00411B75 /* SDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D905C219E8479E00411B75 /* SDHelpViewController.xib */; };
@@ -268,6 +271,9 @@
 		D9C950F2177802DA00FF5A71 /* WZGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZGuideViewController.m; sourceTree = "<group>"; };
 		D9C95119177824CE00FF5A71 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9CBD3EB1757B51400AB3DE8 /* Chart1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart1ViewController.xib; sourceTree = "<group>"; };
+		D9D3B4FE1A01E37500C9A8F5 /* SharePopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePopViewController.h; sourceTree = "<group>"; };
+		D9D3B4FF1A01E37500C9A8F5 /* SharePopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePopViewController.m; sourceTree = "<group>"; };
+		D9D3B5001A01E37500C9A8F5 /* SharePopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharePopViewController.xib; sourceTree = "<group>"; };
 		D9D905C019E8479E00411B75 /* SDHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHelpViewController.h; sourceTree = "<group>"; };
 		D9D905C119E8479E00411B75 /* SDHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHelpViewController.m; sourceTree = "<group>"; };
 		D9D905C219E8479E00411B75 /* SDHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDHelpViewController.xib; sourceTree = "<group>"; };
@@ -712,6 +718,7 @@
 		D9BCFBDA17341FB7001B30D7 /* roamer */ = {
 			isa = PBXGroup;
 			children = (
+				D9D3B4FD1A01E34700C9A8F5 /* SharePopView-共享操作界面 */,
 				D989E56519FF73EE00AF4143 /* 微信 */,
 				D9A5D9CF19F635970066E129 /* CustomizeRoad-道路定制功能 */,
 				D9D9184C19F272510002488C /* Downloader */,
@@ -768,6 +775,17 @@
 				D9C950F2177802DA00FF5A71 /* WZGuideViewController.m */,
 			);
 			path = WZGuide;
+			sourceTree = "<group>";
+		};
+		D9D3B4FD1A01E34700C9A8F5 /* SharePopView-共享操作界面 */ = {
+			isa = PBXGroup;
+			children = (
+				D9D3B4FE1A01E37500C9A8F5 /* SharePopViewController.h */,
+				D9D3B4FF1A01E37500C9A8F5 /* SharePopViewController.m */,
+				D9D3B5001A01E37500C9A8F5 /* SharePopViewController.xib */,
+			);
+			name = "SharePopView-共享操作界面";
+			path = SharePopView;
 			sourceTree = "<group>";
 		};
 		D9D905BF19E8479E00411B75 /* Helper */ = {
@@ -852,6 +870,7 @@
 				D989F0B619AC68AB0011A511 /* Chart4ViewController.h in Headers */,
 				D911812D175C53C300251F1B /* Chart3MetroViewController.h in Headers */,
 				D978B81619F77AA70060FED4 /* RoadMapViewController.h in Headers */,
+				D9D3B5011A01E37500C9A8F5 /* SharePopViewController.h in Headers */,
 				D9C950F3177802DA00FF5A71 /* WZGuideViewController.h in Headers */,
 				D955CC9A19C8B1EF0019AAEF /* PopupView.h in Headers */,
 				D955CCA219C8C3C10019AAEF /* ISRDataHelper.h in Headers */,
@@ -948,6 +967,7 @@
 				D978B81819F77AA70060FED4 /* RoadMapViewController.xib in Resources */,
 				D9A5D9D519F635970066E129 /* CustomizeRoadListViewController.xib in Resources */,
 				D99AEDBB19E81F84009E602E /* iLiveTrafficMenuViewController.xib in Resources */,
+				D9D3B5031A01E37500C9A8F5 /* SharePopViewController.xib in Resources */,
 				D9B75C0119D1ED79008862F1 /* Chart4TableCellType2.xib in Resources */,
 				D911812F175C53C300251F1B /* Chart3MetroViewController.xib in Resources */,
 				D9D905C519E8479E00411B75 /* SDHelpViewController.xib in Resources */,
@@ -1041,6 +1061,7 @@
 				D9BCFBF117376B5D001B30D7 /* Tools.m in Sources */,
 				D955CC9F19C8BFF20019AAEF /* RecognizerFactory.m in Sources */,
 				D955CCA319C8C3C10019AAEF /* ISRDataHelper.m in Sources */,
+				D9D3B5021A01E37500C9A8F5 /* SharePopViewController.m in Sources */,
 				D955CC9B19C8B1EF0019AAEF /* PopupView.m in Sources */,
 				D997225619F128D30054667F /* SlidingTabsControl.m in Sources */,
 				D90A246119F7B55600AA2527 /* SketchToolbar.m in Sources */,
@@ -1223,7 +1244,7 @@
 				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = NO;
 				MOMC_NO_MAX_PROPERTY_COUNT_WARNINGS = NO;
 				MOMC_NO_WARNINGS = NO;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "fb4a96c9-842b-482c-9639-99be52fcce77";
 				"PROVISIONING_PROFILE[sdk=*]" = "";
@@ -1336,7 +1357,7 @@
 				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = NO;
 				MOMC_NO_MAX_PROPERTY_COUNT_WARNINGS = NO;
 				MOMC_NO_WARNINGS = NO;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "fb4a96c9-842b-482c-9639-99be52fcce77";
 				"PROVISIONING_PROFILE[sdk=*]" = "";

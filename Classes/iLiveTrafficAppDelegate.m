@@ -53,9 +53,6 @@ static iLiveTrafficAppDelegate *shared;
 }
 
 
-/******************
- modified by wbgao
- ******************/
 @synthesize mapViewController = _mapViewController;
 @synthesize configure = _configure;
 @synthesize locationManager = _locationManager;
@@ -176,6 +173,19 @@ static iLiveTrafficAppDelegate *shared;
     }else{
         DLog(@"非第一次运行，不显示guide界面");
     }
+
+    //设置当前使用的地图版本和aapp版本一致
+    NSString * localVersion = [[NSUserDefaults standardUserDefaults] stringForKey:@"LocalBaseMapTPKVersion"];
+    if (localVersion == nil){
+        NSDictionary* infoDict =[[NSBundle mainBundle] infoDictionary];
+        NSString* versionNum =[infoDict objectForKey:@"CFBundleShortVersionString"];
+        localVersion = versionNum ;
+        [[NSUserDefaults standardUserDefaults] setObject:localVersion forKey:@"LocalBaseMapTPKVersion"];
+    }
+
+
+    //使用微信API
+    [WXApi registerApp:WEBCHART_APP_ID];
 
     //使用 crashlytics sdk
     [Crashlytics startWithAPIKey:@"df5790710b6debf17578f252f8aaadcb7de2af79"];

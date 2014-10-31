@@ -64,6 +64,33 @@
 
 }
 
+#pragma mark - 共享功能按钮点击
+-(void) shareMenuBtnClicked:(id)sender{
+    NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"SharePopViewController" owner:self options:nil];
+    UIView *contentView = [nibObjects objectAtIndex:0];
+
+    CGRect frame = contentView.frame;
+    frame.origin.x = 100;
+    frame.origin.y = 100;
+    frame.size.width = 200;
+    frame.size.height = 200;
+    contentView.frame = frame ;
+
+
+
+
+//    KLCPopupLayout layout = KLCPopupLayoutMake((KLCPopupHorizontalLayout)KLCPopupHorizontalLayoutCenter,(KLCPopupVerticalLayout)KLCPopupVerticalLayoutBelowCenter);
+
+    KLCPopup* popup = [KLCPopup popupWithContentView:contentView
+                                            showType:(KLCPopupShowType)KLCPopupShowTypeFadeIn 
+                                         dismissType:(KLCPopupDismissType)KLCPopupDismissTypeShrinkOut
+                                            maskType:(KLCPopupMaskType)KLCPopupMaskTypeNone 
+                            dismissOnBackgroundTouch:NO
+                               dismissOnContentTouch:NO];
+    [popup show];
+
+}
+
 /*
 #pragma mark - Navigation
 

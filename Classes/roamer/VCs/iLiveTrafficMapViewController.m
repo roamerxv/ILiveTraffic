@@ -91,11 +91,9 @@
 @synthesize _iFly_uploader;
 @synthesize _iFlySpeechRecognizer;
 
-@synthesize isCheckTPKFileByShowButton;
 
 @synthesize maskView;
 
-static bool isSilenceCheckTPKVersion  = true;
 
 
 //显示图表
@@ -563,9 +561,6 @@ static bool isSilenceCheckTPKVersion  = true;
 //    [self becomeFirstResponder];
     //获取全市拥堵指数和获取各个区域拥堵指数(通过线程方法)
     [self handleTimer:nil];
-    //检查地图包版本，进行按钮图片的修改（逻辑在回调函数里面实现，这里定义一个开关键）
-    isCheckTPKFileByShowButton = true;
-    [Tools asynchronousQueryServerBaseMapTpkFileVersion];
 
 }
 
@@ -600,7 +595,6 @@ static bool isSilenceCheckTPKVersion  = true;
     [super viewDidLoad];
     
     self.mapView.touchDelegate=self;
-    isSilenceCheckTPKVersion = true;
     
     //注册监听事件，用于在地图上定位路段
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
@@ -795,9 +789,6 @@ static bool isSilenceCheckTPKVersion  = true;
                                            selector: @selector(handleTimer:)
                                            userInfo: nil
                                             repeats: YES];
-
-    //监听讯飞查询网络参数的消息
-    [[NSNotificationCenter defaultCenter]  addObserver:self selector:@selector(checkBaseMapVersion:) name:SUNFLOWERNOTIFICATION object:nil];
 }
 
 #pragma mark 
@@ -1164,24 +1155,9 @@ static bool isSilenceCheckTPKVersion  = true;
     Chart1ViewController * vc = [[Chart1ViewController alloc]init];
     vc.displayReturnButton = true;
     [vc setMapVC:self];
-    [self.revealSideViewController pushViewController:vc onDirection:PPRevealSideDirectionBottom  withOffset:110.0 animated:YES];
+    [self.revealSideViewController pushViewController:vc onDirection:PPRevealSideDirectionBottom  withOffset:(self.view.frame.size.height/3*2) animated:YES];
 }
 
--(IBAction)downloadBtnClicked:(id)sender{
-    isSilenceCheckTPKVersion = false;
-    self.isCheckTPKFileByShowButton = false;
-    Tools * tools = [Tools sharedInstance];
-    if (tools.backgroudIsDownlaoding){ //如果有下载进程，直接显示，不用做版本检查
-        [MMProgressHUD dismiss];
-        [self showDownloadView];
-        return ;
-    }else{
-        [MMProgressHUD showWithTitle:@"检查" status:@"开始检查版本"];
-        [Tools asynchronousQueryServerBaseMapTpkFileVersion];
-    }
-
-    DLog(@"下载按钮被点击");
-}
 
 #pragma mark - arcgis map 事件响应
 -(void)mapView:(AGSMapView *)mapView didClickAtPoint:(CGPoint)screen mapPoint:(AGSPoint *)mappoint graphics:(NSDictionary *)graphics
@@ -1191,140 +1167,6 @@ static bool isSilenceCheckTPKVersion  = true;
 
 #pragma mark - PPRevealSideViewControllerDelegate
 - (void) pprevealSideViewController:(PPRevealSideViewController *)controller didPopToController:(UIViewController *)centerController{
-
-}
-
-
-
-#pragma mark - 判断地图版本,通过 Tools 中的 asynchronousQueryServerBaseMapTpkFileVersion 方法回调
-- (void) checkBaseMapVersion:(NSNotification*) notification{
-    Tools * tools = [Tools sharedInstance];
-    [MMProgressHUD dismiss];
-    NSDictionary* obj = (NSDictionary*)[notification object];//获取到传递的对象
-    DLog(@"获取到传递的对象%@",obj);
-    NSString * serverVersion = [IFlyFlowerCollector getOnlineParams:@"BaseMapTPKVersion"];
-    if ([[(NSString *)[obj objectForKey:@"config_update"] uppercaseString] isEqualToString:@"YES"] ){ //如果本地对象还没设置,则来拆分对象获得服务器端设置
-        serverVersion = (NSString *) [(NSDictionary*)[obj objectForKey:@"online_params"] objectForKey:@"BaseMapTPKVersion"];
-    }else{
-        serverVersion = [IFlyFlowerCollector getOnlineParams:@"BaseMapTPKVersion"];
-    }
-    tools.baseMapVersionAtServer = serverVersion ;
-
-    NSString * localVersion = [[NSUserDefaults standardUserDefaults] stringForKey:@"LocalBaseMapTPKVersion"];
-    DLog(@"服务器上设置的tpk 文件版本是%@,本地的版本是%@", serverVersion,localVersion);
-    NSString * message = nil;
-    if (serverVersion == nil){
-        if (self.isCheckTPKFileByShowButton){
-
-        }else{
-            message =  [[NSString alloc]initWithFormat:@"检查失败\n请联网"];
-            DLog("%@",message);
-            [MMProgressHUD showWithTitle:@"温馨提示" status:message];
-            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 2.5 * NSEC_PER_SEC);
-            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                [MMProgressHUD dismiss];
-            });
-        }
-
-    }else  if ([localVersion isEqualToString:serverVersion]){  //如果本地版本和服务器版本一样
-        // 主线程刷新界面开始
-        if ([NSThread isMainThread])
-        {
-            [self.downloadMapBtn setImage:[UIImage imageNamed:@"download_map.png"] forState:UIControlStateNormal];
-            [self.downloadMapBtn setNeedsDisplay];
-        }
-        else
-        {
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                //Update UI in UI thread here
-                [self.downloadMapBtn setImage:[UIImage imageNamed:@"download_map.png"] forState:UIControlStateNormal];
-                [self.downloadMapBtn setNeedsDisplay];
-
-            });
-        }
-        // 主线程刷新界面结束
-        // 如果只是用于改变 按钮图片，则就退出
-        if (self.isCheckTPKFileByShowButton){
-            return ;
-        }
-        [MMProgressHUD dismiss];
-        // 主线程刷新界面开始
-        if ([NSThread isMainThread])
-        {
-            [self confirmDownloadTPKFile:localVersion];
-        }
-        else
-        {
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                //Update UI in UI thread here
-                [self confirmDownloadTPKFile:localVersion];
-            });
-        }
-        // 主线程刷新界面结束
-
-    }else{ //如果本地版本和服务器版本不一样
-        // 主线程刷新界面开始
-        if ([NSThread isMainThread])
-        {
-            [self.downloadMapBtn setImage:[UIImage imageNamed:@"download_new_map.png"] forState:UIControlStateNormal];
-            [self.downloadMapBtn setNeedsDisplay];
-        }
-        else
-        {
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                //Update UI in UI thread here
-                [self.downloadMapBtn setImage:[UIImage imageNamed:@"download_new_map.png"] forState:UIControlStateNormal];
-                [self.downloadMapBtn setNeedsDisplay];
-
-            });
-        }
-        // 主线程刷新界面结束
-
-        if (self.isCheckTPKFileByShowButton){
-            return ;
-        }
-        message =  [[NSString alloc]initWithFormat:@"发现新版本地图-%@" ,serverVersion ];
-        DLog(@"%@",message);
-        [MMProgressHUD showWithTitle:@"温馨提示" status:message];
-        double delayInSeconds = MMProgressHUD_DELAY_SECONDS;
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            [MMProgressHUD dismiss];
-            [self showDownloadView];
-        });
-
-    }
-}
-
-
-
-
-#pragma mark - 弹出对话窗，确定用户是否一定要下载
--(void) confirmDownloadTPKFile:(NSString *) localVersion{
-    NSString * message =  [[NSString alloc]initWithFormat:@"您在使用最新版地图\n%@\n可以不用再下载",localVersion];
-    AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"提示" andText:message andCancelButton:YES forAlertType:AlertInfo];
-    [alert.defaultButton setTitle:@"不下载了" forState:UIControlStateNormal];
-    [alert.cancelButton setTitle:@"仍然下载" forState:UIControlStateNormal];
-    alert.completionBlock = ^void (AMSmoothAlertView *alertObj, UIButton *button) {
-        if(button == alertObj.defaultButton) {
-
-        } else {
-            [self showDownloadView];
-        }
-    };
-    [MMProgressHUD dismiss];
-    [alert show];
-}
-
-
-#pragma mark - 载入下载组件界面
--(void) showDownloadView{
-//    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"DownloadManager" bundle:nil];
-//    UIViewController *initialViewController = [mainStoryboard instantiateInitialViewController];
-//    [self presentViewController:initialViewController animated:YES completion:nil];
-    Downloader * downloader = [[Downloader alloc] initWithNibName:@"Downloader" bundle:nil];
-    [self presentViewController:downloader  animated:NO completion:nil];
-
 
 }
 

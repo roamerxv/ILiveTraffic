@@ -108,8 +108,8 @@
         self.arear1_view.hidden = YES;
         self.arear2_view.hidden = YES;
         // 调整Y轴位置和高度
-        frame.origin.y = self.plotSpaceFrame.origin.y+50;
-        frame.size.height = self.plotSpaceFrame.size.height+50;
+        frame.origin.y = self.view.frame.size.height/3*2;
+        frame.size.height = self.view.frame.size.height/3;
         self.hostingView.frame = frame;
         // 隐藏about 按钮
         self.mapVC.aboutBtn.hidden = TRUE;
