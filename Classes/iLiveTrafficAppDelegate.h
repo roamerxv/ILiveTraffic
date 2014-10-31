@@ -15,7 +15,8 @@
 #import "Tools.h"
 #import "DeviceInfoController.h"
 
-#import "WZGuideViewController.h"
+#import "OnboardingViewController.h"
+#import "OnboardingContentViewController.h"
 
 #import "iflyMSC/IFlySpeechUtility.h"
 #import "iflyMSC/IFlySetting.h"

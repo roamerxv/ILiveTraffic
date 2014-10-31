@@ -18,6 +18,8 @@ pod 'GPUImage' , :inhibit_warnings => true
 pod 'AMSmoothAlert'  # 弹出式提示窗
 pod 'STAlertView'  #带输入的弹出提示窗
 
+pod 'Onboard', :git => 'https://github.com/mamaral/Onboard.git' #引导组件
+
 #pod "CNPGridMenu" #弹出式的菜单
 
 pod 'KLCPopup' #弹出式菜单

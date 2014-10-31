@@ -159,24 +159,24 @@ static iLiveTrafficAppDelegate *shared;
     self.mapViewController = [[[iLiveTrafficMapViewController alloc] init] autorelease];
     self.locationManager = [[[iLiveTraffciLocationManager alloc] init] autorelease];
     
-    PPRevealSideViewController *vc = [[[PPRevealSideViewController alloc] initWithRootViewController:self.mapViewController] autorelease];
 
-    self.window.rootViewController = vc;
 	self.window.backgroundColor = [UIColor blackColor];
 	curView = map;
 	[window makeKeyAndVisible];
     
-    
+
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
         DLog(@"第一次运行，显示guide界面");
-        [WZGuideViewController show];
+        self.window.rootViewController = [self generateOnBoardingVC];
+
     }else{
         DLog(@"非第一次运行，不显示guide界面");
+        [self setupNormalRootViewControllerAnimated:YES];
     }
 
     //设置当前使用的地图版本和aapp版本一致
     NSString * localVersion = [[NSUserDefaults standardUserDefaults] stringForKey:@"LocalBaseMapTPKVersion"];
-    if (localVersion == nil){
+    if (localVersion == nil || [localVersion isEqualToString:@""]){
         NSDictionary* infoDict =[[NSBundle mainBundle] infoDictionary];
         NSString* versionNum =[infoDict objectForKey:@"CFBundleShortVersionString"];
         localVersion = versionNum ;
@@ -188,11 +188,95 @@ static iLiveTrafficAppDelegate *shared;
     [WXApi registerApp:WEBCHART_APP_ID];
 
     //使用 crashlytics sdk
-    [Crashlytics startWithAPIKey:@"df5790710b6debf17578f252f8aaadcb7de2af79"];
+    [Crashlytics startWithAPIKey:CRASHLYTICS_APP_ID];
+
+    DLog(@"启动完成！");
 
 	return YES;
 }
 
+
+- (void)setupNormalRootViewControllerAnimated:(BOOL)animated {
+    // create whatever your root view controller is going to be, in this case just a simple view controller
+    // wrapped in a navigation controller
+    PPRevealSideViewController *mainVC = [[[PPRevealSideViewController alloc] initWithRootViewController:self.mapViewController] autorelease];
+
+
+    // if we want to animate the transition, do it
+    if (animated) {
+        [UIView transitionWithView:self.window duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                self.window.rootViewController = mainVC;
+        } completion:nil];
+    }
+
+    // otherwise just set the root view controller normally without animation
+    else {
+        self.window.rootViewController = mainVC;
+    }
+}
+
+- (void)handleOnboardingCompletion {
+    // set that we have completed onboarding so we only do it once
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+
+    // animate the transition to the main application
+    [self setupNormalRootViewControllerAnimated:YES];
+    
+}
+
+- (OnboardingViewController *)generateOnBoardingVC {
+
+    OnboardingContentViewController *firstPage = [[OnboardingContentViewController alloc] initWithTitle:@"" body:@"" image:nil buttonText:nil action:^{
+    }];
+
+    UIGraphicsBeginImageContext(firstPage.view.frame.size);
+    [[UIImage imageNamed:@"ios_guide_01"] drawInRect:firstPage.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    firstPage.view.backgroundColor = [UIColor colorWithPatternImage:image];
+
+
+
+    OnboardingContentViewController *secondPage = [[OnboardingContentViewController alloc] initWithTitle:@"" body:@"" image:nil buttonText:nil action:^{
+    }];
+    UIGraphicsBeginImageContext(secondPage.view.frame.size);
+    [[UIImage imageNamed:@"ios_guide_02"] drawInRect:firstPage.view.bounds];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    secondPage.view.backgroundColor = [UIColor colorWithPatternImage:image];
+
+    OnboardingContentViewController *thirdPage = [[OnboardingContentViewController alloc] initWithTitle:@"" body:@"" image:nil buttonText:nil action:^{
+    }];
+    UIGraphicsBeginImageContext(secondPage.view.frame.size);
+    [[UIImage imageNamed:@"ios_guide_03"] drawInRect:thirdPage.view.bounds];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    thirdPage.view.backgroundColor = [UIColor colorWithPatternImage:image];
+
+
+    OnboardingContentViewController *forthPage = [[OnboardingContentViewController alloc] initWithTitle:@"" body:@"" image:nil buttonText:@"开启应用" action:^{
+        [self handleOnboardingCompletion];
+    }];
+    UIGraphicsBeginImageContext(forthPage.view.frame.size);
+    [[UIImage imageNamed:@"ios_guide_04"] drawInRect:firstPage.view.bounds];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    forthPage.view.backgroundColor = [UIColor colorWithPatternImage:image];
+
+    image=nil;
+    [image release];
+
+
+    OnboardingViewController *onboardingVC = [[OnboardingViewController alloc] initWithBackgroundImage:[UIImage imageNamed:@"street"] contents:@[firstPage, secondPage, thirdPage,forthPage]];
+
+    // If you want to allow skipping the onboarding process, enable skipping and set a block to be executed
+    // when the user hits the skip button.
+    onboardingVC.allowSkipping = YES;
+    onboardingVC.skipHandler = ^{
+        [self handleOnboardingCompletion];
+    };
+
+    return onboardingVC;
+}
+
+
+/* 设置和显示引导页 --- end*/
 	
 -(UIImage*)getCoverImage{
 	return coverImage;

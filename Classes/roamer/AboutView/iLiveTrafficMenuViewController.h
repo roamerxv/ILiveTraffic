@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Tools.h"
+#import "DownloadTPKFileThread.h"
 
 @class iLiveTrafficMapViewController;
 

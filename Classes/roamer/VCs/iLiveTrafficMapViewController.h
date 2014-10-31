@@ -44,7 +44,6 @@
 #import "MMProgressHUD.h"
 #import "MMProgressHUDOverlayView.h"
 
-#import "Downloader.h"
 
 
 //讯飞语音使用的头文件

@@ -35,7 +35,7 @@ NSMutableArray *arear_array = [NSMutableArray arrayWithObjects:
 -(id)init{
     if (self = [super init]) {
         backgroudIsDownlaoding = false;
-        baseMapVersionAtServer = [[NSString alloc] initWithString:@""];
+        baseMapVersionAtServer = @"";
     }
     return self;
 }

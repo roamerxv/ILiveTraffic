@@ -99,7 +99,7 @@
                         <action selector="chartBtnClicked:" destination="-1" eventType="touchUpInside" id="148"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR4-ZP-Ueb" userLabel="Button - 调用下载">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR4-ZP-Ueb" userLabel="Button - 调用下载">
                     <rect key="frame" x="552" y="158" width="48" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="LoZ-QC-BTr"/>

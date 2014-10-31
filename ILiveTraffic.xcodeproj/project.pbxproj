@@ -123,19 +123,19 @@
 		D9BCFBEB17341FB7001B30D7 /* TrafficeIndexController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFBE317341FB7001B30D7 /* TrafficeIndexController.m */; };
 		D9BCFBF117376B5D001B30D7 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFBF017376B5D001B30D7 /* Tools.m */; };
 		D9BCFBF717376F54001B30D7 /* DeviceInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFBF617376F54001B30D7 /* DeviceInfoController.m */; };
-		D9C950F3177802DA00FF5A71 /* WZGuideViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9C950F1177802DA00FF5A71 /* WZGuideViewController.h */; };
-		D9C950F4177802DA00FF5A71 /* WZGuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C950F2177802DA00FF5A71 /* WZGuideViewController.m */; };
 		D9C9511A177824CE00FF5A71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C95119177824CE00FF5A71 /* main.m */; };
 		D9CBD3EC1757B51400AB3DE8 /* Chart1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9CBD3EB1757B51400AB3DE8 /* Chart1ViewController.xib */; };
 		D9D3B5011A01E37500C9A8F5 /* SharePopViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D3B4FE1A01E37500C9A8F5 /* SharePopViewController.h */; };
 		D9D3B5021A01E37500C9A8F5 /* SharePopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D3B4FF1A01E37500C9A8F5 /* SharePopViewController.m */; };
 		D9D3B5031A01E37500C9A8F5 /* SharePopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D3B5001A01E37500C9A8F5 /* SharePopViewController.xib */; };
+		D9D3B5081A03650C00C9A8F5 /* Downloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D3B5051A03650C00C9A8F5 /* Downloader.h */; };
+		D9D3B5091A03650C00C9A8F5 /* Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D3B5061A03650C00C9A8F5 /* Downloader.m */; };
+		D9D3B50A1A03650C00C9A8F5 /* Downloader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D3B5071A03650C00C9A8F5 /* Downloader.xib */; };
+		D9D3B50E1A03655B00C9A8F5 /* DownloadTPKFileThread.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D3B50C1A03655B00C9A8F5 /* DownloadTPKFileThread.h */; };
+		D9D3B50F1A03655B00C9A8F5 /* DownloadTPKFileThread.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D3B50D1A03655B00C9A8F5 /* DownloadTPKFileThread.m */; };
 		D9D905C319E8479E00411B75 /* SDHelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D905C019E8479E00411B75 /* SDHelpViewController.h */; };
 		D9D905C419E8479E00411B75 /* SDHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D905C119E8479E00411B75 /* SDHelpViewController.m */; };
 		D9D905C519E8479E00411B75 /* SDHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D905C219E8479E00411B75 /* SDHelpViewController.xib */; };
-		D9D9185719F275270002488C /* Downloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D9185419F275270002488C /* Downloader.h */; };
-		D9D9185819F275270002488C /* Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D9185519F275270002488C /* Downloader.m */; };
-		D9D9185919F275270002488C /* Downloader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D9185619F275270002488C /* Downloader.xib */; };
 		D9FBBB9619AC7ECB003940B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9FBBB9519AC7ECA003940B8 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -267,19 +267,19 @@
 		D9BCFBF517376F54001B30D7 /* DeviceInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfoController.h; sourceTree = "<group>"; };
 		D9BCFBF617376F54001B30D7 /* DeviceInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfoController.m; sourceTree = "<group>"; };
 		D9C5D81819E7CAFD004DD37B /* ILiveTraffic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ILiveTraffic.entitlements; path = ILiveTraffic/ILiveTraffic.entitlements; sourceTree = "<group>"; };
-		D9C950F1177802DA00FF5A71 /* WZGuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZGuideViewController.h; sourceTree = "<group>"; };
-		D9C950F2177802DA00FF5A71 /* WZGuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZGuideViewController.m; sourceTree = "<group>"; };
 		D9C95119177824CE00FF5A71 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9CBD3EB1757B51400AB3DE8 /* Chart1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart1ViewController.xib; sourceTree = "<group>"; };
 		D9D3B4FE1A01E37500C9A8F5 /* SharePopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePopViewController.h; sourceTree = "<group>"; };
 		D9D3B4FF1A01E37500C9A8F5 /* SharePopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePopViewController.m; sourceTree = "<group>"; };
 		D9D3B5001A01E37500C9A8F5 /* SharePopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharePopViewController.xib; sourceTree = "<group>"; };
+		D9D3B5051A03650C00C9A8F5 /* Downloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Downloader.h; sourceTree = "<group>"; };
+		D9D3B5061A03650C00C9A8F5 /* Downloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Downloader.m; sourceTree = "<group>"; };
+		D9D3B5071A03650C00C9A8F5 /* Downloader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Downloader.xib; sourceTree = "<group>"; };
+		D9D3B50C1A03655B00C9A8F5 /* DownloadTPKFileThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTPKFileThread.h; sourceTree = "<group>"; };
+		D9D3B50D1A03655B00C9A8F5 /* DownloadTPKFileThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTPKFileThread.m; sourceTree = "<group>"; };
 		D9D905C019E8479E00411B75 /* SDHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDHelpViewController.h; sourceTree = "<group>"; };
 		D9D905C119E8479E00411B75 /* SDHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDHelpViewController.m; sourceTree = "<group>"; };
 		D9D905C219E8479E00411B75 /* SDHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDHelpViewController.xib; sourceTree = "<group>"; };
-		D9D9185419F275270002488C /* Downloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Downloader.h; sourceTree = "<group>"; };
-		D9D9185519F275270002488C /* Downloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Downloader.m; sourceTree = "<group>"; };
-		D9D9185619F275270002488C /* Downloader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Downloader.xib; sourceTree = "<group>"; };
 		D9FBBB9519AC7ECA003940B8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F5464CC9FD5891D9A9BAAECC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -731,7 +731,6 @@
 				D920F4EA19A78EF8004A955F /* Others */,
 				D90A6E6217D9B90700121939 /* MainRoadSpeed */,
 				D95AAD6717D6DDDF00697B24 /* 讯飞 */,
-				D9C950F0177802DA00FF5A71 /* WZGuide */,
 				D96E28361749E260009377A9 /* ZXQuartz */,
 				D95C82F0174147C0002BAF19 /* CorePlotCharts-4图表 */,
 				D9BCFBEE17376B4C001B30D7 /* Tools */,
@@ -768,15 +767,6 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		D9C950F0177802DA00FF5A71 /* WZGuide */ = {
-			isa = PBXGroup;
-			children = (
-				D9C950F1177802DA00FF5A71 /* WZGuideViewController.h */,
-				D9C950F2177802DA00FF5A71 /* WZGuideViewController.m */,
-			);
-			path = WZGuide;
-			sourceTree = "<group>";
-		};
 		D9D3B4FD1A01E34700C9A8F5 /* SharePopView-共享操作界面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,6 +776,26 @@
 			);
 			name = "SharePopView-共享操作界面";
 			path = SharePopView;
+			sourceTree = "<group>";
+		};
+		D9D3B5041A03650C00C9A8F5 /* downloadWithUI-不再使用 */ = {
+			isa = PBXGroup;
+			children = (
+				D9D3B5051A03650C00C9A8F5 /* Downloader.h */,
+				D9D3B5061A03650C00C9A8F5 /* Downloader.m */,
+				D9D3B5071A03650C00C9A8F5 /* Downloader.xib */,
+			);
+			name = "downloadWithUI-不再使用";
+			path = downloadWithUI;
+			sourceTree = "<group>";
+		};
+		D9D3B50B1A03653B00C9A8F5 /* downloadWithThread */ = {
+			isa = PBXGroup;
+			children = (
+				D9D3B50C1A03655B00C9A8F5 /* DownloadTPKFileThread.h */,
+				D9D3B50D1A03655B00C9A8F5 /* DownloadTPKFileThread.m */,
+			);
+			path = downloadWithThread;
 			sourceTree = "<group>";
 		};
 		D9D905BF19E8479E00411B75 /* Helper */ = {
@@ -801,9 +811,8 @@
 		D9D9184C19F272510002488C /* Downloader */ = {
 			isa = PBXGroup;
 			children = (
-				D9D9185419F275270002488C /* Downloader.h */,
-				D9D9185519F275270002488C /* Downloader.m */,
-				D9D9185619F275270002488C /* Downloader.xib */,
+				D9D3B50B1A03653B00C9A8F5 /* downloadWithThread */,
+				D9D3B5041A03650C00C9A8F5 /* downloadWithUI-不再使用 */,
 			);
 			path = Downloader;
 			sourceTree = "<group>";
@@ -853,6 +862,7 @@
 				D920F4F919A78EF8004A955F /* PPPickerSheet.h in Headers */,
 				D981BF5A19CC71E90094BFD9 /* IFlyFlowerCollector.h in Headers */,
 				D920F4F319A78EF8004A955F /* iLiveTraffciLocationManager.h in Headers */,
+				D9D3B50E1A03655B00C9A8F5 /* DownloadTPKFileThread.h in Headers */,
 				D920F4F519A78EF8004A955F /* iLiveTrafficConfigure.h in Headers */,
 				D989E56C19FF741600AF4143 /* WXApiObject.h in Headers */,
 				D920F4F719A78EF8004A955F /* iLiveTrafficScaleIndicatorView.h in Headers */,
@@ -864,6 +874,7 @@
 				D93B97C419CD54AB009E6865 /* FlowerCollector.h in Headers */,
 				D99A4ED017429B2A00D302F2 /* Chart1ViewController.h in Headers */,
 				D9273FDF174370FB00804318 /* Chart1Theme.h in Headers */,
+				D9D3B5081A03650C00C9A8F5 /* Downloader.h in Headers */,
 				D92A90881749DB1400572450 /* Chart2ViewController.h in Headers */,
 				D96E28391749E260009377A9 /* UIView+ZXQuartz.h in Headers */,
 				D97BE4B91753111F005BAF63 /* Chart4TableCell.h in Headers */,
@@ -871,10 +882,8 @@
 				D911812D175C53C300251F1B /* Chart3MetroViewController.h in Headers */,
 				D978B81619F77AA70060FED4 /* RoadMapViewController.h in Headers */,
 				D9D3B5011A01E37500C9A8F5 /* SharePopViewController.h in Headers */,
-				D9C950F3177802DA00FF5A71 /* WZGuideViewController.h in Headers */,
 				D955CC9A19C8B1EF0019AAEF /* PopupView.h in Headers */,
 				D955CCA219C8C3C10019AAEF /* ISRDataHelper.h in Headers */,
-				D9D9185719F275270002488C /* Downloader.h in Headers */,
 				D955CC9E19C8BFF20019AAEF /* RecognizerFactory.h in Headers */,
 				D911C58F178D31E30043BCF8 /* TabbarViewController.h in Headers */,
 				D9125C401796CCE100ADC6EA /* Chart4TableCellType2.h in Headers */,
@@ -966,12 +975,12 @@
 				D9CBD3EC1757B51400AB3DE8 /* Chart1ViewController.xib in Resources */,
 				D978B81819F77AA70060FED4 /* RoadMapViewController.xib in Resources */,
 				D9A5D9D519F635970066E129 /* CustomizeRoadListViewController.xib in Resources */,
+				D9D3B50A1A03650C00C9A8F5 /* Downloader.xib in Resources */,
 				D99AEDBB19E81F84009E602E /* iLiveTrafficMenuViewController.xib in Resources */,
 				D9D3B5031A01E37500C9A8F5 /* SharePopViewController.xib in Resources */,
 				D9B75C0119D1ED79008862F1 /* Chart4TableCellType2.xib in Resources */,
 				D911812F175C53C300251F1B /* Chart3MetroViewController.xib in Resources */,
 				D9D905C519E8479E00411B75 /* SDHelpViewController.xib in Resources */,
-				D9D9185919F275270002488C /* Downloader.xib in Resources */,
 				D95D580617812FC80003AC41 /* MainWindow.xib in Resources */,
 				D959FD5717B22B560080C858 /* Chart4TableCellType3.xib in Resources */,
 				D9B232C519D82ED000F399DF /* iLiveTraffic_Base_Map.tpk in Resources */,
@@ -1075,10 +1084,9 @@
 				D920F50319A78F03004A955F /* UIViewController-Extras.m in Sources */,
 				D978B81719F77AA70060FED4 /* RoadMapViewController.m in Sources */,
 				D920F4F419A78EF8004A955F /* iLiveTraffciLocationManager.m in Sources */,
+				D9D3B50F1A03655B00C9A8F5 /* DownloadTPKFileThread.m in Sources */,
 				D97BE4BA1753111F005BAF63 /* Chart4TableCell.m in Sources */,
-				D9D9185819F275270002488C /* Downloader.m in Sources */,
 				D911812E175C53C300251F1B /* Chart3MetroViewController.m in Sources */,
-				D9C950F4177802DA00FF5A71 /* WZGuideViewController.m in Sources */,
 				D9C9511A177824CE00FF5A71 /* main.m in Sources */,
 				D939EDD619F66677008A9FF9 /* RoadInfos.m in Sources */,
 				D911C590178D31E30043BCF8 /* TabbarViewController.m in Sources */,
@@ -1088,6 +1096,7 @@
 				D942C66E17AA2228007F7124 /* Canvas.m in Sources */,
 				D959FD5617B22B560080C858 /* Chart4TableCellType3.m in Sources */,
 				D920F4F819A78EF8004A955F /* iLiveTrafficScaleIndicatorView.m in Sources */,
+				D9D3B5091A03650C00C9A8F5 /* Downloader.m in Sources */,
 				D90A6E6717D9B90700121939 /* MainRoadSpeedViewController.m in Sources */,
 				D91131E919C18D7000191E5A /* Configer.m in Sources */,
 				D91B97C417DE24C600D34FA5 /* Cell4Roadname.m in Sources */,

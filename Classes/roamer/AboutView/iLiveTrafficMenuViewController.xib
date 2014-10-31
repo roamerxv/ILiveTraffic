@@ -24,15 +24,6 @@
                 <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ios_help" translatesAutoresizingMaskIntoConstraints="NO" id="12">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="540"/>
-                    </variation>
-                    <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="340"/>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="740"/>
-                    </variation>
                 </imageView>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqm-8c-ukk" userLabel="View-foot区域">
                     <rect key="frame" x="0.0" y="540" width="600" height="60"/>
@@ -40,154 +31,99 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gq-br-ANU">
                             <rect key="frame" x="20" y="15" width="572" height="34"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="34" id="AeE-QQ-BDQ"/>
-                                <constraint firstAttribute="width" constant="572" id="DQA-hO-bWW"/>
+                                <constraint firstAttribute="width" constant="572" id="Ii5-AJ-JrD"/>
+                                <constraint firstAttribute="height" constant="34" id="hlH-RI-gxs"/>
                             </constraints>
                             <string key="text">杭州市综合交通研究中心
 地址:浙江省杭州市中河中路275-1</string>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="-180" y="23" width="572" height="34"/>
-                            </variation>
-                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="-180" y="23" width="572" height="34"/>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="-180" y="23" width="572" height="34"/>
-                            </variation>
                         </label>
                         <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="应用" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15">
                             <rect key="frame" x="517" y="0.0" width="29" height="21"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="21" id="IAR-Jo-y6G"/>
-                                <constraint firstAttribute="width" constant="29" id="eho-Sd-26h"/>
+                                <constraint firstAttribute="height" constant="21" id="TvZ-jH-esJ"/>
+                                <constraint firstAttribute="width" constant="29" id="tJQ-WK-aTY"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="317" y="0.0" width="29" height="21"/>
-                            </variation>
-                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="317" y="0.0" width="29" height="21"/>
-                            </variation>
                         </label>
                         <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13" userLabel="版本号">
                             <rect key="frame" x="547" y="1" width="52" height="17"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="52" id="2Xr-Lg-LFg"/>
-                                <constraint firstAttribute="height" constant="17" id="Apb-52-ipv"/>
+                                <constraint firstAttribute="width" constant="52" id="7LL-RC-Mvt"/>
+                                <constraint firstAttribute="height" constant="17" id="WM3-Wt-fdR"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="347" y="1" width="52" height="17"/>
-                            </variation>
-                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="347" y="1" width="52" height="17"/>
-                            </variation>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNK-zU-hb4" userLabel="Button-下载地图">
-                            <rect key="frame" x="84" y="1" width="140" height="16"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="16" id="Nfl-vG-vCW"/>
-                                <constraint firstAttribute="width" constant="140" id="u54-02-Ufd"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                            <state key="normal" title="当前地图版本-">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="84" y="1" width="140" height="21"/>
-                            </variation>
-                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="84" y="1" width="140" height="21"/>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="84" y="1" width="140" height="21"/>
-                            </variation>
-                            <connections>
-                                <action selector="downloadBtnClicked:" destination="-1" eventType="touchUpInside" id="zrh-Pa-M5w"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10" userLabel="Button-帮助">
                             <rect key="frame" x="84" y="34" width="22" height="22"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="22" id="oGz-kc-Aw5"/>
-                                <constraint firstAttribute="width" constant="22" id="y5G-Sh-tgJ"/>
+                                <constraint firstAttribute="height" constant="22" id="DCr-Lw-q9e"/>
+                                <constraint firstAttribute="width" constant="22" id="VqP-zu-enj"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                             <state key="normal">
                                 <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="84" y="34" width="22" height="22"/>
-                            </variation>
-                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="84" y="34" width="22" height="22"/>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="84" y="34" width="22" height="22"/>
-                            </variation>
                             <connections>
                                 <action selector="helpBtnClicked:" destination="-1" eventType="touchUpInside" id="11"/>
                             </connections>
                         </button>
-                        <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="udD-t1-JeU">
+                        <progressView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="udD-t1-JeU">
                             <rect key="frame" x="84" y="29" width="80" height="2"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="80" id="0Gd-5T-m54"/>
-                                <constraint firstAttribute="height" constant="2" id="bjk-BF-FWU"/>
+                                <constraint firstAttribute="width" constant="80" id="MFI-Mc-W0B"/>
+                                <constraint firstAttribute="height" constant="2" id="q8q-el-iop"/>
                             </constraints>
-                            <variation key="widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="197" y="55" width="200" height="2"/>
-                            </variation>
-                            <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="197" y="55" width="200" height="2"/>
-                            </variation>
                         </progressView>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNK-zU-hb4" userLabel="Button-下载地图">
+                            <rect key="frame" x="84" y="1" width="140" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="QZ6-li-PNI"/>
+                                <constraint firstAttribute="width" constant="140" id="v7V-Vn-vws"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <state key="normal" title="有新地图3.20.01,点击下载">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="downloadBtnClicked:" destination="-1" eventType="touchUpInside" id="zrh-Pa-M5w"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="10" firstAttribute="top" secondItem="udD-t1-JeU" secondAttribute="bottom" constant="3" id="17O-aS-y6m"/>
-                        <constraint firstItem="13" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="1" id="4lD-T4-C1R"/>
-                        <constraint firstAttribute="trailing" secondItem="9gq-br-ANU" secondAttribute="trailing" constant="8" id="BIE-UR-PV1"/>
-                        <constraint firstItem="BNK-zU-hb4" firstAttribute="leading" secondItem="gqm-8c-ukk" secondAttribute="leading" constant="84" id="CdO-2R-IHV"/>
-                        <constraint firstItem="9gq-br-ANU" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="15" id="Cwi-lb-aa4"/>
-                        <constraint firstAttribute="width" constant="600" id="Fub-9g-gBy"/>
-                        <constraint firstItem="udD-t1-JeU" firstAttribute="leading" secondItem="gqm-8c-ukk" secondAttribute="leading" constant="84" id="KeK-W6-vKd"/>
-                        <constraint firstAttribute="height" constant="60" id="Qgf-hj-Mh7"/>
-                        <constraint firstItem="13" firstAttribute="leading" secondItem="15" secondAttribute="trailing" constant="1" id="XCn-tE-9Sc"/>
-                        <constraint firstItem="udD-t1-JeU" firstAttribute="top" secondItem="BNK-zU-hb4" secondAttribute="bottom" constant="12" id="YJa-eD-GGx"/>
-                        <constraint firstItem="10" firstAttribute="leading" secondItem="gqm-8c-ukk" secondAttribute="leading" constant="84" id="bSY-gG-c5J"/>
-                        <constraint firstItem="15" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" id="eFi-IS-1Qz"/>
-                        <constraint firstItem="BNK-zU-hb4" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="1" id="kcN-Tr-Z86"/>
-                        <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="1" id="vwK-9X-1Ee"/>
+                        <constraint firstAttribute="trailing" secondItem="9gq-br-ANU" secondAttribute="trailing" constant="8" id="5Uk-fe-Idv"/>
+                        <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="1" id="5pz-BG-DNs"/>
+                        <constraint firstItem="udD-t1-JeU" firstAttribute="top" secondItem="BNK-zU-hb4" secondAttribute="bottom" constant="8" id="BOF-9g-SDu"/>
+                        <constraint firstItem="10" firstAttribute="leading" secondItem="gqm-8c-ukk" secondAttribute="leading" constant="84" id="C4u-pl-HfW"/>
+                        <constraint firstItem="udD-t1-JeU" firstAttribute="leading" secondItem="gqm-8c-ukk" secondAttribute="leading" constant="84" id="F7A-iD-9CO"/>
+                        <constraint firstItem="15" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" id="PiL-4i-Vj1"/>
+                        <constraint firstItem="9gq-br-ANU" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="15" id="Ycj-ya-oJk"/>
+                        <constraint firstItem="10" firstAttribute="top" secondItem="udD-t1-JeU" secondAttribute="bottom" constant="3" id="dQU-ot-ElT"/>
+                        <constraint firstItem="BNK-zU-hb4" firstAttribute="leading" secondItem="gqm-8c-ukk" secondAttribute="leading" constant="84" id="jB3-5k-9Jw"/>
+                        <constraint firstItem="13" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="1" id="qji-SD-ADU"/>
+                        <constraint firstItem="13" firstAttribute="leading" secondItem="15" secondAttribute="trailing" constant="1" id="tRT-6N-Y0m"/>
+                        <constraint firstAttribute="height" constant="60" id="xZP-8C-fHZ"/>
+                        <constraint firstItem="BNK-zU-hb4" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="1" id="yii-0g-CCk"/>
                     </constraints>
-                    <variation key="widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="540" width="400" height="60"/>
-                    </variation>
-                    <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="340" width="400" height="60"/>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="740" width="400" height="60"/>
-                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="12" firstAttribute="top" secondItem="1" secondAttribute="top" id="0Le-gZ-t4k"/>
-                <constraint firstItem="gqm-8c-ukk" firstAttribute="top" secondItem="12" secondAttribute="bottom" id="553-pP-cFH"/>
-                <constraint firstAttribute="trailing" secondItem="12" secondAttribute="trailing" id="I15-HE-h9V"/>
-                <constraint firstItem="12" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="jet-ma-72K"/>
-                <constraint firstAttribute="trailing" secondItem="gqm-8c-ukk" secondAttribute="trailing" id="pwq-Jv-Ska"/>
-                <constraint firstItem="gqm-8c-ukk" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="wdw-nK-tVN"/>
-                <constraint firstAttribute="bottom" secondItem="gqm-8c-ukk" secondAttribute="bottom" id="wrz-ZV-kjK"/>
+                <constraint firstItem="12" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Q94-f7-xlF"/>
+                <constraint firstItem="gqm-8c-ukk" firstAttribute="top" secondItem="12" secondAttribute="bottom" id="aLy-zu-28T"/>
+                <constraint firstAttribute="bottom" secondItem="gqm-8c-ukk" secondAttribute="bottom" id="eYe-3S-Y5m"/>
+                <constraint firstAttribute="trailing" secondItem="gqm-8c-ukk" secondAttribute="trailing" id="epa-Gh-hg7"/>
+                <constraint firstAttribute="trailing" secondItem="12" secondAttribute="trailing" id="is1-jn-E2T"/>
+                <constraint firstItem="12" firstAttribute="top" secondItem="1" secondAttribute="top" id="mgc-C5-ckV"/>
+                <constraint firstItem="gqm-8c-ukk" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="wyA-MQ-IUU"/>
             </constraints>
             <point key="canvasLocation" x="-203" y="68"/>
         </view>

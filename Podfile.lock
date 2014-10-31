@@ -6,6 +6,7 @@ PODS:
   - GPUImage (0.1.6)
   - KLCPopup (1.0)
   - MMProgressHUD (0.2.3)
+  - Onboard (1.1)
   - PPRevealSideViewController (1.1.0)
   - SBJson (4.0.1)
   - Shimmer (1.0.1)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - GPUImage
   - KLCPopup
   - MMProgressHUD
+  - Onboard (from `https://github.com/mamaral/Onboard.git`)
   - PPRevealSideViewController (~> 1.1.0)
   - SBJson
   - Shimmer
@@ -30,6 +32,10 @@ DEPENDENCIES:
   - UAProgressView
   - UIDeviceAddition
 
+EXTERNAL SOURCES:
+  Onboard:
+    :git: https://github.com/mamaral/Onboard.git
+
 SPEC CHECKSUMS:
   AMSmoothAlert: 1b4bf6688b698a606a963c336b5060490f4d3db2
   ArcGIS-Runtime-SDK-iOS: 4f8c8a4992385b225ffd10a6dd2c0151335f437d
@@ -37,6 +43,7 @@ SPEC CHECKSUMS:
   GPUImage: cecb0830bb9428f50192042e3c7b53810f51388e
   KLCPopup: 23548d0454ca156b0eb684f791f234b9c2134369
   MMProgressHUD: 416686cee2e9af16691e82ebfdcf7caf1dd6f621
+  Onboard: 40270e520b6df51e90de7fe0d57eb54057dc22d9
   PPRevealSideViewController: b49265e0b6c5493aed29a6821c8eb8d84b7e109a
   SBJson: d71212c078abf4679d54b0d0565260c474e46235
   Shimmer: 35aa2a57b8fbc17f9e16706021665966fd93dbd1

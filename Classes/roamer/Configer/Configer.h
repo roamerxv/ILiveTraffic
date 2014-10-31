@@ -61,6 +61,8 @@
 //微信sdk的参数
 #define WEBCHART_APP_ID @"64206ae5"
 
+//crashlytics APP_ID
+#define CRASHLYTICS_APP_ID @"df5790710b6debf17578f252f8aaadcb7de2af79"
 
 //ArcGIS rest 服务参数
 #define baseMapServiceURL @"http://www.hzctrc.com/arcgis/rest/services/V32/mobilebasetest/MapServer"
