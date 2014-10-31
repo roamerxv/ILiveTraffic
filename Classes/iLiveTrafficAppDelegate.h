@@ -47,30 +47,11 @@
 	UIImage*  cancelBarImage;
 	UIImage* coverImage;
 	
-	UIActivityIndicatorView* activeView;
-	UIActivityIndicatorView* activeViewLoadingMap;
-    
-	
-//	MapView* mapView;
-	
-	enum CURVIEWTYPE {
-		map,info,setting,cityChange
-	};
-	
-	CURVIEWTYPE curView;
-
-    
-	bool m_bAppInit;
-	bool m_bAppActive;
 	
     
-    iLiveTrafficMapViewController *_mapViewController;
-    iLiveTrafficConfigure *_configure;
-    iLiveTraffciLocationManager *_locationManager;
     
     NSString* deviceInfoID;
     
-    NSOperationQueue *queue;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow* window;
@@ -90,41 +71,7 @@
 
 
 
-/******************
- modified by wbgao
- ******************/
-@property (nonatomic, retain) iLiveTrafficMapViewController *mapViewController;
-@property (nonatomic, retain) iLiveTrafficConfigure *configure;
-@property (nonatomic, retain) iLiveTraffciLocationManager *locationManager;
-
 @property(nonatomic,retain) NSString * deviceInfoID;
-
-#define CONFIG [iLiveTrafficAppDelegate sharedAppDelegate].configure
-#define LOCATIONMANAGER [iLiveTrafficAppDelegate sharedAppDelegate].locationManager
-
-#define DEVICE_IS_IPHONE5 ([[UIScreen mainScreen] bounds].size.height == 568)
-
-#define DEVICE_IS_IPHONE5 ([[UIScreen mainScreen] bounds].size.height == 568)
-
-+ (iLiveTrafficAppDelegate *)sharedAppDelegate;
-
-- (NSURL *)smartURLForString:(NSString *)str;
-- (NSString *)pathForTemporaryFileWithPrefix:(NSString *)prefix;
-
-
--(IBAction) clickbarItemUpdate:(id)sender;
-
-
--(void) updateBarItems;
-
-
--(void) updateAllSetting;
-
--(UIImage*) getCoverImage;
--(void) startLoadingAnimation;
--(void) stopLoadingAnimation;
-
-+ (id)shared;
 
 
 

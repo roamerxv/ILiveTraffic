@@ -91,7 +91,7 @@
     DLog(@"开始调用的url是:%@",[url absoluteString] );
     //异步请求
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    (void)[[NSURLConnection alloc] initWithRequest:request delegate:self];
     
 }
 

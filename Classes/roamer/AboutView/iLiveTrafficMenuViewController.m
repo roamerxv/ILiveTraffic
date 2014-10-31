@@ -174,21 +174,21 @@
 -(void) refreshDownloadBtnAndState{
     if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateReady)
     {
-        [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
+        [self.downloadTPKBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
         self.downloadTPKBtn.enabled = YES ;
         self.progressView.hidden = YES ;
     }else if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateDownloading){
         [self.downloadTPKBtn setTitle:@"正在下载,点击暂停" forState:UIControlStateNormal];
-        [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
+        [self.downloadTPKBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
         self.downloadTPKBtn.enabled = YES ;
         self.progressView.hidden = NO ;
     }else if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateCancelled){
         [self.downloadTPKBtn setTitle:@"下载暂停,点击继续下载" forState:UIControlStateNormal];
-        [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
+        [self.downloadTPKBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
         self.downloadTPKBtn.enabled = YES ;
         self.progressView.hidden = NO ;
     }else{//不需要下载
-        [self.downloadTPKBtn setBackgroundColor:[UIColor clearColor] ];
+        [self.downloadTPKBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         self.downloadTPKBtn.enabled = NO ;
         self.progressView.hidden = YES;
     }
@@ -325,9 +325,6 @@
             text = @"自动更新(每5分钟)";
         }
         
-        if([CONFIG refreshType] == row){
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        }
     }
     
     cell.textLabel.text = text;

@@ -11,7 +11,7 @@
 		1B7BC060127999C8001CEB5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7BC05F127999C8001CEB5C /* QuartzCore.framework */; };
 		1B8445F4123C8B2F0007F8FB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B8445F3123C8B2F0007F8FB /* CoreFoundation.framework */; };
 		1B844602123C8BE40007F8FB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B844601123C8BE40007F8FB /* CFNetwork.framework */; };
-		1D3623260D0F684500981E51 /* iLiveTrafficAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iLiveTrafficAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1D3623260D0F684500981E51 /* iLiveTrafficAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iLiveTrafficAppDelegate.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
@@ -54,8 +54,6 @@
 		D920F4FA19A78EF8004A955F /* PPPickerSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4F219A78EF8004A955F /* PPPickerSheet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D920F50019A78F03004A955F /* NSDateFormatter+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4FC19A78F03004A955F /* NSDateFormatter+Extras.h */; };
 		D920F50119A78F03004A955F /* NSDateFormatter+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4FD19A78F03004A955F /* NSDateFormatter+Extras.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D920F50219A78F03004A955F /* UIViewController-Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F4FE19A78F03004A955F /* UIViewController-Extras.h */; };
-		D920F50319A78F03004A955F /* UIViewController-Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F4FF19A78F03004A955F /* UIViewController-Extras.m */; };
 		D920F51919A78F1E004A955F /* iLiveTrafficMapViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D920F50D19A78F1E004A955F /* iLiveTrafficMapViewController.h */; };
 		D920F51A19A78F1E004A955F /* iLiveTrafficMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D920F50E19A78F1E004A955F /* iLiveTrafficMapViewController.m */; };
 		D920F51B19A78F1E004A955F /* iLiveTrafficMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D920F50F19A78F1E004A955F /* iLiveTrafficMapViewController.xib */; };
@@ -193,8 +191,6 @@
 		D920F4F219A78EF8004A955F /* PPPickerSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPickerSheet.m; sourceTree = "<group>"; };
 		D920F4FC19A78F03004A955F /* NSDateFormatter+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Extras.h"; sourceTree = "<group>"; };
 		D920F4FD19A78F03004A955F /* NSDateFormatter+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Extras.m"; sourceTree = "<group>"; };
-		D920F4FE19A78F03004A955F /* UIViewController-Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController-Extras.h"; sourceTree = "<group>"; };
-		D920F4FF19A78F03004A955F /* UIViewController-Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController-Extras.m"; sourceTree = "<group>"; };
 		D920F50D19A78F1E004A955F /* iLiveTrafficMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iLiveTrafficMapViewController.h; sourceTree = "<group>"; };
 		D920F50E19A78F1E004A955F /* iLiveTrafficMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iLiveTrafficMapViewController.m; sourceTree = "<group>"; };
 		D920F50F19A78F1E004A955F /* iLiveTrafficMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iLiveTrafficMapViewController.xib; sourceTree = "<group>"; };
@@ -498,8 +494,6 @@
 			children = (
 				D920F4FC19A78F03004A955F /* NSDateFormatter+Extras.h */,
 				D920F4FD19A78F03004A955F /* NSDateFormatter+Extras.m */,
-				D920F4FE19A78F03004A955F /* UIViewController-Extras.h */,
-				D920F4FF19A78F03004A955F /* UIViewController-Extras.m */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -867,7 +861,6 @@
 				D989E56C19FF741600AF4143 /* WXApiObject.h in Headers */,
 				D920F4F719A78EF8004A955F /* iLiveTrafficScaleIndicatorView.h in Headers */,
 				D9D905C319E8479E00411B75 /* SDHelpViewController.h in Headers */,
-				D920F50219A78F03004A955F /* UIViewController-Extras.h in Headers */,
 				D90A246019F7B55600AA2527 /* SketchToolbar.h in Headers */,
 				D91131E819C18D7000191E5A /* Configer.h in Headers */,
 				D989E56B19FF741600AF4143 /* WXApi.h in Headers */,
@@ -1081,7 +1074,6 @@
 				D96E283A1749E260009377A9 /* UIView+ZXQuartz.m in Sources */,
 				D989F0B719AC68AB0011A511 /* Chart4ViewController.m in Sources */,
 				D99AEDBA19E81F84009E602E /* iLiveTrafficMenuViewController.m in Sources */,
-				D920F50319A78F03004A955F /* UIViewController-Extras.m in Sources */,
 				D978B81719F77AA70060FED4 /* RoadMapViewController.m in Sources */,
 				D920F4F419A78EF8004A955F /* iLiveTraffciLocationManager.m in Sources */,
 				D9D3B50F1A03655B00C9A8F5 /* DownloadTPKFileThread.m in Sources */,

@@ -178,7 +178,7 @@
     //异步请求
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    [[NSURLConnection alloc] initWithRequest:request delegate:self] ;
+    (void)[[NSURLConnection alloc] initWithRequest:request delegate:self] ;
     
 }
 

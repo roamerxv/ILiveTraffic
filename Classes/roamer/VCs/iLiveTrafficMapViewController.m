@@ -2,8 +2,8 @@
 //  iLiveTrafficMapViewController.m
 //  ILiveTraffic
 //
-//  Created by Gao WenBin on 13-4-15.
-//  Copyright (c) 2013年 Tongji University. All rights reserved.
+//  Created by 徐泽宇 on 14-10-15.
+//  Copyright (c) 2014年 Tongji University. All rights reserved.
 //
 //
 //                     _ooOoo_
@@ -32,9 +32,6 @@
 #import "iLiveTrafficMenuViewController.h"
 #import "PPRevealSideViewController.h"
 #import "NSDateFormatter+Extras.h"
-#import "UIViewController-Extras.h"
-
-
 
 
 @interface iLiveTrafficMapViewController (){
@@ -286,8 +283,10 @@
         NSURL *url = [[NSURL alloc] initWithString:urlString];
         //异步请求
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [[NSURLConnection alloc] initWithRequest:request delegate:self];
-
+        NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        if (connection == nil){
+            DLog(@"远程访问发生错误！%@",url);
+        }
 
     }
 

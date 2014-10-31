@@ -35,27 +35,6 @@ static iLiveTrafficAppDelegate *shared;
 @synthesize deviceInfoID;
 
 
-- (id)init
-{
-    [super init];
-    [queue setMaxConcurrentOperationCount:1];
-    queue = [[NSOperationQueue alloc] init];
-    shared = self;
-    return self;
-}
-
-+ (id)shared;
-{
-    if (!shared) {
-        [[iLiveTrafficAppDelegate alloc] init];
-    }
-    return shared;
-}
-
-
-@synthesize mapViewController = _mapViewController;
-@synthesize configure = _configure;
-@synthesize locationManager = _locationManager;
 #pragma mark -
 #pragma mark Application lifecycle
 
@@ -155,13 +134,8 @@ static iLiveTrafficAppDelegate *shared;
     
     [[UIApplication sharedApplication ] setIdleTimerDisabled:YES];
 
-    self.configure = [[[iLiveTrafficConfigure alloc] init] autorelease];
-    self.mapViewController = [[[iLiveTrafficMapViewController alloc] init] autorelease];
-    self.locationManager = [[[iLiveTraffciLocationManager alloc] init] autorelease];
-    
 
 	self.window.backgroundColor = [UIColor blackColor];
-	curView = map;
 	[window makeKeyAndVisible];
     
 
@@ -199,7 +173,7 @@ static iLiveTrafficAppDelegate *shared;
 - (void)setupNormalRootViewControllerAnimated:(BOOL)animated {
     // create whatever your root view controller is going to be, in this case just a simple view controller
     // wrapped in a navigation controller
-    PPRevealSideViewController *mainVC = [[[PPRevealSideViewController alloc] initWithRootViewController:self.mapViewController] autorelease];
+    PPRevealSideViewController *mainVC = [[PPRevealSideViewController alloc] initWithRootViewController:[[iLiveTrafficMapViewController alloc] init]] ;
 
 
     // if we want to animate the transition, do it
@@ -260,7 +234,6 @@ static iLiveTrafficAppDelegate *shared;
     forthPage.view.backgroundColor = [UIColor colorWithPatternImage:image];
 
     image=nil;
-    [image release];
 
 
     OnboardingViewController *onboardingVC = [[OnboardingViewController alloc] initWithBackgroundImage:[UIImage imageNamed:@"street"] contents:@[firstPage, secondPage, thirdPage,forthPage]];
@@ -278,21 +251,6 @@ static iLiveTrafficAppDelegate *shared;
 
 /* 设置和显示引导页 --- end*/
 	
--(UIImage*)getCoverImage{
-	return coverImage;
-}
-
--(void) stopLoadingAnimation{
-	[activeViewLoadingMap stopAnimating];
-}
-
--(void) startLoadingAnimation{
-	[activeViewLoadingMap startAnimating];
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-	m_bAppActive = false;
-}
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -304,19 +262,6 @@ static iLiveTrafficAppDelegate *shared;
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    /*
-     Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
-     */
-//	[activeViewLoadingMap startAnimating];
-	
-//	[self.mapViewController.mapView go2Foreground];
-//	toolbar.hidden = false;
-//	[window addSubview:self.mapViewController.mapView];
-//	[window addSubview:activeView];
-//	[window addSubview:activeViewLoadingMap];
-//	[window makeKeyAndVisible];
-	m_bAppActive = true;
-//	[self.mapViewController refreshTimeLabel];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -345,50 +290,7 @@ static iLiveTrafficAppDelegate *shared;
 }
 
 
-- (void)dealloc {
 
-    updateBarImage = nil;
-    cancelBarImage = nil;
-    coverImage = nil ;
-    activeView = nil;
-	
-    activeViewLoadingMap = nil;
-    window = nil;
-
-    self.mapViewController = nil;
-    self.configure = nil;
-    self.locationManager = nil;
-	
-    queue = nil;
-    [super dealloc];
-}
-
-
--(IBAction) clickbarItemUpdate:(id)sender{
-    DLog(@"正在调用刷新按钮");
-
-//	if ([self.mapViewController.mapView isDownloadFinished]) {// not in updating progress
-//		barItemUpdate.image = cancelBarImage;
-//		//barItemUpdate.title = @"取消";
-//		barItemUpdate.enabled = true;//[mapView getSwitchBarItemEnabled];
-//		[activeView startAnimating];
-//		[self.mapViewController.mapView startDownloadSpeed];
-//	}
-//	else {
-//		barItemUpdate.image = updateBarImage;
-//		//barItemUpdate.title = @"更新";
-//		barItemUpdate.enabled = true;//[mapView getSwitchBarItemEnabled];
-//		[activeView stopAnimating];
-//		[self.mapViewController.mapView stopDownload];
-//	}	
-}
-
--(void) updateBarItems{
-//    
-//	barItemSwitchRoad.title = [self.mapViewController.mapView getSwitchBarItemTitle];
-//	barItemSwitchRoad.enabled = [self.mapViewController.mapView getSwitchBarItemEnabled];
-//	barItemShowPark.enabled = [self.mapViewController.mapView getSwitchBarItemEnabled];
-}
 
 
 
@@ -397,77 +299,8 @@ static iLiveTrafficAppDelegate *shared;
     return (iLiveTrafficAppDelegate *) [UIApplication sharedApplication].delegate;
 }
 
-- (void)didStartNetworking
-{
-    self.networkingCount += 1;
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-}
 
-- (void)didStopNetworking
-{
-    assert(self.networkingCount > 0);
-    self.networkingCount -= 1;
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = (self.networkingCount != 0);
-}
 
-- (NSURL *)smartURLForString:(NSString *)str
-{
-    NSURL *     result;
-    NSString *  trimmedStr;
-    NSRange     schemeMarkerRange;
-    NSString *  scheme;
-    
-    assert(str != nil);
-	
-    result = nil;
-    
-    trimmedStr = [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    if ( (trimmedStr != nil) && (trimmedStr.length != 0) ) {
-        schemeMarkerRange = [trimmedStr rangeOfString:@"://"];
-        
-        if (schemeMarkerRange.location == NSNotFound) {
-            result = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", trimmedStr]];
-        } else {
-            scheme = [trimmedStr substringWithRange:NSMakeRange(0, schemeMarkerRange.location)];
-            assert(scheme != nil);
-            
-            if ( ([scheme compare:@"http"  options:NSCaseInsensitiveSearch] == NSOrderedSame)
-				|| ([scheme compare:@"https" options:NSCaseInsensitiveSearch] == NSOrderedSame) ) {
-                result = [NSURL URLWithString:trimmedStr];
-            } else {
-                // It looks like this is some unsupported URL scheme.
-            }
-        }
-    }
-    
-    return result;
-}
-
-- (NSString *)pathForTemporaryFileWithPrefix:(NSString *)prefix
-{
-    NSString *  result;
-    CFUUIDRef   uuid;
-    CFStringRef uuidStr;
-    
-    uuid = CFUUIDCreate(NULL);
-    assert(uuid != NULL);
-    
-    uuidStr = CFUUIDCreateString(NULL, uuid);
-    assert(uuidStr != NULL);
-    
-    result = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@-%@", prefix, uuidStr]];
-    assert(result != nil);
-    
-    CFRelease(uuidStr);
-    CFRelease(uuid);
-    
-    return result;
-}
-
--(void) updateAllSetting{
-//	[self.mapViewController.mapView updateAllElementsAfterSetting];
-	
-}
 
 //《选择城市》的按钮点击后刷新相关变量     徐泽宇-2011.11.08 begin
 -(void) updateCityInfo :(NSString *) theCitySelected
