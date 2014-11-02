@@ -12,6 +12,8 @@
 
 @class iLiveTrafficMapViewController;
 
+static BOOL needDownlaod  = false;
+
 @interface iLiveTrafficMenuViewController : UIViewController{
     IBOutlet UILabel * versionLabel ;
     IBOutlet UIButton * checkNewImageBtn;

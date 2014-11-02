@@ -126,12 +126,7 @@ static iLiveTrafficAppDelegate *shared;
         [alert show];
     }
 	
-    
-	NSString* coverpath = [[NSBundle mainBundle] pathForResource:@"cover" ofType:@"jpg"];
-	NSData * coverData= [[NSData alloc] initWithContentsOfFile:coverpath];
-	coverImage = [[UIImage alloc] initWithData:coverData];
-    
-    
+        
     [[UIApplication sharedApplication ] setIdleTimerDisabled:YES];
 
 

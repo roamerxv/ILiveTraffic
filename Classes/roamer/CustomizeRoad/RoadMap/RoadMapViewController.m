@@ -18,6 +18,10 @@
 @synthesize baseMapLayer;
 @synthesize save_sketch_order;
 
+@synthesize cityCongestLabel;
+@synthesize cityCongestDescLabel;
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -34,21 +38,22 @@
     AGSGraphicsLayer* graphicsLayer = [AGSGraphicsLayer graphicsLayer];
     [self.mapView addMapLayer:graphicsLayer withName:@"Mask Layer"];
 
-    //A composite symbol for the graphics layer's renderer to symbolize the sketches
-    AGSCompositeSymbol* composite = [AGSCompositeSymbol compositeSymbol];
-    AGSSimpleMarkerSymbol* markerSymbol = [[AGSSimpleMarkerSymbol alloc] init];
-    markerSymbol.style = AGSSimpleMarkerSymbolStyleSquare;
-    markerSymbol.color = [UIColor clearColor];
-    [composite addSymbol:markerSymbol];
-    AGSSimpleLineSymbol* lineSymbol = [[AGSSimpleLineSymbol alloc] init];
-    lineSymbol.color= [UIColor grayColor];
-    lineSymbol.width = 1;
-    [composite addSymbol:lineSymbol];
-    AGSSimpleFillSymbol* fillSymbol = [[AGSSimpleFillSymbol alloc] init];
-    fillSymbol.color = [UIColor colorWithRed:1.0 green:1.0 blue:0 alpha:0.0] ;
-    [composite addSymbol:fillSymbol];
-    AGSSimpleRenderer* renderer = [AGSSimpleRenderer simpleRendererWithSymbol:composite];
-    graphicsLayer.renderer = renderer;
+    //定制草案图层保存后的符号效果
+//    //A composite symbol for the graphics layer's renderer to symbolize the sketches
+//    AGSCompositeSymbol* composite = [AGSCompositeSymbol compositeSymbol];
+//    AGSSimpleMarkerSymbol* markerSymbol = [[AGSSimpleMarkerSymbol alloc] init];
+//    markerSymbol.style = AGSSimpleMarkerSymbolStyleSquare;
+//    markerSymbol.color = [UIColor clearColor];
+//    [composite addSymbol:markerSymbol];
+//    AGSSimpleLineSymbol* lineSymbol = [[AGSSimpleLineSymbol alloc] init];
+//    lineSymbol.color= [UIColor grayColor];
+//    lineSymbol.width = 1.0f;
+//    [composite addSymbol:lineSymbol];
+//    AGSSimpleFillSymbol* fillSymbol = [[AGSSimpleFillSymbol alloc] init];
+//    fillSymbol.color = [UIColor colorWithRed:1.0 green:1.0 blue:0 alpha:0.0] ;
+//    [composite addSymbol:fillSymbol];
+//    AGSSimpleRenderer* renderer = [AGSSimpleRenderer simpleRendererWithSymbol:composite];
+//    graphicsLayer.renderer = renderer;
 
     //Sketch layer
     AGSSketchGraphicsLayer* sketchLayer = [[AGSSketchGraphicsLayer alloc] initWithGeometry:nil];
@@ -61,6 +66,16 @@
         mapView:self.mapView
         graphicsLayer:graphicsLayer
         withSketchOrderNumToPlist:save_sketch_order];
+
+    //注册监听事件，用于刷新全市拥堵指数
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self
+           selector:@selector(refreshCityCongestIndexUI:)
+               name:@"refresh_congest_index_ui"
+             object:nil];
+
+    //立即除非主程序中的定时器
+    [[iLiveTrafficMapViewController getFefreshCityCongestIndexTimer] fire];
 
 }
 
@@ -90,6 +105,17 @@
     [popup show];
 
 }
+
+#pragma mark - 更新全市拥堵指数的UI
+-(void) refreshCityCongestIndexUI:(NSNotification *) notification{
+    CityCongestIndexUI* cityCongestIndexUI = (CityCongestIndexUI*)[notification object];//获取到传递的对象
+    self.cityCongestLabel.text = cityCongestIndexUI.congestIndexText;
+    self.cityCongestDescLabel.text = cityCongestIndexUI.congestIndexDescText;
+    self.cityCongestLabel.textColor = cityCongestIndexUI.color;
+    self.cityCongestDescLabel.textColor = cityCongestIndexUI.color;
+
+}
+
 
 /*
 #pragma mark - Navigation

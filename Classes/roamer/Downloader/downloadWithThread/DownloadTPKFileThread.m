@@ -41,6 +41,8 @@
             long long totalSizeOfFile =response.expectedContentLength+tempFileSize;
             [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithLongLong:totalSizeOfFile] forKey:@"TOTAL_SIZE_OF_DOWNLOAD_FILE"];
             currentDownloadStatus = TCBlobDownloadStateDownloading;
+            //发出通知机制，告知开始下载
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"dwonloanding_tpk_begin" object:[[NSNumber alloc ] initWithFloat:nil]];
         }
         progress:^(uint64_t receivedLength, uint64_t totalLength, NSInteger remainingTime, float progress)
         {

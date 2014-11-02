@@ -129,11 +129,6 @@
 }
 
 
--(void)refrestDataPeriodical{
-    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(refreshBtnClicked:) object:nil];
-    [self performSelector:@selector(refrestDataPeriodical) withObject:nil afterDelay:refreshTime];
-}
-
 
 
 //异步调用如果调用有错误，则出现此信息
@@ -559,7 +554,7 @@
     [super viewDidAppear:animated];
 //    [self becomeFirstResponder];
     //获取全市拥堵指数和获取各个区域拥堵指数(通过线程方法)
-    [self handleTimer:nil];
+    [timer fire];
 
 }
 
@@ -606,6 +601,14 @@
            selector:@selector(changeBaseMapLayer:)
                name:@"reloadBaseMap"
              object:nil];
+
+    //注册监听事件，用于刷新全市拥堵指数
+    [nc addObserver:self
+           selector:@selector(refreshCityCongestIndexUI:)
+               name:@"refresh_congest_index_ui"
+             object:nil];
+
+
     //定义 query task
     NSString * roadLayerURL1=[baseMapServiceURL stringByAppendingString:@"/3"];
     NSString * roadLayerURL2=[baseMapServiceURL stringByAppendingString:@"/4"];
@@ -782,7 +785,6 @@
 	[self.mapView addMapLayer:self.graphicsLayer withName:@"Road Graphics Layer"];
     
     // 定时器
-    NSTimer *timer;
     timer = [NSTimer scheduledTimerWithTimeInterval: 2*60  //刷新间隔是2分钟
                                              target: self
                                            selector: @selector(handleTimer:)
@@ -815,7 +817,7 @@
 #pragma mark 定时器刷新
 - (void) handleTimer: (NSTimer *) timer
 {
-    DLog(@"定时器开始刷新拥堵指数");
+    DLog(@"定时器开始要求刷新拥堵指数");
     @try {
         [NSThread detachNewThreadSelector:@selector(refreshAll:) toTarget:self withObject:nil];
     }
@@ -832,8 +834,6 @@
     DLog(@"线程开始获得远程调用");
     @try {
         [self refreshCongestIndexOfCity];
-//        [self getArearCongestIndex];
-//        [self refreshCurrentArearCongestIndexWithNetCode:currentArearCode];
     }
     @catch (NSException *exception) {
         DLog(@"捕获错误：%@",exception);
@@ -1111,13 +1111,6 @@
                                                                         error:&error];
     AGSSBJsonParser * parser = [[AGSSBJsonParser alloc] init];
     NSMutableDictionary *jsonDic = [parser objectWithString:current_congest_index error:&error];
-    //    NSMutableDictionary *jsonDic = [current_congest_index JSONValue];
-    NSMutableDictionary * congestIndexInfo = [jsonDic objectForKey:@"congest_index"];
-    NSMutableDictionary * congestDescInfo = [jsonDic objectForKey:@"congest_index_desc"];
-    NSMutableDictionary * congestIndexColorInfo = [jsonDic objectForKey:@"contest_index_color"];
-    UIColor *color = [UIColor colorWithRed:[[congestIndexColorInfo objectForKey:@"R"] floatValue] green:[[congestIndexColorInfo objectForKey:@"G"] floatValue] blue:[[congestIndexColorInfo objectForKey:@"B"] floatValue] alpha:[[congestIndexColorInfo objectForKey:@"alpha"] floatValue]];
-    [self jamLabelUpdate:[NSString stringWithFormat:(@"%@"),congestIndexInfo ] withDesc:[NSString stringWithFormat:(@"%@"),congestDescInfo] withColor:color];
-    DLog(@"调用拥堵指数结束");
     if (error)
     {
         UIColor *colorError = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
@@ -1127,28 +1120,54 @@
         if ( lastValue == nil)
         {
             DLog(@"第一次访问就无法访问网络，缓存也没有数据。");
-            [self jamLabelUpdate:[NSString stringWithFormat:(@"%@"),@"0.0" ] withDesc:@"" withColor:colorError];
+            CityCongestIndexUI * cityCongestIndexUI = [[CityCongestIndexUI alloc] init];
+            cityCongestIndexUI.congestIndexText = @"0.0";
+            cityCongestIndexUI.congestIndexDescText=@"";
+            cityCongestIndexUI.color = colorError;
+            //发出通知，告知开始新的拥堵指数的界面
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"refresh_congest_index_ui" object:cityCongestIndexUI];
         }else{
             DLog(@"此次访问无法访问网络，从缓存中获取数据。");
-            [self jamLabelUpdate:[NSString stringWithFormat:(@"%@"),lastValue ] withDesc:@"" withColor:colorError];
+            CityCongestIndexUI * cityCongestIndexUI = [[CityCongestIndexUI alloc] init];
+            cityCongestIndexUI.congestIndexText = lastValue;
+            cityCongestIndexUI.congestIndexDescText=@"";
+            cityCongestIndexUI.color = colorError;
+            //发出通知，告知开始新的拥堵指数的界面
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"refresh_congest_index_ui" object:cityCongestIndexUI];
         }
         
     }else{
+        NSMutableDictionary * congestIndexInfo = [jsonDic objectForKey:@"congest_index"];
+        NSMutableDictionary * congestDescInfo = [jsonDic objectForKey:@"congest_index_desc"];
+        NSMutableDictionary * congestIndexColorInfo = [jsonDic objectForKey:@"contest_index_color"];
+        UIColor *color = [UIColor colorWithRed:[[congestIndexColorInfo objectForKey:@"R"] floatValue] green:[[congestIndexColorInfo objectForKey:@"G"] floatValue] blue:[[congestIndexColorInfo objectForKey:@"B"] floatValue] alpha:[[congestIndexColorInfo objectForKey:@"alpha"] floatValue]];
+
+        CityCongestIndexUI * cityCongestIndexUI = [[CityCongestIndexUI alloc] init];
+        cityCongestIndexUI.congestIndexText=[NSString stringWithFormat:(@"%@"),congestIndexInfo ];
+        cityCongestIndexUI.congestIndexDescText=[NSString stringWithFormat:(@"%@"),congestDescInfo ];
+        cityCongestIndexUI.color = color;
+
+        //发出通知，告知开始新的拥堵指数的界面
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"refresh_congest_index_ui" object:cityCongestIndexUI];
+        DLog(@"调用拥堵指数结束");
+        
         //        保存结果到缓冲数据表单
         [[[TrafficeIndexController alloc]init] addOrUpdateRecord:[NSString stringWithFormat:(@"%@"),congestIndexInfo ]];
     }
     
 }
 
--(void)jamLabelUpdate:(NSString*)text  withDesc:(NSString *)desc  withColor:(UIColor*)color{
-    self.cityCongestLabel.text = text;
-    self.cityCongestDescLabel.text = desc;
-    self.cityCongestLabel.textColor = color;
-    self.cityCongestDescLabel.textColor = color;
-//    self.jamDescLabel.textColor = color;
+#pragma mark - 更新全市拥堵指数的UI
+-(void) refreshCityCongestIndexUI:(NSNotification *) notification{
+    CityCongestIndexUI* cityCongestIndexUI = (CityCongestIndexUI*)[notification object];//获取到传递的对象
+    self.cityCongestLabel.text = cityCongestIndexUI.congestIndexText;
+    self.cityCongestDescLabel.text = cityCongestIndexUI.congestIndexDescText;
+    self.cityCongestLabel.textColor = cityCongestIndexUI.color;
+    self.cityCongestDescLabel.textColor = cityCongestIndexUI.color;
+
 }
 
-//点击全市拥堵指数
+//点击全市拥堵指数，在主界面显示图表1
 -(IBAction)onCityCongestIndexButtonClick:(id)sender{
     DLog(@"全市拥堵指数区域被点击");
     Chart1ViewController * vc = [[Chart1ViewController alloc]init];
@@ -1176,6 +1195,9 @@
     [self presentViewController:customizeRoadListViewController  animated:YES completion:nil];
 }
 
++(NSTimer *) getFefreshCityCongestIndexTimer{
+    return timer;
+}
 
 #pragma mark - Uninit
 -(void)dealloc{

@@ -82,6 +82,8 @@
 		D955CCA219C8C3C10019AAEF /* ISRDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D955CCA019C8C3C10019AAEF /* ISRDataHelper.h */; };
 		D955CCA319C8C3C10019AAEF /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D955CCA119C8C3C10019AAEF /* ISRDataHelper.m */; };
 		D955CCA519C9BC110019AAEF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D955CCA419C9BC110019AAEF /* CoreTelephony.framework */; };
+		D95996021A06890500FC4BCC /* CityCongestIndexUI.h in Headers */ = {isa = PBXBuildFile; fileRef = D95996001A06890500FC4BCC /* CityCongestIndexUI.h */; };
+		D95996031A06890500FC4BCC /* CityCongestIndexUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D95996011A06890500FC4BCC /* CityCongestIndexUI.m */; };
 		D959FD5517B22B560080C858 /* Chart4TableCellType3.h in Headers */ = {isa = PBXBuildFile; fileRef = D959FD5217B22B560080C858 /* Chart4TableCellType3.h */; };
 		D959FD5617B22B560080C858 /* Chart4TableCellType3.m in Sources */ = {isa = PBXBuildFile; fileRef = D959FD5317B22B560080C858 /* Chart4TableCellType3.m */; };
 		D959FD5717B22B560080C858 /* Chart4TableCellType3.xib in Resources */ = {isa = PBXBuildFile; fileRef = D959FD5417B22B560080C858 /* Chart4TableCellType3.xib */; };
@@ -123,9 +125,6 @@
 		D9BCFBF717376F54001B30D7 /* DeviceInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFBF617376F54001B30D7 /* DeviceInfoController.m */; };
 		D9C9511A177824CE00FF5A71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C95119177824CE00FF5A71 /* main.m */; };
 		D9CBD3EC1757B51400AB3DE8 /* Chart1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9CBD3EB1757B51400AB3DE8 /* Chart1ViewController.xib */; };
-		D9D3B5011A01E37500C9A8F5 /* SharePopViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D3B4FE1A01E37500C9A8F5 /* SharePopViewController.h */; };
-		D9D3B5021A01E37500C9A8F5 /* SharePopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D3B4FF1A01E37500C9A8F5 /* SharePopViewController.m */; };
-		D9D3B5031A01E37500C9A8F5 /* SharePopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D3B5001A01E37500C9A8F5 /* SharePopViewController.xib */; };
 		D9D3B5081A03650C00C9A8F5 /* Downloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D9D3B5051A03650C00C9A8F5 /* Downloader.h */; };
 		D9D3B5091A03650C00C9A8F5 /* Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D3B5061A03650C00C9A8F5 /* Downloader.m */; };
 		D9D3B50A1A03650C00C9A8F5 /* Downloader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9D3B5071A03650C00C9A8F5 /* Downloader.xib */; };
@@ -220,6 +219,8 @@
 		D955CCA119C8C3C10019AAEF /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
 		D955CCA419C9BC110019AAEF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D955CCA619C9BC2E0019AAEF /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		D95996001A06890500FC4BCC /* CityCongestIndexUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityCongestIndexUI.h; sourceTree = "<group>"; };
+		D95996011A06890500FC4BCC /* CityCongestIndexUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityCongestIndexUI.m; sourceTree = "<group>"; };
 		D959FD5217B22B560080C858 /* Chart4TableCellType3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart4TableCellType3.h; sourceTree = "<group>"; };
 		D959FD5317B22B560080C858 /* Chart4TableCellType3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart4TableCellType3.m; sourceTree = "<group>"; };
 		D959FD5417B22B560080C858 /* Chart4TableCellType3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart4TableCellType3.xib; sourceTree = "<group>"; };
@@ -265,9 +266,6 @@
 		D9C5D81819E7CAFD004DD37B /* ILiveTraffic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ILiveTraffic.entitlements; path = ILiveTraffic/ILiveTraffic.entitlements; sourceTree = "<group>"; };
 		D9C95119177824CE00FF5A71 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9CBD3EB1757B51400AB3DE8 /* Chart1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Chart1ViewController.xib; sourceTree = "<group>"; };
-		D9D3B4FE1A01E37500C9A8F5 /* SharePopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePopViewController.h; sourceTree = "<group>"; };
-		D9D3B4FF1A01E37500C9A8F5 /* SharePopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePopViewController.m; sourceTree = "<group>"; };
-		D9D3B5001A01E37500C9A8F5 /* SharePopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharePopViewController.xib; sourceTree = "<group>"; };
 		D9D3B5051A03650C00C9A8F5 /* Downloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Downloader.h; sourceTree = "<group>"; };
 		D9D3B5061A03650C00C9A8F5 /* Downloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Downloader.m; sourceTree = "<group>"; };
 		D9D3B5071A03650C00C9A8F5 /* Downloader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Downloader.xib; sourceTree = "<group>"; };
@@ -538,6 +536,16 @@
 			path = ../ZXQuartz/TabBar;
 			sourceTree = "<group>";
 		};
+		D95995FF1A0688D200FC4BCC /* CityCongestIndex-全市拥堵指数UI对象 */ = {
+			isa = PBXGroup;
+			children = (
+				D95996001A06890500FC4BCC /* CityCongestIndexUI.h */,
+				D95996011A06890500FC4BCC /* CityCongestIndexUI.m */,
+			);
+			name = "CityCongestIndex-全市拥堵指数UI对象";
+			path = CityCongestIndex;
+			sourceTree = "<group>";
+		};
 		D959FD4F17B229AB0080C858 /* 粗粒度Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -696,7 +704,7 @@
 			path = AboutView;
 			sourceTree = "<group>";
 		};
-		D9A5D9CF19F635970066E129 /* CustomizeRoad-道路定制功能 */ = {
+		D9A5D9CF19F635970066E129 /* CustomizeRoad-出行道路定制功能 */ = {
 			isa = PBXGroup;
 			children = (
 				D978B81219F77A7A0060FED4 /* RoadMap-道路地图 */,
@@ -705,21 +713,21 @@
 				D9A5D9D119F635970066E129 /* CustomizeRoadListViewController.m */,
 				D9A5D9D219F635970066E129 /* CustomizeRoadListViewController.xib */,
 			);
-			name = "CustomizeRoad-道路定制功能";
+			name = "CustomizeRoad-出行道路定制功能";
 			path = CustomizeRoad;
 			sourceTree = "<group>";
 		};
 		D9BCFBDA17341FB7001B30D7 /* roamer */ = {
 			isa = PBXGroup;
 			children = (
-				D9D3B4FD1A01E34700C9A8F5 /* SharePopView-共享操作界面 */,
 				D989E56519FF73EE00AF4143 /* 微信 */,
-				D9A5D9CF19F635970066E129 /* CustomizeRoad-道路定制功能 */,
+				D9A5D9CF19F635970066E129 /* CustomizeRoad-出行道路定制功能 */,
 				D9D9184C19F272510002488C /* Downloader */,
 				D997225019F128D30054667F /* SlidingTabs */,
 				D9D905BF19E8479E00411B75 /* Helper */,
 				D99AEDB519E81F84009E602E /* AboutView */,
 				D91131E519C18D5F00191E5A /* Configer */,
+				D95995FF1A0688D200FC4BCC /* CityCongestIndex-全市拥堵指数UI对象 */,
 				D920F50919A78F1E004A955F /* 主控程序 */,
 				D920F4FB19A78F03004A955F /* Extra */,
 				D920F4EA19A78EF8004A955F /* Others */,
@@ -759,17 +767,6 @@
 				D9BCFBF017376B5D001B30D7 /* Tools.m */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		D9D3B4FD1A01E34700C9A8F5 /* SharePopView-共享操作界面 */ = {
-			isa = PBXGroup;
-			children = (
-				D9D3B4FE1A01E37500C9A8F5 /* SharePopViewController.h */,
-				D9D3B4FF1A01E37500C9A8F5 /* SharePopViewController.m */,
-				D9D3B5001A01E37500C9A8F5 /* SharePopViewController.xib */,
-			);
-			name = "SharePopView-共享操作界面";
-			path = SharePopView;
 			sourceTree = "<group>";
 		};
 		D9D3B5041A03650C00C9A8F5 /* downloadWithUI-不再使用 */ = {
@@ -864,6 +861,7 @@
 				D90A246019F7B55600AA2527 /* SketchToolbar.h in Headers */,
 				D91131E819C18D7000191E5A /* Configer.h in Headers */,
 				D989E56B19FF741600AF4143 /* WXApi.h in Headers */,
+				D95996021A06890500FC4BCC /* CityCongestIndexUI.h in Headers */,
 				D93B97C419CD54AB009E6865 /* FlowerCollector.h in Headers */,
 				D99A4ED017429B2A00D302F2 /* Chart1ViewController.h in Headers */,
 				D9273FDF174370FB00804318 /* Chart1Theme.h in Headers */,
@@ -874,7 +872,6 @@
 				D989F0B619AC68AB0011A511 /* Chart4ViewController.h in Headers */,
 				D911812D175C53C300251F1B /* Chart3MetroViewController.h in Headers */,
 				D978B81619F77AA70060FED4 /* RoadMapViewController.h in Headers */,
-				D9D3B5011A01E37500C9A8F5 /* SharePopViewController.h in Headers */,
 				D955CC9A19C8B1EF0019AAEF /* PopupView.h in Headers */,
 				D955CCA219C8C3C10019AAEF /* ISRDataHelper.h in Headers */,
 				D955CC9E19C8BFF20019AAEF /* RecognizerFactory.h in Headers */,
@@ -970,7 +967,6 @@
 				D9A5D9D519F635970066E129 /* CustomizeRoadListViewController.xib in Resources */,
 				D9D3B50A1A03650C00C9A8F5 /* Downloader.xib in Resources */,
 				D99AEDBB19E81F84009E602E /* iLiveTrafficMenuViewController.xib in Resources */,
-				D9D3B5031A01E37500C9A8F5 /* SharePopViewController.xib in Resources */,
 				D9B75C0119D1ED79008862F1 /* Chart4TableCellType2.xib in Resources */,
 				D911812F175C53C300251F1B /* Chart3MetroViewController.xib in Resources */,
 				D9D905C519E8479E00411B75 /* SDHelpViewController.xib in Resources */,
@@ -1063,7 +1059,6 @@
 				D9BCFBF117376B5D001B30D7 /* Tools.m in Sources */,
 				D955CC9F19C8BFF20019AAEF /* RecognizerFactory.m in Sources */,
 				D955CCA319C8C3C10019AAEF /* ISRDataHelper.m in Sources */,
-				D9D3B5021A01E37500C9A8F5 /* SharePopViewController.m in Sources */,
 				D955CC9B19C8B1EF0019AAEF /* PopupView.m in Sources */,
 				D997225619F128D30054667F /* SlidingTabsControl.m in Sources */,
 				D90A246119F7B55600AA2527 /* SketchToolbar.m in Sources */,
@@ -1087,6 +1082,7 @@
 				D9D905C419E8479E00411B75 /* SDHelpViewController.m in Sources */,
 				D942C66E17AA2228007F7124 /* Canvas.m in Sources */,
 				D959FD5617B22B560080C858 /* Chart4TableCellType3.m in Sources */,
+				D95996031A06890500FC4BCC /* CityCongestIndexUI.m in Sources */,
 				D920F4F819A78EF8004A955F /* iLiveTrafficScaleIndicatorView.m in Sources */,
 				D9D3B5091A03650C00C9A8F5 /* Downloader.m in Sources */,
 				D90A6E6717D9B90700121939 /* MainRoadSpeedViewController.m in Sources */,

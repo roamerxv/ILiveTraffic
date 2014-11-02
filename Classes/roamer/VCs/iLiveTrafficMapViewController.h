@@ -68,6 +68,9 @@
 
 #import "Configer.h"
 
+#import "CityCongestIndexUI.h"
+
+static  NSTimer *timer;
 
 
 @interface iLiveTrafficMapViewController : UIViewController<PPRevealSideViewControllerDelegate,AGSMapViewTouchDelegate,AGSLayerDelegate,AGSQueryTaskDelegate,IFlySpeechRecognizerDelegate,CLLocationManagerDelegate,NSURLConnectionDelegate>{
@@ -126,6 +129,7 @@
     PopupView * _popUpView;
     
 }
+
 
 @property (nonatomic, retain) IBOutlet AGSMapView * mapView;
 @property (nonatomic, retain) IBOutlet UISlider *slider;
@@ -209,6 +213,8 @@
 
 //改变底图
 -(IBAction) changeBaseMapLayer:(id)sender;
+
++(NSTimer *) getFefreshCityCongestIndexTimer;
 
 
 @end

@@ -32,6 +32,23 @@
         self.save_sketch_order = sketch_order_number_to_plist;
 		//hold references to the mapView, graphicsLayer, and sketchLayer
 		self.sketchLayer = sketchLayer;
+        /* 定制草案图层里面，绘画时候用的各种符号*/
+        AGSCompositeSymbol* composite = [AGSCompositeSymbol compositeSymbol];
+        AGSSimpleMarkerSymbol* markerSymbol = [[AGSSimpleMarkerSymbol alloc] init];
+        markerSymbol.style = AGSSimpleMarkerSymbolStyleCircle;
+        markerSymbol.color = [UIColor clearColor];
+        [composite addSymbol:markerSymbol];
+        AGSSimpleLineSymbol* lineSymbol = [[AGSSimpleLineSymbol alloc] init];
+        lineSymbol.color= [UIColor purpleColor];
+        lineSymbol.width = 10.0f;
+        [composite addSymbol:lineSymbol];
+        AGSSimpleFillSymbol* fillSymbol = [[AGSSimpleFillSymbol alloc] init];
+        fillSymbol.color = [UIColor colorWithRed:1.0 green:1.0 blue:0 alpha:0.0] ;
+        [composite addSymbol:fillSymbol];
+        /* 定制结束 */
+
+        sketchLayer.mainSymbol = composite;
+
 		self.mapView = mapView;
 		self.graphicsLayer = graphicsLayer;
 
@@ -79,7 +96,7 @@
             {
                 AGSGeometry* sketchGeometry = [self.sketchLayer.geometry copy];
                 AGSSimpleFillSymbol *filledSymbol = [[AGSSimpleFillSymbol alloc] init];
-                filledSymbol.color = [UIColor colorWithRed:0.951 green:0.666 blue:0.444 alpha:1.500];
+                filledSymbol.color = [UIColor colorWithRed:0.951 green:0.666 blue:0.444 alpha:0.80];
                 AGSGraphic  * graphic = [AGSGraphic graphicWithGeometry:sketchGeometry symbol:filledSymbol attributes:nil ];
                 [graphicsLayer addGraphic: [graphic  initWithJSON:graphics_json ]];
             }
@@ -167,7 +184,7 @@
                 AGSGeometry *revertedGeomery = [engine differenceOfGeometry:self.mapView.baseLayer.fullEnvelope andGeometry:bufferedGeomery];
 
                 AGSSimpleFillSymbol *filledSymbol = [[AGSSimpleFillSymbol alloc] init];
-                filledSymbol.color = [UIColor colorWithRed:0.551 green:0.566 blue:0.444 alpha:0.500];
+                filledSymbol.color = [UIColor colorWithRed:0.551 green:0.566 blue:0.444 alpha:0.800];
 
                 AGSGraphic *revertedGraphics = [AGSGraphic graphicWithGeometry:revertedGeomery symbol:filledSymbol attributes:nil];
 

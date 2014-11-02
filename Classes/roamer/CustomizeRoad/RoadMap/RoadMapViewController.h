@@ -17,6 +17,10 @@
 }
 
 
+@property (nonatomic, retain) IBOutlet UILabel * cityCongestLabel;
+@property (nonatomic, retain) IBOutlet UILabel * cityCongestDescLabel;
+
+
 @property (nonatomic, retain) IBOutlet AGSMapView * mapView;
 @property(nonatomic,retain) AGSLayer * baseMapLayer; //底图
 

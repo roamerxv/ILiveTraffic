@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[iLiveTrafficMenuViewController downloadBtnClicked:]:iLiveTrafficMenuViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[DownloadTPKFileThread getCurrentDownloadStatus]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[Downloader viewDidAppear:]:Downloader.m">
          <PersistentStrings>
             <PersistentString
@@ -60,13 +68,13 @@
          contextName = "-[Chart4ViewController lcoate_in_map_click:]:Chart4ViewController.m">
          <PersistentStrings>
             <PersistentString
+               value = "cell.roadName.text">
+            </PersistentString>
+            <PersistentString
                value = "self.view">
             </PersistentString>
             <PersistentString
                value = "[[view superview]superview]">
-            </PersistentString>
-            <PersistentString
-               value = "cell.roadName.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -74,10 +82,10 @@
          contextName = "-[iLiveTrafficMapViewController viewDidLoad]:iLiveTrafficMapViewController.mm">
          <PersistentStrings>
             <PersistentString
-               value = "hanzhouTrafficEnv.xmin">
+               value = "hanzhouTrafficEnv.xmax">
             </PersistentString>
             <PersistentString
-               value = "hanzhouTrafficEnv.xmax">
+               value = "hanzhouTrafficEnv.xmin">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -107,15 +115,15 @@
          contextName = "-[iLiveTrafficMapViewController locateRoadOnMap:]:iLiveTrafficMapViewController.m">
       </ContextState>
       <ContextState
-         contextName = "__26-[Downloader downloadFile]_block_invoke138:Downloader.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[iLiveTrafficMapViewController locateRoadOnMap:]:iLiveTrafficMapViewController.mm">
+         contextName = "__45-[Downloader downloadFileWithTCBlobDownload:]_block_invoke114:Downloader.m">
          <PersistentStrings>
             <PersistentString
-               value = "roadName[0]">
+               value = "(float)( savedServerFileSizeInfo - (long long)totalLength + (long long) receivedLength)">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__26-[Downloader downloadFile]_block_invoke138:Downloader.m">
       </ContextState>
       <ContextState
          contextName = "-[iLiveTrafficMapViewController viewDidLoad]:iLiveTrafficMapViewController.m">
@@ -129,10 +137,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__45-[Downloader downloadFileWithTCBlobDownload:]_block_invoke114:Downloader.m">
+         contextName = "-[iLiveTrafficMapViewController locateRoadOnMap:]:iLiveTrafficMapViewController.mm">
          <PersistentStrings>
             <PersistentString
-               value = "(float)( savedServerFileSizeInfo - (long long)totalLength + (long long) receivedLength)">
+               value = "roadName[0]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

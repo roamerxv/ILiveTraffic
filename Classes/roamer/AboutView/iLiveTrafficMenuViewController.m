@@ -27,6 +27,7 @@
 @synthesize downloadTPKBtn;
 @synthesize progressView;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -54,13 +55,23 @@
     NSDictionary* infoDict =[[NSBundle mainBundle] infoDictionary];
     NSString* versionNum =[infoDict objectForKey:@"CFBundleShortVersionString"];
     versionLabel.text = versionNum;
-    //监听讯飞查询网络参数的消息,判断是否有新地图
-    [[NSNotificationCenter defaultCenter]  addObserver:self selector:@selector(checkBaseMapVersion:) name:SUNFLOWERNOTIFICATION object:nil];
-    //检查地图包版本，进行按钮图片的修改（逻辑在回调函数里面实现，这里定义一个开关键）
-    [Tools asynchronousQueryServerBaseMapTpkFileVersion];
+
+
 
     //注册监听事件，用于在地图上定位路段
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    //监听讯飞查询网络参数的消息,判断是否有新地图
+    [nc addObserver:self
+           selector:@selector(checkBaseMapVersion:)
+               name:SUNFLOWERNOTIFICATION
+             object:nil];
+
+    //注册监听程序，接受开始下载的消息
+    [nc addObserver:self
+           selector:@selector(downloadBegin:)
+               name:@"dwonloanding_tpk_begin"
+             object:nil];
+
     //注册监听事件，用于刷新下载进度条
     [nc addObserver:self
            selector:@selector(refreshProgressBar:)
@@ -76,6 +87,9 @@
            selector:@selector(downloadFinished:)
                name:@"dwonloanding_tpk_finished"
              object:nil];
+
+    //检查地图包版本，进行按钮图片的修改（逻辑在回调函数里面实现，这里定义一个开关键）
+    [Tools asynchronousQueryServerBaseMapTpkFileVersion];
 }
 
 -(void) viewDidAppear:(BOOL)animated{
@@ -83,7 +97,8 @@
     [FlowerCollector OnEvent:RUN_ABOUT_FUNCTION];
     //设置成一个 下载状态不涵盖的 状态。用于表示不用下载
     [DownloadTPKFileThread setCurrentDownloadStatus:-1];
-    [self refreshDownloadBtnAndState];
+    self.progressView.hidden=YES;
+
 
 }
 
@@ -110,48 +125,64 @@
     {  //如果本地版本和服务器版本一样
         // 主线程刷新界面开始
         //设置成一个 下载状态不涵盖的 状态。用于表示不用下载
+        needDownlaod = false;
         [DownloadTPKFileThread setCurrentDownloadStatus:-1];
         if ([NSThread isMainThread])
         {
             [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"地图是最新版本%@",localVersion ] forState:UIControlStateNormal];
-            [self refreshDownloadBtnAndState];
+            self.progressView.hidden=true;
         }
         else
         {
             dispatch_sync(dispatch_get_main_queue(), ^{
                 //Update UI in UI thread here
                 [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"地图是最新版本%@",localVersion ] forState:UIControlStateNormal];
-                [self refreshDownloadBtnAndState];
+                self.progressView.hidden=YES;
 
             });
         }
         // 主线程刷新界面结束
     }else
     { //如果本地版本和服务器版本不一样
+        needDownlaod = true;
         Tools * tools = [Tools sharedInstance];
         tools.baseMapVersionAtServer = serverVersion;
         [DownloadTPKFileThread setCurrentDownloadStatus:TCBlobDownloadStateReady];
         if ([NSThread isMainThread])
         {
             [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"有新地图%@,点击更新",serverVersion ] forState:UIControlStateNormal];
-            [self refreshDownloadBtnAndState];
-
+            self.progressView.hidden=YES;
+            [self.downloadTPKBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
         }
         else
         {
             dispatch_sync(dispatch_get_main_queue(), ^{
                 //Update UI in UI thread here
                 [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"有新地图%@,点击更新",serverVersion ] forState:UIControlStateNormal];
-                [self refreshDownloadBtnAndState];
+                self.progressView.hidden=YES;
+                [self.downloadTPKBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
             });
         }
     }
 }
 
+#pragma mark - 监听开始下载的通知
+-(void) downloadBegin:(NSNotification*) notification{
+    needDownlaod = YES;
+    [self.downloadTPKBtn setTitle:@"下载请求成功，开始下载文件!" forState:UIControlStateNormal ];
+    self.progressView.hidden=NO;
+
+}
+
+
 #pragma mark - 监听下载暂停通知
 -(void) downloadCanceled:(NSNotification*) notification{
     [DownloadTPKFileThread setCurrentDownloadStatus:TCBlobDownloadStateCancelled];
-    [self refreshDownloadBtnAndState];
+    [self.downloadTPKBtn setTitle:@"下载暂停，点击继续" forState:UIControlStateNormal ];
+    needDownlaod = YES;
+    self.progressView.hidden=NO;
+    [self.downloadTPKBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+
 }
 
 #pragma mark - 监听下载完成的通知
@@ -160,58 +191,26 @@
     [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"地图是最新版本%@",localVersion ] forState:UIControlStateNormal];
     //设置成一个 下载状态不涵盖的 状态。用于表示不用下载
     [DownloadTPKFileThread setCurrentDownloadStatus:-1];
-    [self refreshDownloadBtnAndState];
+    needDownlaod = NO;
+    self.progressView.hidden=YES;
+    [self.downloadTPKBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    //讯飞上记录下载完成的功能
+    [FlowerCollector OnEvent:RUN_DOWNLOAD_FUNCTION];
+
 }
 
 #pragma mark - 监听消息的回调，用于刷新进度条
 - (void) refreshProgressBar:(NSNotification*) notification{
     NSNumber* percent = (NSNumber *)[notification object];//获取到传递的对象
     [self.progressView setProgress:[percent floatValue]];
-    [self refreshDownloadBtnAndState];
+    [self.downloadTPKBtn setTitle:[[NSString alloc]initWithFormat:@"下载了%0.1f%%，点击暂停",[percent floatValue]*100 ] forState:UIControlStateNormal ];
+    needDownlaod = YES;
 }
 
-#pragma mark - 根据下载状态显示按钮文字和进度条状态
--(void) refreshDownloadBtnAndState{
-    if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateReady)
-    {
-        [self.downloadTPKBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
-        self.downloadTPKBtn.enabled = YES ;
-        self.progressView.hidden = YES ;
-    }else if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateDownloading){
-        [self.downloadTPKBtn setTitle:@"正在下载,点击暂停" forState:UIControlStateNormal];
-        [self.downloadTPKBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
-        self.downloadTPKBtn.enabled = YES ;
-        self.progressView.hidden = NO ;
-    }else if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateCancelled){
-        [self.downloadTPKBtn setTitle:@"下载暂停,点击继续下载" forState:UIControlStateNormal];
-        [self.downloadTPKBtn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
-        self.downloadTPKBtn.enabled = YES ;
-        self.progressView.hidden = NO ;
-    }else{//不需要下载
-        [self.downloadTPKBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-        self.downloadTPKBtn.enabled = NO ;
-        self.progressView.hidden = YES;
-    }
-}
-
-
-
-//#pragma mark - 刷新下载按钮和进度条
-//-(void) refreshUIStatus:(BOOL) canDownload{
-//    if (canDownload)
-//    {
-//        [self.downloadTPKBtn setEnabled:YES];
-//        [self.downloadTPKBtn setBackgroundColor:[UIColor redColor] ];
-//        self.progressView.hidden = NO;
-//    }else{
-//        [self.downloadTPKBtn setEnabled:NO];
-//        [self.downloadTPKBtn setBackgroundColor:[UIColor clearColor] ];
-//        self.progressView.hidden = YES;
-//    }
-//}
 
 #pragma mark - 点击下载地图按钮
 -(IBAction)downloadBtnClicked:(id)sender{
+    DLog(@"下载按钮被点击！");
     if ([DownloadTPKFileThread getCurrentDownloadStatus] == TCBlobDownloadStateReady)
     {
         [DownloadTPKFileThread downloadFile];

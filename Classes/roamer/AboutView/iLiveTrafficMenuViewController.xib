@@ -29,7 +29,7 @@
                     <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gq-br-ANU">
-                            <rect key="frame" x="20" y="15" width="572" height="34"/>
+                            <rect key="frame" x="20" y="26" width="572" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="572" id="Ii5-AJ-JrD"/>
                                 <constraint firstAttribute="height" constant="34" id="hlH-RI-gxs"/>
@@ -41,7 +41,7 @@
                             <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </label>
                         <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="应用" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15">
-                            <rect key="frame" x="517" y="0.0" width="29" height="21"/>
+                            <rect key="frame" x="517" y="5" width="29" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="TvZ-jH-esJ"/>
                                 <constraint firstAttribute="width" constant="29" id="tJQ-WK-aTY"/>
@@ -51,7 +51,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13" userLabel="版本号">
-                            <rect key="frame" x="547" y="1" width="52" height="17"/>
+                            <rect key="frame" x="547" y="7" width="52" height="17"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="52" id="7LL-RC-Mvt"/>
                                 <constraint firstAttribute="height" constant="17" id="WM3-Wt-fdR"/>
@@ -76,14 +76,14 @@
                             </connections>
                         </button>
                         <progressView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="udD-t1-JeU">
-                            <rect key="frame" x="84" y="29" width="80" height="2"/>
+                            <rect key="frame" x="84" y="21" width="80" height="2"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="MFI-Mc-W0B"/>
                                 <constraint firstAttribute="height" constant="2" id="q8q-el-iop"/>
                             </constraints>
                         </progressView>
-                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNK-zU-hb4" userLabel="Button-下载地图">
-                            <rect key="frame" x="84" y="1" width="140" height="20"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNK-zU-hb4" userLabel="Button-下载地图">
+                            <rect key="frame" x="84" y="3" width="140" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="QZ6-li-PNI"/>
                                 <constraint firstAttribute="width" constant="140" id="v7V-Vn-vws"/>
@@ -101,17 +101,17 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="9gq-br-ANU" secondAttribute="trailing" constant="8" id="5Uk-fe-Idv"/>
                         <constraint firstAttribute="trailing" secondItem="13" secondAttribute="trailing" constant="1" id="5pz-BG-DNs"/>
-                        <constraint firstItem="udD-t1-JeU" firstAttribute="top" secondItem="BNK-zU-hb4" secondAttribute="bottom" constant="8" id="BOF-9g-SDu"/>
+                        <constraint firstItem="udD-t1-JeU" firstAttribute="top" secondItem="BNK-zU-hb4" secondAttribute="bottom" constant="-2" id="BOF-9g-SDu"/>
                         <constraint firstItem="10" firstAttribute="leading" secondItem="gqm-8c-ukk" secondAttribute="leading" constant="84" id="C4u-pl-HfW"/>
                         <constraint firstItem="udD-t1-JeU" firstAttribute="leading" secondItem="gqm-8c-ukk" secondAttribute="leading" constant="84" id="F7A-iD-9CO"/>
-                        <constraint firstItem="15" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" id="PiL-4i-Vj1"/>
-                        <constraint firstItem="9gq-br-ANU" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="15" id="Ycj-ya-oJk"/>
-                        <constraint firstItem="10" firstAttribute="top" secondItem="udD-t1-JeU" secondAttribute="bottom" constant="3" id="dQU-ot-ElT"/>
+                        <constraint firstItem="15" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="5" id="PiL-4i-Vj1"/>
+                        <constraint firstItem="9gq-br-ANU" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="26" id="Ycj-ya-oJk"/>
+                        <constraint firstItem="10" firstAttribute="top" secondItem="udD-t1-JeU" secondAttribute="bottom" constant="11" id="dQU-ot-ElT"/>
                         <constraint firstItem="BNK-zU-hb4" firstAttribute="leading" secondItem="gqm-8c-ukk" secondAttribute="leading" constant="84" id="jB3-5k-9Jw"/>
-                        <constraint firstItem="13" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="1" id="qji-SD-ADU"/>
+                        <constraint firstItem="13" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="7" id="qji-SD-ADU"/>
                         <constraint firstItem="13" firstAttribute="leading" secondItem="15" secondAttribute="trailing" constant="1" id="tRT-6N-Y0m"/>
                         <constraint firstAttribute="height" constant="60" id="xZP-8C-fHZ"/>
-                        <constraint firstItem="BNK-zU-hb4" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="1" id="yii-0g-CCk"/>
+                        <constraint firstItem="BNK-zU-hb4" firstAttribute="top" secondItem="gqm-8c-ukk" secondAttribute="top" constant="3" id="yii-0g-CCk"/>
                     </constraints>
                 </view>
             </subviews>
